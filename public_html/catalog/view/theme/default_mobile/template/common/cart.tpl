@@ -1,0 +1,1 @@
+<div class="cart" onclick="location.href='/cart'"><span id="totals"><?php echo $text_items; ?></div>

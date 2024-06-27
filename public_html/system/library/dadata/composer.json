@@ -1,0 +1,13 @@
+{
+    "name": "nlit/dadata",
+    "type": "library",
+    "require": {
+        "hflabs/dadata": "^20.12"
+    },
+    "authors": [
+        {
+            "name": "Artem Olenchenko",
+            "email": "dedix@mail.ru"
+        }
+    ]
+}

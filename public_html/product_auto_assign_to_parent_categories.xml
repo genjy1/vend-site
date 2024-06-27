@@ -1,0 +1,131 @@
+<modification>
+
+  <id>Product Auto Assign To Parent Categories</id>
+
+  <version>2.3.0.2</version>
+
+  <vqmver>2.4</vqmver>
+
+  <author>StepanMatl</author>
+
+  
+
+  <file name="admin/controller/catalog/product.php">
+
+    <operation>
+
+      <search position="before"><![CDATA[$this->response->setOutput($this->load->view('catalog/product_form', $data));]]></search>
+
+      <add><![CDATA[    if (isset($this->request->post['autoassign'])) {
+
+			$data['autoassign'] = $this->request->post['autoassign'];
+
+		} else {
+
+			$data['autoassign'] = '';
+
+		}
+
+    ]]></add>
+
+    </operation>
+
+	</file>
+
+  
+
+  <file name="admin/model/catalog/product.php">
+
+    <operation>
+
+      <search position="replace" offset="4"><![CDATA[if (isset($data['product_category'])) {]]></search>
+
+      <add><![CDATA[if (empty($data['autoassign'])) {
+
+    if (isset($data['product_category'])) {
+
+			foreach ($data['product_category'] as $category_id) {
+
+				$this->db->query("INSERT INTO " . DB_PREFIX . "product_to_category SET product_id = '" . (int)$product_id . "', category_id = '" . (int)$category_id . "'");
+
+			}		
+
+		}
+
+    } else {
+
+    if (isset($data['product_category'])) {
+
+      $all_cats = array();
+
+			foreach ($data['product_category'] as $category_id) {
+
+        $parent_cats = explode(".", $this->getCategoryParentsIds($category_id));
+
+        $all_cats = array_merge($all_cats, $parent_cats);
+
+			}
+
+      $all_cats = array_unique($all_cats);
+
+      foreach($all_cats as $category_id) {
+
+        $this->db->query("INSERT INTO " . DB_PREFIX . "product_to_category SET product_id = '" . (int)$product_id . "', category_id = '" . (int)$category_id . "'");
+
+      //}
+
+		//}
+
+    }]]></add>
+
+    </operation>
+
+    
+
+    <operation>
+
+      <search position="before"><![CDATA[public function addProduct($data) {]]></search>
+
+      <add><![CDATA[  public function getCategoryParentsIds($category_id) {
+
+    $query = $this->db->query("SELECT c.category_id, c.parent_id FROM " . DB_PREFIX . "category c WHERE c.category_id = '" . (int)$category_id . "' ORDER BY c.sort_order");
+
+		
+
+    $category_info = $query->row;
+
+		
+
+		if ($category_info['parent_id']) {
+
+			return $this->getCategoryParentsIds($category_info['parent_id']) . "." . $category_info['category_id'];
+
+		} else {
+
+			return $category_info['category_id'];
+
+		}
+
+	}
+
+  ]]></add>
+
+    </operation>
+
+	</file>
+
+  
+
+  <file name="admin/view/template/catalog/product_form.tpl">
+
+    <operation>
+
+      <search position="before"><![CDATA[<input type="text" name="category" value="" placeholder="<?php echo $entry_category; ?>" id="input-category" class="form-control" />]]></search>
+
+      <add><![CDATA[<p><label><input type="checkbox" name="autoassign" value="1"<?php if ($autoassign) { ?> checked="checked"<?php } ?> /> Iekļaut visas preču grupas</label></p>]]></add>
+
+    </operation>
+
+	</file>
+
+</modification>

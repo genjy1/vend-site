@@ -1,0 +1,2580 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Created>2006-09-16T00:00:00Z</Created>
+  <LastSaved>2017-03-17T17:41:04Z</LastSaved>
+  <Version>12.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <RemovePersonalInformation/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>7950</WindowHeight>
+  <WindowWidth>14805</WindowWidth>
+  <WindowTopX>240</WindowTopX>
+  <WindowTopY>165</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s16">
+   <Font ss:FontName="Calibri" x:CharSet="204" x:Family="Swiss" ss:Size="11"
+    ss:Color="#000000" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s17">
+   <Font ss:FontName="Calibri" x:CharSet="204" x:Family="Swiss" ss:Size="11"
+    ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s18">
+   <NumberFormat ss:Format="#,##0"/>
+  </Style>
+  <Style ss:ID="s19">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Calibri" x:CharSet="204" x:Family="Swiss" ss:Size="11"
+    ss:Color="#000000" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s20">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="Arial Unicode MS" x:CharSet="204" x:Family="Swiss"
+    ss:Color="#000000"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Лист1">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="276" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="15">
+   <Column ss:AutoFitWidth="0" ss:Width="96.75"/>
+   <Column ss:Width="119.25" ss:Span="1"/>
+   <Column ss:Index="4" ss:AutoFitWidth="0" ss:Width="106.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="225.75"/>
+   <Column ss:Width="160.5"/>
+   <Column ss:Width="128.25"/>
+   <Row>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">Страна / республика</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">Город / Край / Округ</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">Город-/-Край-/-Округ2</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">Подомен</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">Полное наименование</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">Род падеж</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">Страна респ в скобках</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s16"><Data ss:Type="String">Беларусь</Data></Cell>
+    <Cell><Data ss:Type="String">Минск</Data></Cell>
+    <Cell><Data ss:Type="String">Минск</Data></Cell>
+    <Cell><Data ss:Type="String">minsk</Data></Cell>
+    <Cell><Data ss:Type="String">minsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Минске</Data></Cell>
+    <Cell><Data ss:Type="String">(Беларусь)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Беларусь</Data></Cell>
+    <Cell><Data ss:Type="String">Брест</Data></Cell>
+    <Cell><Data ss:Type="String">Брест</Data></Cell>
+    <Cell><Data ss:Type="String">brest</Data></Cell>
+    <Cell><Data ss:Type="String">brest.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Бресте</Data></Cell>
+    <Cell><Data ss:Type="String">(Беларусь)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Беларусь</Data></Cell>
+    <Cell><Data ss:Type="String">Витебск</Data></Cell>
+    <Cell><Data ss:Type="String">Витебск</Data></Cell>
+    <Cell><Data ss:Type="String">vitebsk</Data></Cell>
+    <Cell><Data ss:Type="String">vitebsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Витебске</Data></Cell>
+    <Cell><Data ss:Type="String">(Беларусь)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Беларусь</Data></Cell>
+    <Cell><Data ss:Type="String">Гомель</Data></Cell>
+    <Cell><Data ss:Type="String">Гомель</Data></Cell>
+    <Cell><Data ss:Type="String">gomel</Data></Cell>
+    <Cell><Data ss:Type="String">gomel.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Гомеле</Data></Cell>
+    <Cell><Data ss:Type="String">(Беларусь)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Беларусь</Data></Cell>
+    <Cell><Data ss:Type="String">Гродно</Data></Cell>
+    <Cell><Data ss:Type="String">Гродно</Data></Cell>
+    <Cell><Data ss:Type="String">grodno</Data></Cell>
+    <Cell><Data ss:Type="String">grodno.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Гродно</Data></Cell>
+    <Cell><Data ss:Type="String">(Беларусь)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Беларусь</Data></Cell>
+    <Cell><Data ss:Type="String">Могилёв</Data></Cell>
+    <Cell><Data ss:Type="String">Могилёв</Data></Cell>
+    <Cell><Data ss:Type="String">mogilev</Data></Cell>
+    <Cell><Data ss:Type="String">mogilev.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Могилеве</Data></Cell>
+    <Cell><Data ss:Type="String">(Беларусь)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Беларусь</Data></Cell>
+    <Cell><Data ss:Type="String">Бобруйск</Data></Cell>
+    <Cell><Data ss:Type="String">Бобруйск</Data></Cell>
+    <Cell><Data ss:Type="String">bobruisk</Data></Cell>
+    <Cell><Data ss:Type="String">bobruisk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Бобруйске</Data></Cell>
+    <Cell><Data ss:Type="String">(Беларусь)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Беларусь</Data></Cell>
+    <Cell><Data ss:Type="String">Барановичи</Data></Cell>
+    <Cell><Data ss:Type="String">Барановичи</Data></Cell>
+    <Cell><Data ss:Type="String">baranovichi</Data></Cell>
+    <Cell><Data ss:Type="String">baranovichi.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Барановичах</Data></Cell>
+    <Cell><Data ss:Type="String">(Беларусь)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Беларусь</Data></Cell>
+    <Cell><Data ss:Type="String">Борисов</Data></Cell>
+    <Cell><Data ss:Type="String">Борисов</Data></Cell>
+    <Cell><Data ss:Type="String">borisov</Data></Cell>
+    <Cell><Data ss:Type="String">borisov.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Борисове</Data></Cell>
+    <Cell><Data ss:Type="String">(Беларусь)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Беларусь</Data></Cell>
+    <Cell><Data ss:Type="String">Пинск</Data></Cell>
+    <Cell><Data ss:Type="String">Пинск</Data></Cell>
+    <Cell><Data ss:Type="String">pinsk</Data></Cell>
+    <Cell><Data ss:Type="String">pinsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Пинске</Data></Cell>
+    <Cell><Data ss:Type="String">(Беларусь)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s16"><Data ss:Type="String">Армения</Data></Cell>
+    <Cell><Data ss:Type="String">Арагацотн</Data></Cell>
+    <Cell><Data ss:Type="String">Арагацотн</Data></Cell>
+    <Cell><Data ss:Type="String">aragatcotn</Data></Cell>
+    <Cell><Data ss:Type="String">aragatcotn.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Арагацотне</Data></Cell>
+    <Cell><Data ss:Type="String">(Армения)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Армения</Data></Cell>
+    <Cell><Data ss:Type="String">Арарат</Data></Cell>
+    <Cell><Data ss:Type="String">Арарат</Data></Cell>
+    <Cell><Data ss:Type="String">ararat</Data></Cell>
+    <Cell><Data ss:Type="String">ararat.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Арарате</Data></Cell>
+    <Cell><Data ss:Type="String">(Армения)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Армения</Data></Cell>
+    <Cell><Data ss:Type="String">Вайоц Дзор</Data></Cell>
+    <Cell><Data ss:Type="String">Вайоц-Дзор</Data></Cell>
+    <Cell><Data ss:Type="String">vaiotc-dzor</Data></Cell>
+    <Cell><Data ss:Type="String">vaiotc-dzor.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Вайоц-Дзоре</Data></Cell>
+    <Cell><Data ss:Type="String">(Армения)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Армения</Data></Cell>
+    <Cell><Data ss:Type="String">Гегаркуник</Data></Cell>
+    <Cell><Data ss:Type="String">Гегаркуник</Data></Cell>
+    <Cell><Data ss:Type="String">gegarkunik</Data></Cell>
+    <Cell><Data ss:Type="String">gegarkunik.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Гегаркунике</Data></Cell>
+    <Cell><Data ss:Type="String">(Армения)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Армения</Data></Cell>
+    <Cell><Data ss:Type="String">Котайк</Data></Cell>
+    <Cell><Data ss:Type="String">Котайк</Data></Cell>
+    <Cell><Data ss:Type="String">kotaik</Data></Cell>
+    <Cell><Data ss:Type="String">kotaik.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Котайке</Data></Cell>
+    <Cell><Data ss:Type="String">(Армения)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Армения</Data></Cell>
+    <Cell><Data ss:Type="String">Лори</Data></Cell>
+    <Cell><Data ss:Type="String">Лори</Data></Cell>
+    <Cell><Data ss:Type="String">lori</Data></Cell>
+    <Cell><Data ss:Type="String">lori.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Лори</Data></Cell>
+    <Cell><Data ss:Type="String">(Армения)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Армения</Data></Cell>
+    <Cell><Data ss:Type="String">Сюник</Data></Cell>
+    <Cell><Data ss:Type="String">Сюник</Data></Cell>
+    <Cell><Data ss:Type="String">siunik</Data></Cell>
+    <Cell><Data ss:Type="String">siunik.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Сюнике</Data></Cell>
+    <Cell><Data ss:Type="String">(Армения)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Армения</Data></Cell>
+    <Cell><Data ss:Type="String">Тавуш</Data></Cell>
+    <Cell><Data ss:Type="String">Тавуш</Data></Cell>
+    <Cell><Data ss:Type="String">tavush</Data></Cell>
+    <Cell><Data ss:Type="String">tavush.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Тавуше</Data></Cell>
+    <Cell><Data ss:Type="String">(Армения)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Армения</Data></Cell>
+    <Cell><Data ss:Type="String">Ширак</Data></Cell>
+    <Cell><Data ss:Type="String">Ширак</Data></Cell>
+    <Cell><Data ss:Type="String">shirak</Data></Cell>
+    <Cell><Data ss:Type="String">shirak.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Шираке</Data></Cell>
+    <Cell><Data ss:Type="String">(Армения)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s16"><Data ss:Type="String">Киргизия</Data></Cell>
+    <Cell><Data ss:Type="String">Бишкек </Data></Cell>
+    <Cell><Data ss:Type="String">Бишкек</Data></Cell>
+    <Cell><Data ss:Type="String">bishkek</Data></Cell>
+    <Cell><Data ss:Type="String">bishkek.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Бишкеке</Data></Cell>
+    <Cell><Data ss:Type="String">(Киргизия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Киргизия</Data></Cell>
+    <Cell><Data ss:Type="String">Ош </Data></Cell>
+    <Cell><Data ss:Type="String">Ош</Data></Cell>
+    <Cell><Data ss:Type="String">osh</Data></Cell>
+    <Cell><Data ss:Type="String">osh.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Оше</Data></Cell>
+    <Cell><Data ss:Type="String">(Киргизия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Киргизия</Data></Cell>
+    <Cell><Data ss:Type="String">Джалал-Абад </Data></Cell>
+    <Cell><Data ss:Type="String">Джалал-Абад</Data></Cell>
+    <Cell><Data ss:Type="String">dzhalal-abad</Data></Cell>
+    <Cell><Data ss:Type="String">dzhalal-abad.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Джалал-Абаде</Data></Cell>
+    <Cell><Data ss:Type="String">(Киргизия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Киргизия</Data></Cell>
+    <Cell><Data ss:Type="String">Каракол </Data></Cell>
+    <Cell><Data ss:Type="String">Каракол</Data></Cell>
+    <Cell><Data ss:Type="String">karakol</Data></Cell>
+    <Cell><Data ss:Type="String">karakol.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Караколе</Data></Cell>
+    <Cell><Data ss:Type="String">(Киргизия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Киргизия</Data></Cell>
+    <Cell><Data ss:Type="String">Токмок </Data></Cell>
+    <Cell><Data ss:Type="String">Токмок</Data></Cell>
+    <Cell><Data ss:Type="String">tokmok</Data></Cell>
+    <Cell><Data ss:Type="String">tokmok.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Токмоке</Data></Cell>
+    <Cell><Data ss:Type="String">(Киргизия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Киргизия</Data></Cell>
+    <Cell><Data ss:Type="String">Узген </Data></Cell>
+    <Cell><Data ss:Type="String">Узген</Data></Cell>
+    <Cell><Data ss:Type="String">uzgen</Data></Cell>
+    <Cell><Data ss:Type="String">uzgen.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Узгене</Data></Cell>
+    <Cell><Data ss:Type="String">(Киргизия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Киргизия</Data></Cell>
+    <Cell><Data ss:Type="String">Балыкчы </Data></Cell>
+    <Cell><Data ss:Type="String">Балыкчы</Data></Cell>
+    <Cell><Data ss:Type="String">balykchy</Data></Cell>
+    <Cell><Data ss:Type="String">balykchy.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Балыкчи</Data></Cell>
+    <Cell><Data ss:Type="String">(Киргизия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Киргизия</Data></Cell>
+    <Cell><Data ss:Type="String">Кара-Балта</Data></Cell>
+    <Cell><Data ss:Type="String">Кара-Балта</Data></Cell>
+    <Cell><Data ss:Type="String">kara-balta</Data></Cell>
+    <Cell><Data ss:Type="String">kara-balta.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Кара-Балте</Data></Cell>
+    <Cell><Data ss:Type="String">(Киргизия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Киргизия</Data></Cell>
+    <Cell><Data ss:Type="String">Нарын </Data></Cell>
+    <Cell><Data ss:Type="String">Нарын</Data></Cell>
+    <Cell><Data ss:Type="String">naryn</Data></Cell>
+    <Cell><Data ss:Type="String">naryn.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Нарыне</Data></Cell>
+    <Cell><Data ss:Type="String">(Киргизия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Киргизия</Data></Cell>
+    <Cell><Data ss:Type="String">Талас</Data></Cell>
+    <Cell><Data ss:Type="String">Талас</Data></Cell>
+    <Cell><Data ss:Type="String">talas</Data></Cell>
+    <Cell><Data ss:Type="String">talas.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Таласе</Data></Cell>
+    <Cell><Data ss:Type="String">(Киргизия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s16"><Data ss:Type="String">Казахстан</Data></Cell>
+    <Cell><Data ss:Type="String">Уральск</Data></Cell>
+    <Cell><Data ss:Type="String">Уральск</Data></Cell>
+    <Cell><Data ss:Type="String">uralsk</Data></Cell>
+    <Cell><Data ss:Type="String">uralsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Уральске</Data></Cell>
+    <Cell><Data ss:Type="String">(Казахстан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Казахстан</Data></Cell>
+    <Cell><Data ss:Type="String">Усть-Каменогорск</Data></Cell>
+    <Cell><Data ss:Type="String">Усть-Каменогорск</Data></Cell>
+    <Cell><Data ss:Type="String">ust-kamenogorsk</Data></Cell>
+    <Cell><Data ss:Type="String">ust-kamenogorsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Усть-Каменогорске</Data></Cell>
+    <Cell><Data ss:Type="String">(Казахстан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Казахстан</Data></Cell>
+    <Cell><Data ss:Type="String">Павлодар</Data></Cell>
+    <Cell><Data ss:Type="String">Павлодар</Data></Cell>
+    <Cell><Data ss:Type="String">pavlodar</Data></Cell>
+    <Cell><Data ss:Type="String">pavlodar.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Павлодаре</Data></Cell>
+    <Cell><Data ss:Type="String">(Казахстан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Казахстан</Data></Cell>
+    <Cell><Data ss:Type="String">Семей</Data></Cell>
+    <Cell><Data ss:Type="String">Семей</Data></Cell>
+    <Cell><Data ss:Type="String">semei</Data></Cell>
+    <Cell><Data ss:Type="String">semei.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Семейе</Data></Cell>
+    <Cell><Data ss:Type="String">(Казахстан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Казахстан</Data></Cell>
+    <Cell><Data ss:Type="String">Тараз</Data></Cell>
+    <Cell><Data ss:Type="String">Тараз</Data></Cell>
+    <Cell><Data ss:Type="String">taraz</Data></Cell>
+    <Cell><Data ss:Type="String">taraz.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Таразе</Data></Cell>
+    <Cell><Data ss:Type="String">(Казахстан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Казахстан</Data></Cell>
+    <Cell><Data ss:Type="String">Актобе</Data></Cell>
+    <Cell><Data ss:Type="String">Актобе</Data></Cell>
+    <Cell><Data ss:Type="String">aktobe</Data></Cell>
+    <Cell><Data ss:Type="String">aktobe.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Актобе</Data></Cell>
+    <Cell><Data ss:Type="String">(Казахстан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Казахстан</Data></Cell>
+    <Cell><Data ss:Type="String">Караганда</Data></Cell>
+    <Cell><Data ss:Type="String">Караганда</Data></Cell>
+    <Cell><Data ss:Type="String">karaganda</Data></Cell>
+    <Cell><Data ss:Type="String">karaganda.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Караганде</Data></Cell>
+    <Cell><Data ss:Type="String">(Казахстан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Казахстан</Data></Cell>
+    <Cell><Data ss:Type="String">Астана</Data></Cell>
+    <Cell><Data ss:Type="String">Астана</Data></Cell>
+    <Cell><Data ss:Type="String">astana</Data></Cell>
+    <Cell><Data ss:Type="String">astana.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Астане</Data></Cell>
+    <Cell><Data ss:Type="String">(Казахстан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Казахстан</Data></Cell>
+    <Cell><Data ss:Type="String">Шымкент</Data></Cell>
+    <Cell><Data ss:Type="String">Шымкент</Data></Cell>
+    <Cell><Data ss:Type="String">shymkent</Data></Cell>
+    <Cell><Data ss:Type="String">shymkent.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Шымкенте</Data></Cell>
+    <Cell><Data ss:Type="String">(Казахстан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Казахстан</Data></Cell>
+    <Cell><Data ss:Type="String">Алматы</Data></Cell>
+    <Cell><Data ss:Type="String">Алматы</Data></Cell>
+    <Cell><Data ss:Type="String">almaty</Data></Cell>
+    <Cell><Data ss:Type="String">almaty.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Алмате</Data></Cell>
+    <Cell><Data ss:Type="String">(Казахстан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s16"><Data ss:Type="String">Узбекистан</Data></Cell>
+    <Cell><Data ss:Type="String">Ташкент</Data></Cell>
+    <Cell><Data ss:Type="String">Ташкент</Data></Cell>
+    <Cell><Data ss:Type="String">tashkent</Data></Cell>
+    <Cell><Data ss:Type="String">tashkent.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Ташкенте</Data></Cell>
+    <Cell><Data ss:Type="String">(Узбекистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Узбекистан</Data></Cell>
+    <Cell><Data ss:Type="String">Наманган</Data></Cell>
+    <Cell><Data ss:Type="String">Наманган</Data></Cell>
+    <Cell><Data ss:Type="String">namangan</Data></Cell>
+    <Cell><Data ss:Type="String">namangan.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Намангане</Data></Cell>
+    <Cell><Data ss:Type="String">(Узбекистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Узбекистан</Data></Cell>
+    <Cell><Data ss:Type="String">Самарканд</Data></Cell>
+    <Cell><Data ss:Type="String">Самарканд</Data></Cell>
+    <Cell><Data ss:Type="String">samarkand</Data></Cell>
+    <Cell><Data ss:Type="String">samarkand.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Самарканде</Data></Cell>
+    <Cell><Data ss:Type="String">(Узбекистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Узбекистан</Data></Cell>
+    <Cell><Data ss:Type="String">Андижан</Data></Cell>
+    <Cell><Data ss:Type="String">Андижан</Data></Cell>
+    <Cell><Data ss:Type="String">andizhan</Data></Cell>
+    <Cell><Data ss:Type="String">andizhan.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Андижане</Data></Cell>
+    <Cell><Data ss:Type="String">(Узбекистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Узбекистан</Data></Cell>
+    <Cell><Data ss:Type="String">Нукус</Data></Cell>
+    <Cell><Data ss:Type="String">Нукус</Data></Cell>
+    <Cell><Data ss:Type="String">nukus</Data></Cell>
+    <Cell><Data ss:Type="String">nukus.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Нукусе</Data></Cell>
+    <Cell><Data ss:Type="String">(Узбекистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Узбекистан</Data></Cell>
+    <Cell><Data ss:Type="String">Бухара</Data></Cell>
+    <Cell><Data ss:Type="String">Бухара</Data></Cell>
+    <Cell><Data ss:Type="String">bukhara</Data></Cell>
+    <Cell><Data ss:Type="String">bukhara.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Бухаре</Data></Cell>
+    <Cell><Data ss:Type="String">(Узбекистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Узбекистан</Data></Cell>
+    <Cell><Data ss:Type="String">Карши</Data></Cell>
+    <Cell><Data ss:Type="String">Карши</Data></Cell>
+    <Cell><Data ss:Type="String">karshi</Data></Cell>
+    <Cell><Data ss:Type="String">karshi.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Карши</Data></Cell>
+    <Cell><Data ss:Type="String">(Узбекистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Узбекистан</Data></Cell>
+    <Cell><Data ss:Type="String">Фергана</Data></Cell>
+    <Cell><Data ss:Type="String">Фергана</Data></Cell>
+    <Cell><Data ss:Type="String">fergana</Data></Cell>
+    <Cell><Data ss:Type="String">fergana.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Фергане</Data></Cell>
+    <Cell><Data ss:Type="String">(Узбекистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Узбекистан</Data></Cell>
+    <Cell><Data ss:Type="String">Коканд</Data></Cell>
+    <Cell><Data ss:Type="String">Коканд</Data></Cell>
+    <Cell><Data ss:Type="String">kokand</Data></Cell>
+    <Cell><Data ss:Type="String">kokand.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Коканде</Data></Cell>
+    <Cell><Data ss:Type="String">(Узбекистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Узбекистан</Data></Cell>
+    <Cell><Data ss:Type="String">Маргилан</Data></Cell>
+    <Cell><Data ss:Type="String">Маргилан</Data></Cell>
+    <Cell><Data ss:Type="String">margilan</Data></Cell>
+    <Cell><Data ss:Type="String">margilan.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Маргилане</Data></Cell>
+    <Cell><Data ss:Type="String">(Узбекистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s16"><Data ss:Type="String">Азербайджан</Data></Cell>
+    <Cell><Data ss:Type="String">Баку </Data></Cell>
+    <Cell><Data ss:Type="String">Баку</Data></Cell>
+    <Cell><Data ss:Type="String">baku</Data></Cell>
+    <Cell><Data ss:Type="String">baku.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Баку</Data></Cell>
+    <Cell><Data ss:Type="String">(Азербайджан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Азербайджан</Data></Cell>
+    <Cell><Data ss:Type="String">Гянджа </Data></Cell>
+    <Cell><Data ss:Type="String">Гянджа</Data></Cell>
+    <Cell><Data ss:Type="String">giandzha</Data></Cell>
+    <Cell><Data ss:Type="String">giandzha.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Гяндже</Data></Cell>
+    <Cell><Data ss:Type="String">(Азербайджан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Азербайджан</Data></Cell>
+    <Cell><Data ss:Type="String">Кировабад</Data></Cell>
+    <Cell><Data ss:Type="String">Кировабад</Data></Cell>
+    <Cell><Data ss:Type="String">kirovabad</Data></Cell>
+    <Cell><Data ss:Type="String">kirovabad.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Кировабаде</Data></Cell>
+    <Cell><Data ss:Type="String">(Азербайджан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Азербайджан</Data></Cell>
+    <Cell><Data ss:Type="String">Сумгайыт (Сумгаит) </Data></Cell>
+    <Cell><Data ss:Type="String">Сумгаит</Data></Cell>
+    <Cell><Data ss:Type="String">sumgait</Data></Cell>
+    <Cell><Data ss:Type="String">sumgait.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Сумгаите</Data></Cell>
+    <Cell><Data ss:Type="String">(Азербайджан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Азербайджан</Data></Cell>
+    <Cell><Data ss:Type="String">Мингечевир (Мингечаур) </Data></Cell>
+    <Cell><Data ss:Type="String">Мингечевир</Data></Cell>
+    <Cell><Data ss:Type="String">mingechevir</Data></Cell>
+    <Cell><Data ss:Type="String">mingechevir.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Мингечевире</Data></Cell>
+    <Cell><Data ss:Type="String">(Азербайджан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Азербайджан</Data></Cell>
+    <Cell><Data ss:Type="String">Хырдалан </Data></Cell>
+    <Cell><Data ss:Type="String">Хырдалан</Data></Cell>
+    <Cell><Data ss:Type="String">khyrdalan</Data></Cell>
+    <Cell><Data ss:Type="String">khyrdalan.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Хырдалане</Data></Cell>
+    <Cell><Data ss:Type="String">(Азербайджан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Азербайджан</Data></Cell>
+    <Cell><Data ss:Type="String">Ширван </Data></Cell>
+    <Cell><Data ss:Type="String">Ширван</Data></Cell>
+    <Cell><Data ss:Type="String">shirvan</Data></Cell>
+    <Cell><Data ss:Type="String">shirvan.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Ширване</Data></Cell>
+    <Cell><Data ss:Type="String">(Азербайджан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Азербайджан</Data></Cell>
+    <Cell><Data ss:Type="String">Али-Байрамлы</Data></Cell>
+    <Cell><Data ss:Type="String">Али-Байрамлы</Data></Cell>
+    <Cell><Data ss:Type="String">ali-bairamly</Data></Cell>
+    <Cell><Data ss:Type="String">ali-bairamly.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Али-Байрамлы</Data></Cell>
+    <Cell><Data ss:Type="String">(Азербайджан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Азербайджан</Data></Cell>
+    <Cell><Data ss:Type="String">Нахчыван (Нахичевань) </Data></Cell>
+    <Cell><Data ss:Type="String">Нахчыван</Data></Cell>
+    <Cell><Data ss:Type="String">nakhchyvan</Data></Cell>
+    <Cell><Data ss:Type="String">nakhchyvan.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Нахчыване</Data></Cell>
+    <Cell><Data ss:Type="String">(Азербайджан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Азербайджан</Data></Cell>
+    <Cell><Data ss:Type="String">Шеки</Data></Cell>
+    <Cell><Data ss:Type="String">Шеки</Data></Cell>
+    <Cell><Data ss:Type="String">sheki</Data></Cell>
+    <Cell><Data ss:Type="String">sheki.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Шеки</Data></Cell>
+    <Cell><Data ss:Type="String">(Азербайджан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s16"><Data ss:Type="String">Грузия</Data></Cell>
+    <Cell><Data ss:Type="String">Тбилиси</Data></Cell>
+    <Cell><Data ss:Type="String">Тбилиси</Data></Cell>
+    <Cell><Data ss:Type="String">tbilisi</Data></Cell>
+    <Cell><Data ss:Type="String">tbilisi.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Тбилиси</Data></Cell>
+    <Cell><Data ss:Type="String">(Грузия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Грузия</Data></Cell>
+    <Cell><Data ss:Type="String">Кутаиси</Data></Cell>
+    <Cell><Data ss:Type="String">Кутаиси</Data></Cell>
+    <Cell><Data ss:Type="String">kutaisi</Data></Cell>
+    <Cell><Data ss:Type="String">kutaisi.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Кутаиси</Data></Cell>
+    <Cell><Data ss:Type="String">(Грузия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Грузия</Data></Cell>
+    <Cell><Data ss:Type="String">Рустави</Data></Cell>
+    <Cell><Data ss:Type="String">Рустави</Data></Cell>
+    <Cell><Data ss:Type="String">rustavi</Data></Cell>
+    <Cell><Data ss:Type="String">rustavi.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Рустави</Data></Cell>
+    <Cell><Data ss:Type="String">(Грузия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Грузия</Data></Cell>
+    <Cell><Data ss:Type="String">Батуми</Data></Cell>
+    <Cell><Data ss:Type="String">Батуми</Data></Cell>
+    <Cell><Data ss:Type="String">batumi</Data></Cell>
+    <Cell><Data ss:Type="String">batumi.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Батуми</Data></Cell>
+    <Cell><Data ss:Type="String">(Грузия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Грузия</Data></Cell>
+    <Cell><Data ss:Type="String">Гори</Data></Cell>
+    <Cell><Data ss:Type="String">Гори</Data></Cell>
+    <Cell><Data ss:Type="String">gori</Data></Cell>
+    <Cell><Data ss:Type="String">gori.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Гори</Data></Cell>
+    <Cell><Data ss:Type="String">(Грузия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Грузия</Data></Cell>
+    <Cell><Data ss:Type="String">Поти</Data></Cell>
+    <Cell><Data ss:Type="String">Поти</Data></Cell>
+    <Cell><Data ss:Type="String">poti</Data></Cell>
+    <Cell><Data ss:Type="String">poti.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Поти</Data></Cell>
+    <Cell><Data ss:Type="String">(Грузия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Грузия</Data></Cell>
+    <Cell><Data ss:Type="String">Зугдиди</Data></Cell>
+    <Cell><Data ss:Type="String">Зугдиди</Data></Cell>
+    <Cell><Data ss:Type="String">zugdidi</Data></Cell>
+    <Cell><Data ss:Type="String">zugdidi.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Зугдиди</Data></Cell>
+    <Cell><Data ss:Type="String">(Грузия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Грузия</Data></Cell>
+    <Cell><Data ss:Type="String">Самтреди а</Data></Cell>
+    <Cell><Data ss:Type="String">Самтреди-а</Data></Cell>
+    <Cell><Data ss:Type="String">samtredi-a</Data></Cell>
+    <Cell><Data ss:Type="String">samtredi-a.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Самтреди-а</Data></Cell>
+    <Cell><Data ss:Type="String">(Грузия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Грузия</Data></Cell>
+    <Cell><Data ss:Type="String">Хашури</Data></Cell>
+    <Cell><Data ss:Type="String">Хашури</Data></Cell>
+    <Cell><Data ss:Type="String">khashuri</Data></Cell>
+    <Cell><Data ss:Type="String">khashuri.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Хашури</Data></Cell>
+    <Cell><Data ss:Type="String">(Грузия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Грузия</Data></Cell>
+    <Cell><Data ss:Type="String">Чиатура</Data></Cell>
+    <Cell><Data ss:Type="String">Чиатура</Data></Cell>
+    <Cell><Data ss:Type="String">chiatura</Data></Cell>
+    <Cell><Data ss:Type="String">chiatura.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Чиатуре</Data></Cell>
+    <Cell><Data ss:Type="String">(Грузия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s16"><Data ss:Type="String">Таджикистан</Data></Cell>
+    <Cell><Data ss:Type="String">Душанбе</Data></Cell>
+    <Cell><Data ss:Type="String">Душанбе</Data></Cell>
+    <Cell><Data ss:Type="String">dushanbe</Data></Cell>
+    <Cell><Data ss:Type="String">dushanbe.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Душанбе</Data></Cell>
+    <Cell><Data ss:Type="String">(Таджикистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Таджикистан</Data></Cell>
+    <Cell><Data ss:Type="String">Худжанд</Data></Cell>
+    <Cell><Data ss:Type="String">Худжанд</Data></Cell>
+    <Cell><Data ss:Type="String">khudzhand</Data></Cell>
+    <Cell><Data ss:Type="String">khudzhand.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Худжанде</Data></Cell>
+    <Cell><Data ss:Type="String">(Таджикистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Таджикистан</Data></Cell>
+    <Cell><Data ss:Type="String">Курган-Тюбе</Data></Cell>
+    <Cell><Data ss:Type="String">Курган-Тюбе</Data></Cell>
+    <Cell><Data ss:Type="String">kurgan-tiube</Data></Cell>
+    <Cell><Data ss:Type="String">kurgan-tiube.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Курган-Тюбе</Data></Cell>
+    <Cell><Data ss:Type="String">(Таджикистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Таджикистан</Data></Cell>
+    <Cell><Data ss:Type="String">Куляб</Data></Cell>
+    <Cell><Data ss:Type="String">Куляб</Data></Cell>
+    <Cell><Data ss:Type="String">kuliab</Data></Cell>
+    <Cell><Data ss:Type="String">kuliab.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Кулябе</Data></Cell>
+    <Cell><Data ss:Type="String">(Таджикистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Таджикистан</Data></Cell>
+    <Cell><Data ss:Type="String">Истаравшан</Data></Cell>
+    <Cell><Data ss:Type="String">Истаравшан</Data></Cell>
+    <Cell><Data ss:Type="String">istaravshan</Data></Cell>
+    <Cell><Data ss:Type="String">istaravshan.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Истаравшане</Data></Cell>
+    <Cell><Data ss:Type="String">(Таджикистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Таджикистан</Data></Cell>
+    <Cell><Data ss:Type="String">Турсунзаде</Data></Cell>
+    <Cell><Data ss:Type="String">Турсунзаде</Data></Cell>
+    <Cell><Data ss:Type="String">tursunzade</Data></Cell>
+    <Cell><Data ss:Type="String">tursunzade.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Турсунзаде</Data></Cell>
+    <Cell><Data ss:Type="String">(Таджикистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Таджикистан</Data></Cell>
+    <Cell><Data ss:Type="String">Канибадам</Data></Cell>
+    <Cell><Data ss:Type="String">Канибадам</Data></Cell>
+    <Cell><Data ss:Type="String">kanibadam</Data></Cell>
+    <Cell><Data ss:Type="String">kanibadam.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Канибадаме</Data></Cell>
+    <Cell><Data ss:Type="String">(Таджикистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Таджикистан</Data></Cell>
+    <Cell><Data ss:Type="String">Исфара</Data></Cell>
+    <Cell><Data ss:Type="String">Исфара</Data></Cell>
+    <Cell><Data ss:Type="String">isfara</Data></Cell>
+    <Cell><Data ss:Type="String">isfara.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Исфаре</Data></Cell>
+    <Cell><Data ss:Type="String">(Таджикистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Таджикистан</Data></Cell>
+    <Cell><Data ss:Type="String">Вахдат</Data></Cell>
+    <Cell><Data ss:Type="String">Вахдат</Data></Cell>
+    <Cell><Data ss:Type="String">vakhdat</Data></Cell>
+    <Cell><Data ss:Type="String">vakhdat.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Вахдате</Data></Cell>
+    <Cell><Data ss:Type="String">(Таджикистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Таджикистан</Data></Cell>
+    <Cell><Data ss:Type="String">Пенджикент</Data></Cell>
+    <Cell><Data ss:Type="String">Пенджикент</Data></Cell>
+    <Cell><Data ss:Type="String">pendzhikent</Data></Cell>
+    <Cell><Data ss:Type="String">pendzhikent.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Пенджикенте</Data></Cell>
+    <Cell><Data ss:Type="String">(Таджикистан)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s16"><Data ss:Type="String">Молдова</Data></Cell>
+    <Cell><Data ss:Type="String">Кишинёв</Data></Cell>
+    <Cell><Data ss:Type="String">Кишинёв</Data></Cell>
+    <Cell><Data ss:Type="String">kishinev</Data></Cell>
+    <Cell><Data ss:Type="String">kishinev.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Кишиневе</Data></Cell>
+    <Cell><Data ss:Type="String">(Молдова)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Молдова</Data></Cell>
+    <Cell><Data ss:Type="String">Бельцы</Data></Cell>
+    <Cell><Data ss:Type="String">Бельцы</Data></Cell>
+    <Cell><Data ss:Type="String">beltcy</Data></Cell>
+    <Cell><Data ss:Type="String">beltcy.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Бельцах</Data></Cell>
+    <Cell><Data ss:Type="String">(Молдова)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Молдова</Data></Cell>
+    <Cell><Data ss:Type="String">Тирасполь </Data></Cell>
+    <Cell><Data ss:Type="String">Тирасполь</Data></Cell>
+    <Cell><Data ss:Type="String">tiraspol</Data></Cell>
+    <Cell><Data ss:Type="String">tiraspol.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Тирасполе</Data></Cell>
+    <Cell><Data ss:Type="String">(Молдова)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Молдова</Data></Cell>
+    <Cell><Data ss:Type="String">Бендеры </Data></Cell>
+    <Cell><Data ss:Type="String">Бендеры</Data></Cell>
+    <Cell><Data ss:Type="String">bendery</Data></Cell>
+    <Cell><Data ss:Type="String">bendery.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Бендеры</Data></Cell>
+    <Cell><Data ss:Type="String">(Молдова)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Молдова</Data></Cell>
+    <Cell><Data ss:Type="String">Рыбница </Data></Cell>
+    <Cell><Data ss:Type="String">Рыбница</Data></Cell>
+    <Cell><Data ss:Type="String">rybnitca</Data></Cell>
+    <Cell><Data ss:Type="String">rybnitca.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Рыбнице</Data></Cell>
+    <Cell><Data ss:Type="String">(Молдова)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Молдова</Data></Cell>
+    <Cell><Data ss:Type="String">Кахул</Data></Cell>
+    <Cell><Data ss:Type="String">Кахул</Data></Cell>
+    <Cell><Data ss:Type="String">kakhul</Data></Cell>
+    <Cell><Data ss:Type="String">kakhul.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Кахуле</Data></Cell>
+    <Cell><Data ss:Type="String">(Молдова)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Молдова</Data></Cell>
+    <Cell><Data ss:Type="String">Сороки</Data></Cell>
+    <Cell><Data ss:Type="String">Сороки</Data></Cell>
+    <Cell><Data ss:Type="String">soroki</Data></Cell>
+    <Cell><Data ss:Type="String">soroki.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Сороки</Data></Cell>
+    <Cell><Data ss:Type="String">(Молдова)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Молдова</Data></Cell>
+    <Cell><Data ss:Type="String">Орхей</Data></Cell>
+    <Cell><Data ss:Type="String">Орхей</Data></Cell>
+    <Cell><Data ss:Type="String">orkhei</Data></Cell>
+    <Cell><Data ss:Type="String">orkhei.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Орхей</Data></Cell>
+    <Cell><Data ss:Type="String">(Молдова)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Молдова</Data></Cell>
+    <Cell><Data ss:Type="String">Дубоссары </Data></Cell>
+    <Cell><Data ss:Type="String">Дубоссары</Data></Cell>
+    <Cell><Data ss:Type="String">dubossary</Data></Cell>
+    <Cell><Data ss:Type="String">dubossary.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Дубоссары</Data></Cell>
+    <Cell><Data ss:Type="String">(Молдова)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Молдова</Data></Cell>
+    <Cell><Data ss:Type="String">Приднестровье</Data></Cell>
+    <Cell><Data ss:Type="String">Приднестровье</Data></Cell>
+    <Cell><Data ss:Type="String">pridnestrove</Data></Cell>
+    <Cell><Data ss:Type="String">pridnestrove.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Приднестровье</Data></Cell>
+    <Cell><Data ss:Type="String">(Молдова)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Молдова</Data></Cell>
+    <Cell><Data ss:Type="String">Комрат </Data></Cell>
+    <Cell><Data ss:Type="String">Комрат</Data></Cell>
+    <Cell><Data ss:Type="String">komrat</Data></Cell>
+    <Cell><Data ss:Type="String">komrat.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Комрате</Data></Cell>
+    <Cell><Data ss:Type="String">(Молдова)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Молдова</Data></Cell>
+    <Cell><Data ss:Type="String">Гагаузия</Data></Cell>
+    <Cell><Data ss:Type="String">Гагаузия</Data></Cell>
+    <Cell><Data ss:Type="String">gagauziia</Data></Cell>
+    <Cell><Data ss:Type="String">gagauziia.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Гагаузие</Data></Cell>
+    <Cell><Data ss:Type="String">(Молдова)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s16"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Москва</Data></Cell>
+    <Cell><Data ss:Type="String">Москва</Data></Cell>
+    <Cell><Data ss:Type="String">moskva</Data></Cell>
+    <Cell><Data ss:Type="String">moskva.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Москве</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Санкт-Петербург</Data></Cell>
+    <Cell><Data ss:Type="String">Санкт-Петербург</Data></Cell>
+    <Cell><Data ss:Type="String">sankt-peterburg</Data></Cell>
+    <Cell><Data ss:Type="String">sankt-peterburg.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Санкт-Петербурге</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Новосибирск</Data></Cell>
+    <Cell><Data ss:Type="String">Новосибирск</Data></Cell>
+    <Cell><Data ss:Type="String">novosibirsk</Data></Cell>
+    <Cell><Data ss:Type="String">novosibirsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Новосибирске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Екатеринбург</Data></Cell>
+    <Cell><Data ss:Type="String">Екатеринбург</Data></Cell>
+    <Cell><Data ss:Type="String">ekaterinburg</Data></Cell>
+    <Cell><Data ss:Type="String">ekaterinburg.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Екатеринбурге</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Нижний Новгород</Data></Cell>
+    <Cell><Data ss:Type="String">Нижний-Новгород</Data></Cell>
+    <Cell><Data ss:Type="String">nizhnii-novgorod</Data></Cell>
+    <Cell><Data ss:Type="String">nizhnii-novgorod.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Нижнем-Новгороде</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Казань</Data></Cell>
+    <Cell><Data ss:Type="String">Казань</Data></Cell>
+    <Cell><Data ss:Type="String">kazan</Data></Cell>
+    <Cell><Data ss:Type="String">kazan.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Казани</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Челябинск</Data></Cell>
+    <Cell><Data ss:Type="String">Челябинск</Data></Cell>
+    <Cell><Data ss:Type="String">cheliabinsk</Data></Cell>
+    <Cell><Data ss:Type="String">cheliabinsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Челябинске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Омск</Data></Cell>
+    <Cell><Data ss:Type="String">Омск</Data></Cell>
+    <Cell><Data ss:Type="String">omsk</Data></Cell>
+    <Cell><Data ss:Type="String">omsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Омске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Самара</Data></Cell>
+    <Cell><Data ss:Type="String">Самара</Data></Cell>
+    <Cell><Data ss:Type="String">samara</Data></Cell>
+    <Cell><Data ss:Type="String">samara.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Самаре</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Ростов-на-Дону</Data></Cell>
+    <Cell><Data ss:Type="String">Ростов-на-Дону</Data></Cell>
+    <Cell><Data ss:Type="String">rostov-na-donu</Data></Cell>
+    <Cell><Data ss:Type="String">rostov-na-donu.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Ростове-на-Дону</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Уфа</Data></Cell>
+    <Cell><Data ss:Type="String">Уфа</Data></Cell>
+    <Cell><Data ss:Type="String">ufa</Data></Cell>
+    <Cell><Data ss:Type="String">ufa.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Уфе</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Красноярск</Data></Cell>
+    <Cell><Data ss:Type="String">Красноярск</Data></Cell>
+    <Cell><Data ss:Type="String">krasnoiarsk</Data></Cell>
+    <Cell><Data ss:Type="String">krasnoiarsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Красноярске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Пермь</Data></Cell>
+    <Cell><Data ss:Type="String">Пермь</Data></Cell>
+    <Cell><Data ss:Type="String">perm</Data></Cell>
+    <Cell><Data ss:Type="String">perm.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Перми</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Воронеж</Data></Cell>
+    <Cell><Data ss:Type="String">Воронеж</Data></Cell>
+    <Cell><Data ss:Type="String">voronezh</Data></Cell>
+    <Cell><Data ss:Type="String">voronezh.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Воронеже</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Волгоград</Data></Cell>
+    <Cell><Data ss:Type="String">Волгоград</Data></Cell>
+    <Cell><Data ss:Type="String">volgograd</Data></Cell>
+    <Cell><Data ss:Type="String">volgograd.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Волгограде</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Краснодар</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Краснодар</Data></Cell>
+    <Cell><Data ss:Type="String">krasnodar</Data></Cell>
+    <Cell><Data ss:Type="String">krasnodar.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Краснодаре</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Саратов</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Саратов</Data></Cell>
+    <Cell><Data ss:Type="String">saratov</Data></Cell>
+    <Cell><Data ss:Type="String">saratov.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Саратове</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Тюмень</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Тюмень</Data></Cell>
+    <Cell><Data ss:Type="String">tiumen</Data></Cell>
+    <Cell><Data ss:Type="String">tiumen.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Тюмени</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Тольятти</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Тольятти</Data></Cell>
+    <Cell><Data ss:Type="String">toliatti</Data></Cell>
+    <Cell><Data ss:Type="String">toliatti.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Тольятти</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Ижевск</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Ижевск</Data></Cell>
+    <Cell><Data ss:Type="String">izhevsk</Data></Cell>
+    <Cell><Data ss:Type="String">izhevsk.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Ижевске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Барнаул</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Барнаул</Data></Cell>
+    <Cell><Data ss:Type="String">barnaul</Data></Cell>
+    <Cell><Data ss:Type="String">barnaul.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Барнауле</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Иркутск</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Иркутск</Data></Cell>
+    <Cell><Data ss:Type="String">irkutsk</Data></Cell>
+    <Cell><Data ss:Type="String">irkutsk.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Иркутске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Ульяновск</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Ульяновск</Data></Cell>
+    <Cell><Data ss:Type="String">ulianovsk</Data></Cell>
+    <Cell><Data ss:Type="String">ulianovsk.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Ульяновске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Хабаровск</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Хабаровск</Data></Cell>
+    <Cell><Data ss:Type="String">khabarovsk</Data></Cell>
+    <Cell><Data ss:Type="String">khabarovsk.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Хабаровске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Ярославль</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Ярославль</Data></Cell>
+    <Cell><Data ss:Type="String">iaroslavl</Data></Cell>
+    <Cell><Data ss:Type="String">iaroslavl.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Ярославле</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Владивосток</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Владивосток</Data></Cell>
+    <Cell><Data ss:Type="String">vladivostok</Data></Cell>
+    <Cell><Data ss:Type="String">vladivostok.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Владивостоке</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Махачкала</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Махачкала</Data></Cell>
+    <Cell><Data ss:Type="String">makhachkala</Data></Cell>
+    <Cell><Data ss:Type="String">makhachkala.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Махачкале</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Томск</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Томск</Data></Cell>
+    <Cell><Data ss:Type="String">tomsk</Data></Cell>
+    <Cell><Data ss:Type="String">tomsk.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Томске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Оренбург</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Оренбург</Data></Cell>
+    <Cell><Data ss:Type="String">orenburg</Data></Cell>
+    <Cell><Data ss:Type="String">orenburg.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Оренбурге</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Кемерово</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Кемерово</Data></Cell>
+    <Cell><Data ss:Type="String">kemerovo</Data></Cell>
+    <Cell><Data ss:Type="String">kemerovo.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Кемерово</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Новокузнецк</Data></Cell>
+    <Cell><Data ss:Type="String">Новокузнецк</Data></Cell>
+    <Cell><Data ss:Type="String">novokuznetck</Data></Cell>
+    <Cell><Data ss:Type="String">novokuznetck.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Новокузнецке</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Рязань</Data></Cell>
+    <Cell><Data ss:Type="String">Рязань</Data></Cell>
+    <Cell><Data ss:Type="String">riazan</Data></Cell>
+    <Cell><Data ss:Type="String">riazan.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Рязани</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Астрахань</Data></Cell>
+    <Cell><Data ss:Type="String">Астрахань</Data></Cell>
+    <Cell><Data ss:Type="String">astrakhan</Data></Cell>
+    <Cell><Data ss:Type="String">astrakhan.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Астрахани</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Набережные Челны</Data></Cell>
+    <Cell><Data ss:Type="String">Набережные-Челны</Data></Cell>
+    <Cell><Data ss:Type="String">naberezhnye-chelny</Data></Cell>
+    <Cell><Data ss:Type="String">naberezhnye-chelny.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Набережных-Челнах</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Пенза</Data></Cell>
+    <Cell><Data ss:Type="String">Пенза</Data></Cell>
+    <Cell><Data ss:Type="String">penza</Data></Cell>
+    <Cell><Data ss:Type="String">penza.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Пензе</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Липецк</Data></Cell>
+    <Cell><Data ss:Type="String">Липецк</Data></Cell>
+    <Cell><Data ss:Type="String">lipetck</Data></Cell>
+    <Cell><Data ss:Type="String">lipetck.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Липецке</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Киров</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Киров</Data></Cell>
+    <Cell><Data ss:Type="String">kirov</Data></Cell>
+    <Cell><Data ss:Type="String">kirov.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Кирове</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Тула</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Тула</Data></Cell>
+    <Cell><Data ss:Type="String">tula</Data></Cell>
+    <Cell><Data ss:Type="String">tula.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Туле</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Чебоксары</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Чебоксары</Data></Cell>
+    <Cell><Data ss:Type="String">cheboksary</Data></Cell>
+    <Cell><Data ss:Type="String">cheboksary.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Чебоксарах</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Калининград</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Калининград</Data></Cell>
+    <Cell><Data ss:Type="String">kaliningrad</Data></Cell>
+    <Cell><Data ss:Type="String">kaliningrad.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Калининграде</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Курск</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Курск</Data></Cell>
+    <Cell><Data ss:Type="String">kursk</Data></Cell>
+    <Cell><Data ss:Type="String">kursk.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Курске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Улан - Удэ</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Улан-Удэ</Data></Cell>
+    <Cell><Data ss:Type="String">ulan-ude</Data></Cell>
+    <Cell><Data ss:Type="String">ulan-ude.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Улан-Удэ</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Ставрополь</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Ставрополь</Data></Cell>
+    <Cell><Data ss:Type="String">stavropol</Data></Cell>
+    <Cell><Data ss:Type="String">stavropol.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Ставрополе</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Балашиха</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Балашиха</Data></Cell>
+    <Cell><Data ss:Type="String">balashikha</Data></Cell>
+    <Cell><Data ss:Type="String">balashikha.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Балашихе</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Магнитогорск</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Магнитогорск</Data></Cell>
+    <Cell><Data ss:Type="String">magnitogorsk</Data></Cell>
+    <Cell><Data ss:Type="String">magnitogorsk.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Магнитогорске</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Тверь</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Тверь</Data></Cell>
+    <Cell><Data ss:Type="String">tver</Data></Cell>
+    <Cell><Data ss:Type="String">tver.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Твери</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Севастополь</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Севастополь</Data></Cell>
+    <Cell><Data ss:Type="String">sevastopol</Data></Cell>
+    <Cell><Data ss:Type="String">sevastopol.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Севастополе</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Иваново</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Иваново</Data></Cell>
+    <Cell><Data ss:Type="String">ivanovo</Data></Cell>
+    <Cell><Data ss:Type="String">ivanovo.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Иваново</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Брянск</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Брянск</Data></Cell>
+    <Cell><Data ss:Type="String">briansk</Data></Cell>
+    <Cell><Data ss:Type="String">briansk.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Брянске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Сочи</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Сочи</Data></Cell>
+    <Cell><Data ss:Type="String">sochi</Data></Cell>
+    <Cell><Data ss:Type="String">sochi.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Сочи</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Белгород</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Белгород</Data></Cell>
+    <Cell><Data ss:Type="String">belgorod</Data></Cell>
+    <Cell><Data ss:Type="String">belgorod.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Белгороде</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Нижний Тагил</Data></Cell>
+    <Cell><Data ss:Type="String">Нижний-Тагил</Data></Cell>
+    <Cell><Data ss:Type="String">nizhnii-tagil</Data></Cell>
+    <Cell><Data ss:Type="String">nizhnii-tagil.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Нижнем-Тагиле</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Владимир</Data></Cell>
+    <Cell><Data ss:Type="String">Владимир</Data></Cell>
+    <Cell><Data ss:Type="String">vladimir</Data></Cell>
+    <Cell><Data ss:Type="String">vladimir.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Владимире</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Архангельск</Data></Cell>
+    <Cell><Data ss:Type="String">Архангельск</Data></Cell>
+    <Cell><Data ss:Type="String">arkhangelsk</Data></Cell>
+    <Cell><Data ss:Type="String">arkhangelsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Архангельске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Сургут</Data></Cell>
+    <Cell><Data ss:Type="String">Сургут</Data></Cell>
+    <Cell><Data ss:Type="String">surgut</Data></Cell>
+    <Cell><Data ss:Type="String">surgut.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Сургуте</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Чита</Data></Cell>
+    <Cell><Data ss:Type="String">Чита</Data></Cell>
+    <Cell><Data ss:Type="String">chita</Data></Cell>
+    <Cell><Data ss:Type="String">chita.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Чите</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Калуга</Data></Cell>
+    <Cell><Data ss:Type="String">Калуга</Data></Cell>
+    <Cell><Data ss:Type="String">kaluga</Data></Cell>
+    <Cell><Data ss:Type="String">kaluga.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Калуге</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Симферополь</Data></Cell>
+    <Cell><Data ss:Type="String">Симферополь</Data></Cell>
+    <Cell><Data ss:Type="String">simferopol</Data></Cell>
+    <Cell><Data ss:Type="String">simferopol.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Симферополе</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Смоленск</Data></Cell>
+    <Cell><Data ss:Type="String">Смоленск</Data></Cell>
+    <Cell><Data ss:Type="String">smolensk</Data></Cell>
+    <Cell><Data ss:Type="String">smolensk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Смоленске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Волжский</Data></Cell>
+    <Cell><Data ss:Type="String">Волжский</Data></Cell>
+    <Cell><Data ss:Type="String">volzhskii</Data></Cell>
+    <Cell><Data ss:Type="String">volzhskii.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Волжском</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Курган</Data></Cell>
+    <Cell><Data ss:Type="String">Курган</Data></Cell>
+    <Cell><Data ss:Type="String">kurgan</Data></Cell>
+    <Cell><Data ss:Type="String">kurgan.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Кургане</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Орёл</Data></Cell>
+    <Cell><Data ss:Type="String">Орёл</Data></Cell>
+    <Cell><Data ss:Type="String">orel</Data></Cell>
+    <Cell><Data ss:Type="String">orel.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Орле</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Череповец</Data></Cell>
+    <Cell><Data ss:Type="String">Череповец</Data></Cell>
+    <Cell><Data ss:Type="String">cherepovetc</Data></Cell>
+    <Cell><Data ss:Type="String">cherepovetc.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Череповце</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Вологда</Data></Cell>
+    <Cell><Data ss:Type="String">Вологда</Data></Cell>
+    <Cell><Data ss:Type="String">vologda</Data></Cell>
+    <Cell><Data ss:Type="String">vologda.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Вологде</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Саранск</Data></Cell>
+    <Cell><Data ss:Type="String">Саранск</Data></Cell>
+    <Cell><Data ss:Type="String">saransk</Data></Cell>
+    <Cell><Data ss:Type="String">saransk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Саранске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Владикавказ</Data></Cell>
+    <Cell><Data ss:Type="String">Владикавказ</Data></Cell>
+    <Cell><Data ss:Type="String">vladikavkaz</Data></Cell>
+    <Cell><Data ss:Type="String">vladikavkaz.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">во Владикавказе</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Якутск</Data></Cell>
+    <Cell><Data ss:Type="String">Якутск</Data></Cell>
+    <Cell><Data ss:Type="String">iakutsk</Data></Cell>
+    <Cell><Data ss:Type="String">iakutsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Якутске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Мурманск</Data></Cell>
+    <Cell><Data ss:Type="String">Мурманск</Data></Cell>
+    <Cell><Data ss:Type="String">murmansk</Data></Cell>
+    <Cell><Data ss:Type="String">murmansk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Мурманске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Подольск</Data></Cell>
+    <Cell><Data ss:Type="String">Подольск</Data></Cell>
+    <Cell><Data ss:Type="String">podolsk</Data></Cell>
+    <Cell><Data ss:Type="String">podolsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Подольске</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Тамбов</Data></Cell>
+    <Cell><Data ss:Type="String">Тамбов</Data></Cell>
+    <Cell><Data ss:Type="String">tambov</Data></Cell>
+    <Cell><Data ss:Type="String">tambov.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Тамбове</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Грозный</Data></Cell>
+    <Cell><Data ss:Type="String">Грозный</Data></Cell>
+    <Cell><Data ss:Type="String">groznyi</Data></Cell>
+    <Cell><Data ss:Type="String">groznyi.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Грозном</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Стерлитамак</Data></Cell>
+    <Cell><Data ss:Type="String">Стерлитамак</Data></Cell>
+    <Cell><Data ss:Type="String">sterlitamak</Data></Cell>
+    <Cell><Data ss:Type="String">sterlitamak.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Стерлитамаке</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Петрозаводск</Data></Cell>
+    <Cell><Data ss:Type="String">Петрозаводск</Data></Cell>
+    <Cell><Data ss:Type="String">petrozavodsk</Data></Cell>
+    <Cell><Data ss:Type="String">petrozavodsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Петрозаводске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Кострома</Data></Cell>
+    <Cell><Data ss:Type="String">Кострома</Data></Cell>
+    <Cell><Data ss:Type="String">kostroma</Data></Cell>
+    <Cell><Data ss:Type="String">kostroma.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Костроме</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Нижневартовск</Data></Cell>
+    <Cell><Data ss:Type="String">Нижневартовск</Data></Cell>
+    <Cell><Data ss:Type="String">nizhnevartovsk</Data></Cell>
+    <Cell><Data ss:Type="String">nizhnevartovsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Нижневартовске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Новороссийск</Data></Cell>
+    <Cell><Data ss:Type="String">Новороссийск</Data></Cell>
+    <Cell><Data ss:Type="String">novorossiisk</Data></Cell>
+    <Cell><Data ss:Type="String">novorossiisk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Новороссийске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Йошкар-Ола</Data></Cell>
+    <Cell><Data ss:Type="String">Йошкар-Ола</Data></Cell>
+    <Cell><Data ss:Type="String">ioshkar-ola</Data></Cell>
+    <Cell><Data ss:Type="String">ioshkar-ola.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Йошкар-Оле</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Комсомольск-на-Амуре</Data></Cell>
+    <Cell><Data ss:Type="String">Комсомольск-на-Амуре</Data></Cell>
+    <Cell><Data ss:Type="String">komsomolsk-na-amure</Data></Cell>
+    <Cell><Data ss:Type="String">komsomolsk-na-amure.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Комсомольске-на-Амуре</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Таганрог</Data></Cell>
+    <Cell><Data ss:Type="String">Таганрог</Data></Cell>
+    <Cell><Data ss:Type="String">taganrog</Data></Cell>
+    <Cell><Data ss:Type="String">taganrog.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Таганроге</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Сыктывкар</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Сыктывкар</Data></Cell>
+    <Cell><Data ss:Type="String">syktyvkar</Data></Cell>
+    <Cell><Data ss:Type="String">syktyvkar.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Сыктывкаре</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Химки</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Химки</Data></Cell>
+    <Cell><Data ss:Type="String">khimki</Data></Cell>
+    <Cell><Data ss:Type="String">khimki.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Химках</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Нальчик</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Нальчик</Data></Cell>
+    <Cell><Data ss:Type="String">nalchik</Data></Cell>
+    <Cell><Data ss:Type="String">nalchik.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Нальчике</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Шахты</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Шахты</Data></Cell>
+    <Cell><Data ss:Type="String">shakhty</Data></Cell>
+    <Cell><Data ss:Type="String">shakhty.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Шахтах</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Нижнекамск</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Нижнекамск</Data></Cell>
+    <Cell><Data ss:Type="String">nizhnekamsk</Data></Cell>
+    <Cell><Data ss:Type="String">nizhnekamsk.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Нижнекамске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Братск</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Братск</Data></Cell>
+    <Cell><Data ss:Type="String">bratsk</Data></Cell>
+    <Cell><Data ss:Type="String">bratsk.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Братске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Дзержинск</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Дзержинск</Data></Cell>
+    <Cell><Data ss:Type="String">dzerzhinsk</Data></Cell>
+    <Cell><Data ss:Type="String">dzerzhinsk.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Дзержинске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Орск</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Орск</Data></Cell>
+    <Cell><Data ss:Type="String">orsk</Data></Cell>
+    <Cell><Data ss:Type="String">orsk.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Орске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Ангарск</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Ангарск</Data></Cell>
+    <Cell><Data ss:Type="String">angarsk</Data></Cell>
+    <Cell><Data ss:Type="String">angarsk.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Ангарске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Благовещенск</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Благовещенск</Data></Cell>
+    <Cell><Data ss:Type="String">blagoveshchensk</Data></Cell>
+    <Cell><Data ss:Type="String">blagoveshchensk.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Благовещенске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Энгельс</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Энгельс</Data></Cell>
+    <Cell><Data ss:Type="String">engels</Data></Cell>
+    <Cell><Data ss:Type="String">engels.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Энгельсе</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Старый Оскол</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Старый-Оскол</Data></Cell>
+    <Cell><Data ss:Type="String">staryi-oskol</Data></Cell>
+    <Cell><Data ss:Type="String">staryi-oskol.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Старом-Осколе</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Великий Новгород</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Великий-Новгород</Data></Cell>
+    <Cell><Data ss:Type="String">velikii-novgorod</Data></Cell>
+    <Cell><Data ss:Type="String">velikii-novgorod.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Великом-Новгороде</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Королёв</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Королёв</Data></Cell>
+    <Cell><Data ss:Type="String">korolev</Data></Cell>
+    <Cell><Data ss:Type="String">korolev.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Королеве</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Псков</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Псков</Data></Cell>
+    <Cell><Data ss:Type="String">pskov</Data></Cell>
+    <Cell><Data ss:Type="String">pskov.vend-shop.com</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">в Пскове</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Бийск</Data></Cell>
+    <Cell><Data ss:Type="String">Бийск</Data></Cell>
+    <Cell><Data ss:Type="String">biisk</Data></Cell>
+    <Cell><Data ss:Type="String">biisk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Бийске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Мытищи</Data></Cell>
+    <Cell><Data ss:Type="String">Мытищи</Data></Cell>
+    <Cell><Data ss:Type="String">mytishchi</Data></Cell>
+    <Cell><Data ss:Type="String">mytishchi.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Мытищах</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Прокопьевск</Data></Cell>
+    <Cell><Data ss:Type="String">Прокопьевск</Data></Cell>
+    <Cell><Data ss:Type="String">prokopevsk</Data></Cell>
+    <Cell><Data ss:Type="String">prokopevsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Прокопьевске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Южно-Сахалинск</Data></Cell>
+    <Cell><Data ss:Type="String">Южно-Сахалинск</Data></Cell>
+    <Cell><Data ss:Type="String">iuzhno-sakhalinsk</Data></Cell>
+    <Cell><Data ss:Type="String">iuzhno-sakhalinsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Южно-Сахалинске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Балаково</Data></Cell>
+    <Cell><Data ss:Type="String">Балаково</Data></Cell>
+    <Cell><Data ss:Type="String">balakovo</Data></Cell>
+    <Cell><Data ss:Type="String">balakovo.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Балаково</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Рыбинск</Data></Cell>
+    <Cell><Data ss:Type="String">Рыбинск</Data></Cell>
+    <Cell><Data ss:Type="String">rybinsk</Data></Cell>
+    <Cell><Data ss:Type="String">rybinsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Рыбинске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Армавир</Data></Cell>
+    <Cell><Data ss:Type="String">Армавир</Data></Cell>
+    <Cell><Data ss:Type="String">armavir</Data></Cell>
+    <Cell><Data ss:Type="String">armavir.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Армавире</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Люберцы</Data></Cell>
+    <Cell><Data ss:Type="String">Люберцы</Data></Cell>
+    <Cell><Data ss:Type="String">liubertcy</Data></Cell>
+    <Cell><Data ss:Type="String">liubertcy.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Люберцах</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Северодвинск</Data></Cell>
+    <Cell><Data ss:Type="String">Северодвинск</Data></Cell>
+    <Cell><Data ss:Type="String">severodvinsk</Data></Cell>
+    <Cell><Data ss:Type="String">severodvinsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Северодвинске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Петропавловск-Камчатский</Data></Cell>
+    <Cell><Data ss:Type="String">Петропавловск-Камчатский</Data></Cell>
+    <Cell><Data ss:Type="String">petropavlovsk-kamchatskii</Data></Cell>
+    <Cell><Data ss:Type="String">petropavlovsk-kamchatskii.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Петропавловском-Камчатском</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Абакан</Data></Cell>
+    <Cell><Data ss:Type="String">Абакан</Data></Cell>
+    <Cell><Data ss:Type="String">abakan</Data></Cell>
+    <Cell><Data ss:Type="String">abakan.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Абакане</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Норильск</Data></Cell>
+    <Cell><Data ss:Type="String">Норильск</Data></Cell>
+    <Cell><Data ss:Type="String">norilsk</Data></Cell>
+    <Cell><Data ss:Type="String">norilsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Норильске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Сызрань</Data></Cell>
+    <Cell><Data ss:Type="String">Сызрань</Data></Cell>
+    <Cell><Data ss:Type="String">syzran</Data></Cell>
+    <Cell><Data ss:Type="String">syzran.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Сызрани</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Волгодонск</Data></Cell>
+    <Cell><Data ss:Type="String">Волгодонск</Data></Cell>
+    <Cell><Data ss:Type="String">volgodonsk</Data></Cell>
+    <Cell><Data ss:Type="String">volgodonsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Волгодонске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Новочеркасск</Data></Cell>
+    <Cell><Data ss:Type="String">Новочеркасск</Data></Cell>
+    <Cell><Data ss:Type="String">novocherkassk</Data></Cell>
+    <Cell><Data ss:Type="String">novocherkassk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Новочеркасске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Каменск - Уральский</Data></Cell>
+    <Cell><Data ss:Type="String">Каменск-Уральский</Data></Cell>
+    <Cell><Data ss:Type="String">kamensk-uralskii</Data></Cell>
+    <Cell><Data ss:Type="String">kamensk-uralskii.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Каменск-Уральском</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Златоуст</Data></Cell>
+    <Cell><Data ss:Type="String">Златоуст</Data></Cell>
+    <Cell><Data ss:Type="String">zlatoust</Data></Cell>
+    <Cell><Data ss:Type="String">zlatoust.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Златоусте</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Уссурийск</Data></Cell>
+    <Cell><Data ss:Type="String">Уссурийск</Data></Cell>
+    <Cell><Data ss:Type="String">ussuriisk</Data></Cell>
+    <Cell><Data ss:Type="String">ussuriisk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Уссурийске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Электросталь</Data></Cell>
+    <Cell><Data ss:Type="String">Электросталь</Data></Cell>
+    <Cell><Data ss:Type="String">elektrostal</Data></Cell>
+    <Cell><Data ss:Type="String">elektrostal.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Электростали</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Салават</Data></Cell>
+    <Cell><Data ss:Type="String">Салават</Data></Cell>
+    <Cell><Data ss:Type="String">salavat</Data></Cell>
+    <Cell><Data ss:Type="String">salavat.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Салавате</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Находка</Data></Cell>
+    <Cell><Data ss:Type="String">Находка</Data></Cell>
+    <Cell><Data ss:Type="String">nakhodka</Data></Cell>
+    <Cell><Data ss:Type="String">nakhodka.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Находке</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Альметьевск</Data></Cell>
+    <Cell><Data ss:Type="String">Альметьевск</Data></Cell>
+    <Cell><Data ss:Type="String">almetevsk</Data></Cell>
+    <Cell><Data ss:Type="String">almetevsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Альметьевске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Миасс</Data></Cell>
+    <Cell><Data ss:Type="String">Миасс</Data></Cell>
+    <Cell><Data ss:Type="String">miass</Data></Cell>
+    <Cell><Data ss:Type="String">miass.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Миассе</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Керчь</Data></Cell>
+    <Cell><Data ss:Type="String">Керчь</Data></Cell>
+    <Cell><Data ss:Type="String">kerch</Data></Cell>
+    <Cell><Data ss:Type="String">kerch.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Керчи</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Березники</Data></Cell>
+    <Cell><Data ss:Type="String">Березники</Data></Cell>
+    <Cell><Data ss:Type="String">berezniki</Data></Cell>
+    <Cell><Data ss:Type="String">berezniki.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Березниках</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Рубцовск</Data></Cell>
+    <Cell><Data ss:Type="String">Рубцовск</Data></Cell>
+    <Cell><Data ss:Type="String">rubtcovsk</Data></Cell>
+    <Cell><Data ss:Type="String">rubtcovsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Рубцовске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Копейск</Data></Cell>
+    <Cell><Data ss:Type="String">Копейск</Data></Cell>
+    <Cell><Data ss:Type="String">kopeisk</Data></Cell>
+    <Cell><Data ss:Type="String">kopeisk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Копейске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Пятигорск</Data></Cell>
+    <Cell><Data ss:Type="String">Пятигорск</Data></Cell>
+    <Cell><Data ss:Type="String">piatigorsk</Data></Cell>
+    <Cell><Data ss:Type="String">piatigorsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Пятигорске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Красногорск</Data></Cell>
+    <Cell><Data ss:Type="String">Красногорск</Data></Cell>
+    <Cell><Data ss:Type="String">krasnogorsk</Data></Cell>
+    <Cell><Data ss:Type="String">krasnogorsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Красногорске</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Майкоп</Data></Cell>
+    <Cell><Data ss:Type="String">Майкоп</Data></Cell>
+    <Cell><Data ss:Type="String">maikop</Data></Cell>
+    <Cell><Data ss:Type="String">maikop.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Майкопе</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Коломна</Data></Cell>
+    <Cell><Data ss:Type="String">Коломна</Data></Cell>
+    <Cell><Data ss:Type="String">kolomna</Data></Cell>
+    <Cell><Data ss:Type="String">kolomna.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Коломне</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Одинцово</Data></Cell>
+    <Cell><Data ss:Type="String">Одинцово</Data></Cell>
+    <Cell><Data ss:Type="String">odintcovo</Data></Cell>
+    <Cell><Data ss:Type="String">odintcovo.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Одинцово</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Ковров</Data></Cell>
+    <Cell><Data ss:Type="String">Ковров</Data></Cell>
+    <Cell><Data ss:Type="String">kovrov</Data></Cell>
+    <Cell><Data ss:Type="String">kovrov.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Коврове</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Хасавюрт</Data></Cell>
+    <Cell><Data ss:Type="String">Хасавюрт</Data></Cell>
+    <Cell><Data ss:Type="String">khasaviurt</Data></Cell>
+    <Cell><Data ss:Type="String">khasaviurt.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Хасавюрте</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Кисловодск</Data></Cell>
+    <Cell><Data ss:Type="String">Кисловодск</Data></Cell>
+    <Cell><Data ss:Type="String">kislovodsk</Data></Cell>
+    <Cell><Data ss:Type="String">kislovodsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Кисловодске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Серпухов</Data></Cell>
+    <Cell><Data ss:Type="String">Серпухов</Data></Cell>
+    <Cell><Data ss:Type="String">serpukhov</Data></Cell>
+    <Cell><Data ss:Type="String">serpukhov.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Серпухове</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Новомосковск</Data></Cell>
+    <Cell><Data ss:Type="String">Новомосковск</Data></Cell>
+    <Cell><Data ss:Type="String">novomoskovsk</Data></Cell>
+    <Cell><Data ss:Type="String">novomoskovsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Новомосковске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Нефтекамск</Data></Cell>
+    <Cell><Data ss:Type="String">Нефтекамск</Data></Cell>
+    <Cell><Data ss:Type="String">neftekamsk</Data></Cell>
+    <Cell><Data ss:Type="String">neftekamsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Нефтекамске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Новочебоксарск</Data></Cell>
+    <Cell><Data ss:Type="String">Новочебоксарск</Data></Cell>
+    <Cell><Data ss:Type="String">novocheboksarsk</Data></Cell>
+    <Cell><Data ss:Type="String">novocheboksarsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Новочебоксарске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Нефтеюганск</Data></Cell>
+    <Cell><Data ss:Type="String">Нефтеюганск</Data></Cell>
+    <Cell><Data ss:Type="String">nefteiugansk</Data></Cell>
+    <Cell><Data ss:Type="String">nefteiugansk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Нефтеюганске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Первоуральск</Data></Cell>
+    <Cell><Data ss:Type="String">Первоуральск</Data></Cell>
+    <Cell><Data ss:Type="String">pervouralsk</Data></Cell>
+    <Cell><Data ss:Type="String">pervouralsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Первоуральске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Щёлково</Data></Cell>
+    <Cell><Data ss:Type="String">Щёлково</Data></Cell>
+    <Cell><Data ss:Type="String">shchelkovo</Data></Cell>
+    <Cell><Data ss:Type="String">shchelkovo.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Щёлково</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Черкесск</Data></Cell>
+    <Cell><Data ss:Type="String">Черкесск</Data></Cell>
+    <Cell><Data ss:Type="String">cherkessk</Data></Cell>
+    <Cell><Data ss:Type="String">cherkessk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Черкесске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Дербент</Data></Cell>
+    <Cell><Data ss:Type="String">Дербент</Data></Cell>
+    <Cell><Data ss:Type="String">derbent</Data></Cell>
+    <Cell><Data ss:Type="String">derbent.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Дербенте</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Батайск</Data></Cell>
+    <Cell><Data ss:Type="String">Батайск</Data></Cell>
+    <Cell><Data ss:Type="String">bataisk</Data></Cell>
+    <Cell><Data ss:Type="String">bataisk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Батайске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Орехово-Зуево</Data></Cell>
+    <Cell><Data ss:Type="String">Орехово-Зуево</Data></Cell>
+    <Cell><Data ss:Type="String">orekhovo-zuevo</Data></Cell>
+    <Cell><Data ss:Type="String">orekhovo-zuevo.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Орехово-Зуево</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Невинномысск</Data></Cell>
+    <Cell><Data ss:Type="String">Невинномысск</Data></Cell>
+    <Cell><Data ss:Type="String">nevinnomyssk</Data></Cell>
+    <Cell><Data ss:Type="String">nevinnomyssk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Невинномысске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Домодедово</Data></Cell>
+    <Cell><Data ss:Type="String">Домодедово</Data></Cell>
+    <Cell><Data ss:Type="String">domodedovo</Data></Cell>
+    <Cell><Data ss:Type="String">domodedovo.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Домодедово</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Димитровград</Data></Cell>
+    <Cell><Data ss:Type="String">Димитровград</Data></Cell>
+    <Cell><Data ss:Type="String">dimitrovgrad</Data></Cell>
+    <Cell><Data ss:Type="String">dimitrovgrad.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Димитровграде</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Кызыл</Data></Cell>
+    <Cell><Data ss:Type="String">Кызыл</Data></Cell>
+    <Cell><Data ss:Type="String">kyzyl</Data></Cell>
+    <Cell><Data ss:Type="String">kyzyl.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Кызыле</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Октябрьский</Data></Cell>
+    <Cell><Data ss:Type="String">Октябрьский</Data></Cell>
+    <Cell><Data ss:Type="String">oktiabrskii</Data></Cell>
+    <Cell><Data ss:Type="String">oktiabrskii.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Октябрьском</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Назрань</Data></Cell>
+    <Cell><Data ss:Type="String">Назрань</Data></Cell>
+    <Cell><Data ss:Type="String">nazran</Data></Cell>
+    <Cell><Data ss:Type="String">nazran.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Назрани</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Камышин</Data></Cell>
+    <Cell><Data ss:Type="String">Камышин</Data></Cell>
+    <Cell><Data ss:Type="String">kamyshin</Data></Cell>
+    <Cell><Data ss:Type="String">kamyshin.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Камышине</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Обнинск</Data></Cell>
+    <Cell><Data ss:Type="String">Обнинск</Data></Cell>
+    <Cell><Data ss:Type="String">obninsk</Data></Cell>
+    <Cell><Data ss:Type="String">obninsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Обнинске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Новый Уренгой</Data></Cell>
+    <Cell><Data ss:Type="String">Новый-Уренгой</Data></Cell>
+    <Cell><Data ss:Type="String">novyi-urengoi</Data></Cell>
+    <Cell><Data ss:Type="String">novyi-urengoi.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Новом-Уренгое</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Каспийск</Data></Cell>
+    <Cell><Data ss:Type="String">Каспийск</Data></Cell>
+    <Cell><Data ss:Type="String">kaspiisk</Data></Cell>
+    <Cell><Data ss:Type="String">kaspiisk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Каспийске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Муром</Data></Cell>
+    <Cell><Data ss:Type="String">Муром</Data></Cell>
+    <Cell><Data ss:Type="String">murom</Data></Cell>
+    <Cell><Data ss:Type="String">murom.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Муроме</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Раменское</Data></Cell>
+    <Cell><Data ss:Type="String">Раменское</Data></Cell>
+    <Cell><Data ss:Type="String">ramenskoe</Data></Cell>
+    <Cell><Data ss:Type="String">ramenskoe.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Раменском</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Новошахтинск</Data></Cell>
+    <Cell><Data ss:Type="String">Новошахтинск</Data></Cell>
+    <Cell><Data ss:Type="String">novoshakhtinsk</Data></Cell>
+    <Cell><Data ss:Type="String">novoshakhtinsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Новошахтинске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Жуковский</Data></Cell>
+    <Cell><Data ss:Type="String">Жуковский</Data></Cell>
+    <Cell><Data ss:Type="String">zhukovskii</Data></Cell>
+    <Cell><Data ss:Type="String">zhukovskii.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Жуковском</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Северск</Data></Cell>
+    <Cell><Data ss:Type="String">Северск</Data></Cell>
+    <Cell><Data ss:Type="String">seversk</Data></Cell>
+    <Cell><Data ss:Type="String">seversk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Северске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Пушкино</Data></Cell>
+    <Cell><Data ss:Type="String">Пушкино</Data></Cell>
+    <Cell><Data ss:Type="String">pushkino</Data></Cell>
+    <Cell><Data ss:Type="String">pushkino.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Пушкине</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Ноябрьск</Data></Cell>
+    <Cell><Data ss:Type="String">Ноябрьск</Data></Cell>
+    <Cell><Data ss:Type="String">noiabrsk</Data></Cell>
+    <Cell><Data ss:Type="String">noiabrsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Ноябрьске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Евпатория</Data></Cell>
+    <Cell><Data ss:Type="String">Евпатория</Data></Cell>
+    <Cell><Data ss:Type="String">evpatoriia</Data></Cell>
+    <Cell><Data ss:Type="String">evpatoriia.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Евпатории</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Ессентуки</Data></Cell>
+    <Cell><Data ss:Type="String">Ессентуки</Data></Cell>
+    <Cell><Data ss:Type="String">essentuki</Data></Cell>
+    <Cell><Data ss:Type="String">essentuki.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Ессентуках</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Елец</Data></Cell>
+    <Cell><Data ss:Type="String">Елец</Data></Cell>
+    <Cell><Data ss:Type="String">eletc</Data></Cell>
+    <Cell><Data ss:Type="String">eletc.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Ельце</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Ачинск</Data></Cell>
+    <Cell><Data ss:Type="String">Ачинск</Data></Cell>
+    <Cell><Data ss:Type="String">achinsk</Data></Cell>
+    <Cell><Data ss:Type="String">achinsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Ачинске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Артем</Data></Cell>
+    <Cell><Data ss:Type="String">Артем</Data></Cell>
+    <Cell><Data ss:Type="String">artem</Data></Cell>
+    <Cell><Data ss:Type="String">artem.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Артеме</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Сергиев Посад</Data></Cell>
+    <Cell><Data ss:Type="String">Сергиев-Посад</Data></Cell>
+    <Cell><Data ss:Type="String">sergiev-posad</Data></Cell>
+    <Cell><Data ss:Type="String">sergiev-posad.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Сергиевом-Посаде</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Арзамас</Data></Cell>
+    <Cell><Data ss:Type="String">Арзамас</Data></Cell>
+    <Cell><Data ss:Type="String">arzamas</Data></Cell>
+    <Cell><Data ss:Type="String">arzamas.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Арзамасе</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Элиста</Data></Cell>
+    <Cell><Data ss:Type="String">Элиста</Data></Cell>
+    <Cell><Data ss:Type="String">elista</Data></Cell>
+    <Cell><Data ss:Type="String">elista.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Элисте</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Новокуйбышевск</Data></Cell>
+    <Cell><Data ss:Type="String">Новокуйбышевск</Data></Cell>
+    <Cell><Data ss:Type="String">novokuibyshevsk</Data></Cell>
+    <Cell><Data ss:Type="String">novokuibyshevsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Новокуйбышевске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Бердск</Data></Cell>
+    <Cell><Data ss:Type="String">Бердск</Data></Cell>
+    <Cell><Data ss:Type="String">berdsk</Data></Cell>
+    <Cell><Data ss:Type="String">berdsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Бердске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Ногинск</Data></Cell>
+    <Cell><Data ss:Type="String">Ногинск</Data></Cell>
+    <Cell><Data ss:Type="String">noginsk</Data></Cell>
+    <Cell><Data ss:Type="String">noginsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Ногинске</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell><Data ss:Type="String">Долгопрудный</Data></Cell>
+    <Cell><Data ss:Type="String">Долгопрудный</Data></Cell>
+    <Cell><Data ss:Type="String">dolgoprudnyi</Data></Cell>
+    <Cell><Data ss:Type="String">dolgoprudnyi.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Долгопрудном</Data></Cell>
+    <Cell><Data ss:Type="String">(Россия)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Дубна</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Дубна</Data></Cell>
+    <Cell><Data ss:Type="String">dubna</Data></Cell>
+    <Cell><Data ss:Type="String">dubna.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Дубне</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Зеленоград</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Зеленоград</Data></Cell>
+    <Cell><Data ss:Type="String">zelenograd</Data></Cell>
+    <Cell><Data ss:Type="String">zelenograd.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Зеленограде</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Пущино</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Пущино</Data></Cell>
+    <Cell><Data ss:Type="String">puschino</Data></Cell>
+    <Cell><Data ss:Type="String">puschino.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Пущино</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Черноголовка</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Черноголовка</Data></Cell>
+    <Cell><Data ss:Type="String">chernogolovka</Data></Cell>
+    <Cell><Data ss:Type="String">chernogolovka.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Черноголовке</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Щелково</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Щелково</Data></Cell>
+    <Cell><Data ss:Type="String">schelkovo</Data></Cell>
+    <Cell><Data ss:Type="String">schelkovo.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Щелково</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Клин</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Клин</Data></Cell>
+    <Cell><Data ss:Type="String">klin</Data></Cell>
+    <Cell><Data ss:Type="String">klin.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Клину</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Чехов</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Чехов</Data></Cell>
+    <Cell><Data ss:Type="String">chehov</Data></Cell>
+    <Cell><Data ss:Type="String">chehov.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Чехове</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Ступино</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Ступино</Data></Cell>
+    <Cell><Data ss:Type="String">stupino</Data></Cell>
+    <Cell><Data ss:Type="String">stupino.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Ступино</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Реутов</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Реутов</Data></Cell>
+    <Cell><Data ss:Type="String">reutov</Data></Cell>
+    <Cell><Data ss:Type="String">reutov.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Реутове</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Видное</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Видное</Data></Cell>
+    <Cell><Data ss:Type="String">vidnoe</Data></Cell>
+    <Cell><Data ss:Type="String">vidnoe.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Видном</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Железнодорожный</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Железнодорожный</Data></Cell>
+    <Cell><Data ss:Type="String">zheleznodorojniy</Data></Cell>
+    <Cell><Data ss:Type="String">zheleznodorojniy.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Железнодорожном</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Солнечногорск</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Солнечногорск</Data></Cell>
+    <Cell><Data ss:Type="String">solnechnogorsk</Data></Cell>
+    <Cell><Data ss:Type="String">solnechnogorsk.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Солночногорске</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Дмитров</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Дмитров</Data></Cell>
+    <Cell><Data ss:Type="String">dmitrov</Data></Cell>
+    <Cell><Data ss:Type="String">dmitrov.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Дмитрове</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Павловский Посад</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Павловский-Посад</Data></Cell>
+    <Cell><Data ss:Type="String">pavlovskiy-posad</Data></Cell>
+    <Cell><Data ss:Type="String">pavlovskiy-posad.vend-shop.com</Data></Cell>
+    <Cell><Data ss:Type="String">в Павловском Посаде</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Россия</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Троицк</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Троицк</Data></Cell>
+    <Cell><Data ss:Type="String">troitsk</Data></Cell>
+    <Cell><Data ss:Type="String">troitsk</Data></Cell>
+    <Cell><Data ss:Type="String">в Троицке</Data></Cell>
+    <Cell><Data ss:Type="String">(Московская область)</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>8</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R262C3:R276C3</Range>
+   <Condition>
+    <Value1>AND(COUNTIF(R262C3:R276C3, RC)&gt;1,NOT(ISBLANK(RC)))</Value1>
+    <Format Style='color:#9C0006;background:#FFC7CE'/>
+   </Condition>
+  </ConditionalFormatting>
+ </Worksheet>
+</Workbook>

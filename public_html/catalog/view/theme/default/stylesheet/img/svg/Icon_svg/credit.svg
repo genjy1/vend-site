@@ -1,0 +1,30 @@
+<svg id="credit" xmlns="http://www.w3.org/2000/svg" width="104" height="119" viewBox="0 0 104 119">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        stroke: #4a259b;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 4px;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #e01186;
+      }
+
+      .cls-3 {
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <path id="Polygon_6" data-name="Polygon 6" class="cls-1" d="M533.992,4352.01l-50-28.75v-57.5l50-28.75,50,28.75v57.5Z" transform="translate(-482 -4235)"/>
+  <path id="Polygon_6-2" data-name="Polygon 6" class="cls-2" d="M533.992,4237.01l50,28.75v57.5l-50,28.75-50-28.75" transform="translate(-482 -4235)"/>
+  <path class="cls-3" d="M550.347,4308.72H517.635a1.64,1.64,0,0,0,0,3.28h32.711A1.64,1.64,0,0,0,550.347,4308.72Zm-29.668-4.25c-0.9,0-2.636.73-2.636,1.64a1.633,1.633,0,0,0,1.636,1.63H548.3a1.635,1.635,0,1,0,0-3.27h-0.408v-14.73H548.3a0.815,0.815,0,1,0,0-1.63H519.679a0.811,0.811,0,0,0-.817.81c0,0.45,1.366.82,1.817,0.82h0.409v14.73h-0.409Zm24.943-14.73v14.73h-5.907v-14.73h5.907Zm-8.179,0v14.73h-5.906v-14.73h5.906Zm-14.084,0h5.906v14.73h-5.906v-14.73Zm-5.724-3.11h32.727a1.634,1.634,0,0,0,.531-3.18l-16.23-7.31a1.651,1.651,0,0,0-1.342,0l-16.357,7.37A1.631,1.631,0,0,0,517.635,4286.63Z" transform="translate(-482 -4235)"/>
+</svg>

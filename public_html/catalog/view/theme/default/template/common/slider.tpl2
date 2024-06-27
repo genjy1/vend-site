@@ -1,0 +1,111 @@
+  <div class="banner" id="slider">
+		<div class="sliderContent">
+		<? foreach($slides as $key => $slide) { ?>
+			<div>
+			<!-- <div class="itembg" style="<? if($slide['background'] != ''){ echo 'background: url(' . $slide['background'] . ')'; } else {?> background: url(/image/home/bg_banner.png); <? } ?>"> -->
+      <div class="itembg" 
+      <?php if($key == 0){?> style="<? if($slide['background'] != ''){ echo 'background: url(' . $slide['background'] . ')'; } else {?> background: url(/image/home/bg_banner.png); <? } ?>" <?php } ?> 
+        data-style="<? if($slide['background'] != ''){ echo 'background: url(' . $slide['background'] . ')'; } else {?> background: url(/image/home/bg_banner.png); <? } ?>">
+			<div class="item">
+				<? if($slide['position'] == 0){ $class="left"; } else { $class = "right"; } ?>
+					<div class="textblock <? echo $class ?>">
+						<div class="caption" style="color: <? echo $slide['color_caption'] ?>">
+							<? echo $slide['caption'] ?>
+						</div>
+						<div class="text" style="color: <? echo $slide['color_text'] ?>">
+							<? echo $slide['text'] ?>
+						</div>
+						<div class="links" <? if($slide['text'] == "") {?> style="bottom: -310px;position: absolute;" <? } ?> >
+							<? foreach($slide['links'] as $k => $link){ ?>
+								<? if(isset($slide['text_links'][$k]) && $slide['text_links'][$k] != ''){ ?>
+									<a href="<? echo $link ?>" class="goto" <? if($slide['color_button'] != "#ffffff") { ?> style="background: <? echo $slide['color_button'] ?> " <? } ?>><? echo $slide['text_links'][$k] ?></a>
+								<? } else { ?>
+									<a href="<? echo $link ?>" class="goto" <? if($slide['color_button'] != "#ffffff") { ?> style="background: <? echo $slide['color_button'] ?> " <? } ?>>Перейти к автомату</a>
+								<? } ?>
+							<? } ?>
+						</div>
+<? if(isset($slide['time_end']) && $slide['time_end']) {?>
+			<div class="slidertimer">
+          <div class="timetext" style="margin-top: 10px;">До конца акции осталось</div>
+          <div style="margin-top: 10px;">
+            <div id="counter<? echo $slide['id']; ?>" data-date="<? echo $slide['time_end']; ?> 00:00:00"></div>
+          </div>
+          </div>
+          <script>
+            $(document).ready(function(){
+              $('#counter<? echo $slide['id']; ?>').TimeCircles();
+            });
+          </script>
+        <? } ?>
+					</div>
+					<? if($class == "left"){ $class="right"; } else { $class = "left"; } ?>
+				<img class="simg<? echo $class ?>" src="<? echo $slide['image'] ?>" alt="" />
+			</div>
+			</div>
+			</div>
+		<? } ?>
+		</div>
+  </div>
+  <script>
+  	$(document).ready(function(){
+	$('#slider').mobilyslider({
+		transition: '<? echo $effect; ?>',
+		animationSpeed: 600,
+		autoplay: true,
+		autoplaySpeed: 8000,
+		pauseOnHover: true,
+		bullets: true,
+		arrowsHide: false,
+		animationStart: function(){
+      $(".sliderContent .item:visible").parent().parent().next().find(".itembg").attr("style", $(".sliderContent .item:visible").parent().parent().next().find(".itembg").data("style"));
+    },
+		animationComplete: function(){
+			if(!$(".sliderContent .item:visible").find(".slidertimer").length){
+  				return;
+  			}
+  			if($(".sliderContent .item:visible").hasClass("fixed")){
+  				return;
+  			}
+			stop = $(".sliderContent .item:visible").find(".slidertimer").offset().top + $(".sliderContent .item:visible").find(".slidertimer").height();
+  			btop = $("#slider").find(".sliderBullets").offset().top;
+  			if(stop > btop){
+  						console.log(stop);
+  						console.log(btop);
+  				d = stop - btop;
+  				if((176 - d) > 0){
+  					$(".sliderContent .item:visible").addClass("fixed").find(".caption").css({"padding-top":(172 - d) + "px"});
+  				} else {
+  					$(".sliderContent .item:visible").addClass("fixed").find(".caption").css({"padding-top":10 + "px"})
+  				}
+  			}
+		}
+	});
+
+	$('#slider .item').on("click", function(){
+		href = $(this).find('a').eq(0).attr('href');
+		if(href == "#"){
+			$(".callme").trigger("click");
+		}
+	});
+
+  	});
+  </script>
+  <script>
+  	$(document).ready(function(){
+  		$(".sliderContent > div").map(function(){
+
+  			if(!$(this).find(".slidertimer").length){
+  				return;
+  			}
+  			stop = $(this).find(".slidertimer").offset().top + $(this).find(".slidertimer").height();
+  			btop = $(".sliderBullets").offset().top;
+  			console.log(stop);
+  			console.log(btop);
+  			if(stop > btop){
+  				$(".sliderContent .item:visible").addClass("fixed");
+  				d = stop - btop
+  				$(this).find(".caption").css({"padding-top":(176 - (d + 54)) + "px"});
+  			}
+  		});
+  	});
+  </script>

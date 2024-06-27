@@ -1,0 +1,94 @@
+.slider {
+float:left;
+width:100%;
+height:634px;
+position:relative;
+padding-bottom:26px;
+}
+.sliderContent {
+/*float:left;*/
+width:100%;
+height:634px;
+clear:both;
+position:relative;
+overflow:hidden;
+}
+
+.sliderArrows a {display:block;text-indent:-9999px;outline:none;z-index: 8;background-image:url(../gfx/prev_next.png);width:42px;height:42px;position:absolute;top:50%;margin-top:-34px;}
+
+.prev {
+background-position:0 0;
+left:15px;
+}
+
+.prev:hover {
+background-position:0 -44px;
+}
+
+.next {
+right:15px;
+background-position:-44px 0;
+}
+
+.next:hover {
+background-position:-44px -44px;
+}
+
+.sliderContent .item {position: relative;width: 1170px;height:684px;margin: 0 auto;}
+
+.sliderBullets {
+position:absolute;
+bottom:35px;
+left:50%;
+z-index:50;
+margin-left:-45px;
+}
+
+.sliderBullets a {display:block;float:left;text-indent:-9999px;outline:none;background-position: 0px -3px!important;margin-left:5px;width: 16px;height: 13px;background: url(../gfx/bullets.png) no-repeat;}
+
+.sliderBullets .active {background-position: 0 -16px!important;height: 16px;position: relative;top: -2px;}
+
+.sliderContent a {
+outline:none;
+}
+
+a {
+color:#fff;
+}
+
+a img {
+border:none;
+}
+#slider{
+	position: relative!important;
+}
+#slider .textblock{
+position:absolute;
+width:500px;
+margin-left:85px;
+}
+#slider .textblock .caption{
+font-size:56px;
+color:#fff;
+font-family:FuturaPTHeavy;
+padding-top:176px;
+}
+#slider .textblock .text{
+margin-top:40px;
+font-family:FuturaPTBook;
+font-size:18px;
+color:#fff;
+line-height:1.7;
+}
+#slider .textblock a{
+	background-image: url(../gfx/banar.png)!important;
+	background-position: right 6px top 6px!important;
+	margin-bottom: 15px;
+	padding-left: 23px;
+	text-align: left;
+	margin-top: 47px;
+	background-repeat: no-repeat!important;
+}
+#slider .right{
+	right: 30px;
+}

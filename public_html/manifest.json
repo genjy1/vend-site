@@ -1,0 +1,8 @@
+{
+  "name": "vendshop.com",  // Название сайта
+  "short_name": "VendShop",  // Название сайта
+  "display": "standalone",        // Указываем, где показывать уведомления
+  "gcm_sender_id": "548274249113", // Тот самый идентификатор приложения в Google Cloud Platform
+  // "theme_color": "#ffffff",
+  // "background_color": "#000000"
+}

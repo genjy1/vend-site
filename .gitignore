@@ -1,0 +1,31 @@
+
+#New GitIgnor config
+
+/public_html/config.php
+/public_html/admin/config.php
+/public_html/robots.txt
+ya*.html
+wmail*.html
+goog*.html
+/public_html/wa-data
+/public_html/image/*
+/public_html/image/cache/*
+/public_html/system/storage/*
+!/public_html/system/storage/upload/index.html
+!/public_html/system/storage/backup/index.html
+!/public_html/system/storage/cache/index.html
+!/public_html/system/storage/download/index.html
+!/public_html/system/storage/logs/index.html
+!/public_html/system/storage/marketplace/index.html
+!/public_html/system/storage/session/index.html
+!/public_html/system/storage/upload/index.html
+
+#PhpStorm idea
+/.idea
+
+public_html/system/storage/logs/error.log
+public_html/mailslog
+public_html/debug
+public_html/debugm
+public_html/mails
+

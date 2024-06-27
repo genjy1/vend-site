@@ -1,0 +1,95 @@
+<style>
+	#slider .textblock a{
+    background-image: none!important;
+}
+</style>
+  <div class="banner" id="slider">
+		<div class="sliderContent">
+		<? foreach($slides as $slide) { ?>
+			<div>
+			<div class="itembg" style="<? if($slide['background'] != ''){ echo 'background: url(' . $slide['background'] . ')'; } else {?> background: url(/image/home/bg_banner_mobile.png); <? } ?>">
+			<div class="item" data-bg="<? if($slide['background'] != ''){ echo $slide['background']; } ?>">
+				<? if($slide['position'] == 0){ $class="left"; } else { $class = "right"; } ?>
+					<div class="textblock <? echo $class ?>">
+						<div class="caption" style="color: <? echo $slide['color_caption'] ?>">
+							<? echo $slide['caption'] ?>
+						</div>
+						<div class="text" style="color: <? echo $slide['color_text'] ?>">
+							<? echo $slide['text'] ?>
+						</div>
+						<div class="links" <? if($slide['text'] == "") {?> style="top: 23vw;position: absolute;" <? } ?> >
+							<? foreach($slide['links'] as $k => $link){ ?>
+								<? if(isset($slide['text_links'][$k]) && $slide['text_links'][$k] != ''){ ?>
+									<a href="<? echo $link ?>" class="goto" <? if($slide['color_button'] != "#ffffff") { ?> style="color: <? echo $slide['color_button'] ?> " <? } ?>><? echo $slide['text_links'][$k] ?></a>
+								<? } else { ?>
+									<a href="<? echo $link ?>" class="goto" <? if($slide['color_button'] != "#ffffff") { ?> style="color: <? echo $slide['color_button'] ?> " <? } ?>>Перейти к автомату</a>
+								<? } ?>
+							<? } ?>
+						</div>
+				
+					</div>
+					<? if($class == "left"){ $class="right"; } else { $class = "left"; } ?>
+
+				<? if(isset($slide['time_end']) && $slide['time_end']) {?>
+			<div class="slidertimer">
+				<div class="tin">
+          <div class="timetext">До конца акции осталось</div>
+          <div  style="width: 170px; margin: 5px auto">
+            <div id="counter<? echo $slide['id']; ?>" data-date="<? echo $slide['time_end']; ?> 00:00:00"></div>
+            <div class="tm">
+            	<div>Дни</div>
+            	<div>Часы</div>
+            	<div>Минуты</div>
+            	<div>Секунды</div>
+            </div>
+          </div>
+      		</div>
+          </div>
+          <script>
+            $(document).ready(function(){
+              $('#counter<? echo $slide['id']; ?>').TimeCircles({text_size: 0.09});
+            });
+          </script>
+        <? } ?>
+
+				<img class="simg<? echo $class ?>" src="<? echo $slide['image'] ?>" alt="" />
+			</div>
+			</div>
+			</div>
+		<? } ?>
+		</div>
+  </div>
+  <script>
+  	$(document).ready(function(){
+  	var h = $(".sliderContent").height() - 10;
+  	$(".slidertimer").css({"margin-top": h + "px"});
+	$('#slider').mobilyslider({
+		transition: '<? echo $effect; ?>',
+		animationSpeed: 500,
+		autoplay: true,
+		autoplaySpeed: 8000,
+		pauseOnHover: true,
+		bullets: true,
+		arrowsHide: false,
+		animationStart: function(){},
+		animationComplete: function(){
+			ht = $(".itembg:visible").find(".slidertimer").height();
+			if($(".itembg:visible").find(".slidertimer").length){
+				$(".avtomati").css({"margin-top" : (ht - 20) + "px"});
+			} else {
+				$(".avtomati").css({"margin-top" : "0px"})
+			}
+		}
+	});
+
+	$('#slider .item').on("click", function(){
+		href = $(this).find('a').eq(0).attr('href');
+		if(href == "#"){
+			$(".callme").trigger("click");
+		} else {
+			// location.href = href;
+		}
+	});
+
+  	});
+  </script>

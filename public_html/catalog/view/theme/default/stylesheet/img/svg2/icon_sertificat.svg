@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e01186;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icon_sertificat" class="cls-1" d="M440,1625v16h13v-11h-5v-5h-8Zm9,0v4h4Zm-7,4h4v1h-4v-1Zm0,3h9v1h-9v-1Zm0,3h7v1h-7v-1Zm0,3h9v1h-9v-1Z" transform="translate(-440 -1625)"/>
+</svg>

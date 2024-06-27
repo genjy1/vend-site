@@ -1,0 +1,32 @@
+version: '3'
+services:
+  vend-shop-com:
+    build: ./
+    
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./public_html:/var/www/html
+      - ./tools:/var/www/tools	
+    depends_on:
+      - mysql
+    command: >
+      bash /var/www/tools/start.sh 
+
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=opencart
+      - MYSQL_DATABASE=opencart
+
+  adminer:
+    image: adminer:latest
+    environment:
+      ADMINER_DEFAULT_SERVER: mysql
+    depends_on:
+      - mysql
+    ports:
+      - "8080:8080"
