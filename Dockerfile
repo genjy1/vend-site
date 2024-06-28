@@ -13,7 +13,8 @@ RUN apt-get update \
   && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
   && docker-php-ext-install -j$(nproc) gd zip mysqli curl \
   && docker-php-ext-enable gd zip mysqli curl \
-  && apt-get install -y default-mysql-client
+  && apt-get install -y default-mysql-client \
+  && apt-get install -y sshfs
 
 RUN a2enmod rewrite
 

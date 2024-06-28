@@ -1,6 +1,9 @@
 
 #New GitIgnor config
 
+/tools/projectloaded.lock
+/sql/vend_back.sql
+
 /public_html/config.php
 /public_html/admin/config.php
 /public_html/robots.txt

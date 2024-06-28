@@ -1,11 +1,17 @@
 #!bash
 
-if [ ! -f /var/www/tools/databaseloaded.lock ]; then
+if [ ! -f /var/www/tools/projectloaded.lock ]; then
     echo "Waiting for MySQL Server"
+
 	wait-for-it mysql:3306 -t 60 
+    
     echo "Loading current database"
-	mysql -u root -h mysql --password=opencart opencart < /var/www/sql/vend_db.sql
-	touch /var/www/tools/databaseloaded.lock
+
+    if [ -f /var/www/sql/vend_back.sql ] then
+	   mysql -u root -h mysql --password=opencart opencart < /var/www/sql/vend_back.sql
+    else 
+       mysql -u root -h mysql --password=opencart opencart < /var/www/sql/vend_db.sql
+    fi
 
     echo "generating new localhost ssl-cert"
 
@@ -28,6 +34,8 @@ if [ ! -f /var/www/tools/databaseloaded.lock ]; then
     cp -f /var/www/tools/config.docker.php /var/www/html/config.php
 
     cp -f /var/www/tools/admin-config.docker.php /var/www/html/admin/config.php
+
+    touch /var/www/tools/projectloaded.lock
 fi
 
 echo "Apache Start"

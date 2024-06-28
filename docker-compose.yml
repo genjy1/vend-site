@@ -7,8 +7,9 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./public_html:/var/www/html
-      - ./tools:/var/www/tools	
+      - ./public_html:/var/www/html:rw
+      - ./tools:/var/www/tools:rw	
+      - ./sql:/var/www/sql:rw
     depends_on:
       - mysql
     command: >
