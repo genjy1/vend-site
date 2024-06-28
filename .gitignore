@@ -1,6 +1,7 @@
 
 #New GitIgnor config
 
+/public_html/phpmyadmin/*
 /tmp/*
 
 /tools/projectloaded.lock
