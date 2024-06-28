@@ -3,7 +3,7 @@
 BACKUP_HOST="89.22.150.26"
 BACKUP_PORT="3567"
 BACKUP_USER="backupsrv"
-CURRENTTIME=`date +%s`
+CURRENTTIME=`date +%F`
 PROJECT_FOLDER="/var/www/vend-shop.com"
 
 if [ ! -d /mnt/backfs ]

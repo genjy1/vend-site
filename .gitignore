@@ -1,6 +1,8 @@
 
 #New GitIgnor config
 
+/tmp/*
+
 /tools/projectloaded.lock
 /sql/vend_back.sql
 
