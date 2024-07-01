@@ -11,7 +11,7 @@ then
 	mkdir $TMP_DIR
 fi 
 
-LAST_BACKUP=`ssh $BACKUP_USER@$BACKUP_HOST "ls -p -t /home/backupsrv/*.tar.gz | head -1"`
+LAST_BACKUP=`ssh $BACKUP_USER@$BACKUP_HOST "ls -p -t /home/backupsrv/vend-shop-site*.tar.gz | head -1"`
 
 
 if [ ! -d $TMP_DIR/vend-site ]
