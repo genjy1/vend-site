@@ -4,10 +4,10 @@
           location.href = $(this).val();
         });
         $('#helpcats').styler();
-        // $("#request")
-        // $("#offer")
-        // $("#win")
-        // $("#fast")
+        $("#request").feedback();
+        $("#offer").feedback();
+        $("#win").feedback();
+        $("#fast").feedback();
         $(".callme:not(.postform), a[href=\"#callme\"]").on("click", function(e){
           e.preventDefault();
           $(".win_white:eq(0), .winoverlay").show();
@@ -265,13 +265,3 @@ $("input[type=tel]").attr("autocomplete", "off")
 
 <link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
 <script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=0c876d500cf85fe091c58e7f9df2eff0" charset="UTF-8" async></script>
-    <!-- calltouch -->
-    <script type="text/javascript">(function(w, d,n,c){w.CalltouchDataObject=n;w[n]=function(){w[n]["callbacks"].push(arguments)};
-                if(!w[n]["callbacks"]){w[n]["callbacks"]=[]}w[n]["loaded"]=false;
-                if(typeof c!=="object"){c=[c]}w[n]["counters"]=c;for(var i=0;i<c.length;i+=1){p(c[i])}
-                function p(cId){var a=d.getElementsByTagName("script")[0],
-        s=d.createElement("script"),i=function(){a.parentNode.insertBefore(s,a)};
-                s.type="text/javascript";s.async=true;s.src="https://mod.calltouch.ru/init.js?id="+cId;
-                if(w.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",i,false)}else{i()}}
-                })(window,document,"ct","a32r4yxz");</script>
-    <!-- calltouch -->

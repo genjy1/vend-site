@@ -10,7 +10,7 @@
   </div>
   <script>
 $(document).ready(function() {
-  // $("#feedback").feedback();
+  $("#feedback").feedback();
 
   $(".partners").owlCarousel({
  

@@ -22,12 +22,6 @@ menu, nav, section, audio, video {
   font-size: 100%;
   vertical-align: baseline;
 }
-
-body{
-  font-family: 'FuturaPTHeavy';
-  font-size: 16px;
-}
-
 html {
   line-height: 1;
 }
@@ -72,43 +66,6 @@ body {
   *zoom: 1;
   clear: both;
   padding: 0 15px;
-}
-
-.feedback-form{
-  display: flex;
-  flex-direction: column;
-}
-
-.btn-submit{
-  clear: both;
-  display: block;
-  margin: 0 auto 0;
-  width: 233px;
-  padding-left: 32px;
-  text-align: center;
-  font-family: FuturaPTHeavy;
-  color:  #ffffff;
-  font-size: 13px;
-  font-weight: 800;
-  padding-top: 14px;
-  border-radius: 30px;
-  line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  border-width: 1px;
-  border-color:  #ffffff;
-  border-style: solid;
-  min-width: 220px;
-  padding-right: 43px;
-  height: 50px;
-  display: inline-block;
-  background: transparent;
-}
-
-.btn-submit:hover{
-  background-color: #e01186!important;
-  border: 1px solid #e01186!important;
-  color: #fff!important;
 }
 
 header {
@@ -332,6 +289,7 @@ header .cart span#totals {
   height: 23px;
   text-align: center;
   margin-left: 15px;
+  padding-top: 5px;
   position: relative;
   top: -1px;
 }
@@ -3977,9 +3935,6 @@ button.calc{
   .callbackform .formcol {
       width: 480px;
   }
-
-
-
   .callbackform .formcol.last{
   }
   .callbackform {
