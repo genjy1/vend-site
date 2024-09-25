@@ -238,7 +238,7 @@ $(document).ready(function(){
     
   </div>
   </section>-->
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://www.google.com/recaptcha/api.js?render=6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6"></script>
     <script>
         grecaptcha.ready(function () {
@@ -254,51 +254,54 @@ $(document).ready(function(){
   <div class="callbackform">
     <h2>Оставьте заявку на автомат</h2>
     <div class="subtitle">или другую нашу продукцию</div>
-    <form data-template="request" id="feedback" data-subject="Заявка с главной страницы">
+    <form data-template="request" id="feedback" data-subject="Заявка с главной страницы" class="feedback-form">
       <div class="wl"><span>Заполните поля:</span></div>
-      <div class="formcol">
-        <input type="text" placeholder="Как вас зовут" name="name" required>
-        <input type="text" placeholder="Электронная почта" name="email" required >
-        <input type="text" name="region" required placeholder="Ваш регион">
-        <div class="radios has">
-              <div>
-                <input type="radio" checked="checked" name="has" id="h_has_y" value="Да"> <label for="h_has_y"> <span></span>У меня есть автоматы</label>
-              </div>
+        <div class="input-groups">
+            <div class="formcol">
+                <input type="text" placeholder="Как вас зовут" name="name" required>
+                <input type="text" placeholder="Электронная почта" name="email" required >
+                <input type="text" name="region" required placeholder="Ваш регион">
+                <div class="radios has">
+                    <div>
+                        <input type="radio" checked="checked" name="has" id="h_has_y" value="Да"> <label for="h_has_y"> <span></span>У меня есть автоматы</label>
+                    </div>
 
-              <div>
-                <input type="radio" name="has" id="h_has_no" value="Нет"> <label for="h_has_no"> <span></span>У меня нет автоматов </label>
-              </div>
+                    <div>
+                        <input type="radio" name="has" id="h_has_no" value="Нет"> <label for="h_has_no"> <span></span>У меня нет автоматов </label>
+                    </div>
+                </div>
+                <textarea placeholder="Какие автоматы интересуют?" name="note"></textarea>
+            </div>
+            <div class="formcol tel">
+                <div class="teldiv"><input type="tel" name="ft" maxlength="2" value = "+7" required >
+                    <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
+                    <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required >
+                </div>
+                <input type="text" name="amount" required placeholder="Количество автоматов">
+                <div class="radios">
+                    <div>
+                        <input type="radio" checked="checked" name="firma" id="h_fiz" value="Физическое лицо">
+                        <label for="h_fiz"> <span></span>Физическое лицо</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="firma" id="h_jur" value="Юридическое лицо">
+                        <label for="h_jur"> <span></span>Юридическое лицо </label>
+                    </div>
+                </div>
+                <div class="credit">
+                    <input type="checkbox" name="credit" id="crdit"><label for="crdit"> Кредит/лизинг</label>
+                </div>
+            </div>
+            <div class="formcol last">
+                <div class="ftel">Или позвоните телефону:</div>
+                <div class="numtel">8-800-775-73-49</div>
+                <div class="text">бесплатный звонок по России</div>
+            </div>
         </div>
-        <textarea placeholder="Какие автоматы интересуют?" name="note"></textarea>
-      </div>
-      <div class="formcol tel">
-        <div class="teldiv"><input type="tel" name="ft" maxlength="2" value = "+7" required >
-            <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
-            <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required >
-        </div>
-        <input type="text" name="amount" required placeholder="Количество автоматов">
-        <div class="radios">
-              <div>
-                <input type="radio" checked="checked" name="firma" id="h_fiz" value="Физическое лицо"> 
-                <label for="h_fiz"> <span></span>Физическое лицо</label>
-              </div>
-              <div>
-                <input type="radio" name="firma" id="h_jur" value="Юридическое лицо"> 
-                <label for="h_jur"> <span></span>Юридическое лицо </label>
-              </div>
-        </div>
-        <div class="credit">
-            <input type="checkbox" name="credit" id="crdit"><label for="crdit"> Кредит/лизинг</label> 
-        </div>
-    </div>
-      <div class="formcol last">
-        <div class="ftel">Или позвоните телефону:</div>
-        <div class="numtel">8-800-775-73-49</div>
-        <div class="text">бесплатный звонок по России</div>
-      </div>
+
       <input type="hidden" name="recaptcha_response" id="recaptchaResponseHome">
-      <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?> ?>">
-      <a href="javascript:void(0)" id="submit" class="goto submit">Отправить заявку</a>
+      <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)  ?>">
+        <button type="submit" class="btn-submit px-3 py-3" >Отправить заявку</button>
     </form>
   </div>
   </section>

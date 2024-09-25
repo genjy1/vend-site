@@ -17,14 +17,12 @@ class ControllerCommonFeedback extends Controller {
 			$data = html_entity_decode($this->request->post['data']);
 			$data = json_decode($data, true);
 			$json['data'] = $data;
-            $_SESSION['json_data'] = $json['data'];
 			$ok = true;
 		} else {
 			$json['error'] = 1;
 			$this->response->addHeader('Content-Type: application/json');
 			$this->response->setOutput(json_encode($json));
 			$ok = false;
-
 			//exit;
 		}
 		
@@ -50,7 +48,7 @@ class ControllerCommonFeedback extends Controller {
 		 	
 		     // Создаем POST запрос
 		    $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-		    $recaptcha_secret = RECAPTCHA_SECRET_KEY;
+		    $recaptcha_secret = '6Lcn7DgpAAAAAD_JnNF74xcvgnxfBDC7aF_7-yhL';
 		    $recaptcha_response = $data['recaptcha_response'];
 		 
 		    // Отправляем POST запрос и декодируем результаты ответа
@@ -60,50 +58,17 @@ class ControllerCommonFeedback extends Controller {
 		 	file_put_contents($_SERVER['DOCUMENT_ROOT']."/debugm", print_r($recaptcha, true), FILE_APPEND);
 		 
 		    // Принимаем меры в зависимости от полученного результата
-		    if ($_SESSION['captcha_valid']) {
+		    if ($recaptcha->score >= 0.5) { 
 		    	//print_r(111);
 			// Проверка пройдена - отправляем сообщение.*/
 
+				$template = $data['template'];
 
-				 $template = $data['template'];
-				 $your_site_id = CALLTOUCH_ID;
-
-				 if(isset($data["subject"]) && $data["subject"] != "" && $data["subject"] !="undefined"){
-				 	$subject = $data["subject"];
-				 } else {
-				 	$subject = "Новое уведомление";
-				 }
-				 // Данные формы готовы для обработки
-
-    			 // Calltouch API URL
-			     $calltouch_url = 'https://api.calltouch.ru/calls-service/RestAPI/requests/'.$your_site_id.'/register/';
-
-			     // Параметры для отправки
-			     $calltouch_data = array(
-			         'subject' => isset($data['subject']) ? $data['subject'] : 'Заявка с сайта',
-			         'phoneNumber' => isset($data['phone']) ? $data['phone'] : '', // телефон из формы
-			         'email' => isset($data['email']) ? $data['email'] : '', // email из формы
-			         'fio' => isset($data['name']) ? $data['name'] : '', // имя клиента
-			         'requestUrl' => $_SERVER['HTTP_REFERER'], // страница отправки формы
-			         'comment' => isset($data['comment']) ? $data['comment'] : '', // комментарий или сообщение
-			         'sessionId' => '', // можно передавать идентификатор сессии (необязательно)
-			     );
-
-			     // Отправка запроса в Calltouch
-			     $ch = curl_init();
-			     curl_setopt($ch, CURLOPT_URL, $calltouch_url);
-			     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-			     curl_setopt($ch, CURLOPT_POST, 1);
-			     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($calltouch_data));
-			     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
-			     $response = curl_exec($ch);
-			     curl_close($ch);
-
-			     // Логирование ответа Calltouch
-			     file_put_contents($_SERVER['DOCUMENT_ROOT']."/calltouch_log", print_r($response, true), FILE_APPEND);
-
-
-
+				if(isset($data["subject"]) && $data["subject"] != "" && $data["subject"] !="undefined"){
+					$subject = $data["subject"];
+				} else {
+					$subject = "Новое уведомление";
+				}
 
 		    if(isset($data['email']) && filter_var($data['email'], FILTER_VALIDATE_EMAIL))
 		    {
