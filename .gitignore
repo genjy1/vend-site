@@ -25,7 +25,7 @@ goog*.html
 !/public_html/system/storage/marketplace/index.html
 !/public_html/system/storage/session/index.html
 !/public_html/system/storage/upload/index.html
-#/mysql/*
+/mysql/*
 #PhpStorm idea
 /.idea
 
