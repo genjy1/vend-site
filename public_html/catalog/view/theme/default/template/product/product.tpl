@@ -381,7 +381,11 @@ items: [{
       <input type="hidden" id="derivalPoint">
       <input type="hidden" id="arrivalPoint">
       <button id="delcalc">Рассчитать</button>
-      <div class="total"><div class="spiner"></div><span>Всего: </span><span id="tot">0</span></div>
+      <div class="total"><div class="spiner"></div>
+        <div class="total-text__wrapper">
+          <span style="color: #e01186">Всего: </span><span id="tot">0</span>
+        </div>
+      </div>
     </form>
     <script>
       $(document).ready(function(){
@@ -423,17 +427,6 @@ items: [{
 
 
     </div>
-    
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6"></script>
-    <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6', { action: 'contact' }).then(function (token) {
-                var recaptchaResponse = document.getElementById('recaptchaResponseProd');
-                recaptchaResponse.value = token;
-            });
-        });
-    </script>
-    
     <div class="questform">
       <div class="title">Есть вопросы? Задайте их менеджеру!</div>
       <div class="subtitle">Можете позвонить по телефону 8 (800) 775-73-49 или задать через форму ниже</div>
@@ -473,8 +466,7 @@ items: [{
           </div>
           <textarea placeholder="Какие автоматы интересуют?" required name="note"></textarea>
         </div>
-        <input type="hidden" name="recaptcha_response" id="recaptchaResponseProd">
-        <button id="submit" class="submit">Отправить заявку</button>
+                <button id="submit" class="submit">Отправить заявку</button>
         <div class="prv">
             Нажимая на кнопку "отправить", вы даете согласие на обработку <a href="https://vend-shop.com/privacy/">персональных данных</a>.
           </div>
@@ -646,7 +638,6 @@ items: [{
 <? if($avtomat){ ?>
   <script type="text/javascript">
     $(document).ready(function(){
-      $("#offerform").feedback();
       $("#getOffer, .getoffer").on("click", function(){
         $("#offer .zvonok").text($(this).text());
         $("#offer #win").attr("data-subject", $(this).text());
@@ -716,7 +707,7 @@ items: [{
     $(document).ready(function(){
 
 
-      if($(".desin").height() <= 390){
+      if($(".desin").height() <= 290){
         $(".descbut").hide();
       }
       $(".descbut").on("click", function(){
@@ -895,7 +886,7 @@ items: [{
         }
       });
 
-      $("#feedback").feedback();
+      // $("#feedback").feedback();
 
       $('.top div').on('click', function(){
        $('.top div').removeClass('active');

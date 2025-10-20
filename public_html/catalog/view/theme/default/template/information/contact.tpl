@@ -18,10 +18,6 @@
             <div>Московская область, Сергиево-Посадский район, город </div>
             <div><span itemprop="addressLocality">Сергиев Посад</span>, <span itemprop="streetAddress">Новоугличское шоссе, дом 67</span></div>
           </div>
-          <div class="block" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <div class="title">Бухгалтерия:</div>
-            <div><span itemprop="addressLocality">Москва,</span> <span itemprop="streetAddress">Береговой проезд, дом 4, строение 1</span></div>
-          </div>
           <div class="block">
             <div class="title">Режим работы:</div>
             <div>Понедельник – пятница с 9:00 до 18:00,</div>
@@ -80,17 +76,6 @@
             <div>Водопьянов Михаил Алексеевич</div>
           </div>
         </div>
-        
-        <script src="https://www.google.com/recaptcha/api.js?render=6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6"></script>
-    <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6', { action: 'contact' }).then(function (token) {
-                var recaptchaResponse = document.getElementById('recaptchaResponseCont');
-                recaptchaResponse.value = token;
-            });
-        });
-    </script>
-        
         <div class="right">
           <h2>Оставьте заявку! Мы свяжемся с Вами!</h2>
           <form data-template="request" data-subject="Форма связи" id="feedback">
@@ -128,10 +113,7 @@
           </div>
             <textarea placeholder="Какие автоматы интересуют?" name="note"><? echo $enquiry ?></textarea>
             <button type="submit" class="submit">Отправить заявку</button>
-          <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?> ?>">
-			<input type="hidden" name="recaptcha_response" id="recaptchaResponseCont">
-
-
+            <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?> ?>">
             <? if(isset($succes) && $succes ) { ?><div class="alert">Спасибо! Ваша заявка успешно отправлена. Наши специалисты скоро свяжутся с Вами</div><? } ?>
             <? foreach($errors as $error){?>
               <div class="alert"><? echo $error ?></div>
@@ -144,9 +126,4 @@
         <? echo $content_bottom; ?>
       </div>
     </div>
-    <script>
-    $(document).ready(function() {
-      $("#feedback").feedback();
-    });
-  </script>
 <?php echo $footer; ?>

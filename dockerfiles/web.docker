@@ -1,0 +1,41 @@
+FROM php:8.2-apache
+
+RUN apt-get update \
+  && apt-get install -y \
+                     wait-for-it \
+                     unzip \
+                     libfreetype6-dev \
+                     libjpeg62-turbo-dev \
+                     libpng-dev \
+                     libzip-dev \
+                     libcurl3-dev \
+					 libwebp-dev \
+  && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
+  && docker-php-ext-install -j$(nproc) gd zip mysqli curl \
+  && docker-php-ext-enable gd zip mysqli curl \
+  && apt-get install -y default-mysql-client \
+  && apt-get install -y dos2unix
+
+RUN apt update && apt install curl zip unzip zlib1g zlib1g-dev libgd-dev libmcrypt-dev libxml2-dev -y
+
+RUN openssl req -newkey rsa:2048 -nodes -keyout /etc/ssl/private/vend.test.key -x509 -days 365 -out /etc/ssl/certs/vend.test.crt -subj "/C=RU/ST=Moscow/L=Moscow/O=Test Company/OU=IT/CN=vend.test"
+
+#COPY ./public_html  /var/www/html
+
+COPY ./conf/apache2.conf /etc/apache2/apache2.conf
+
+COPY ./conf/www.vend-shop.conf /etc/apache2/sites-enabled/ 
+
+COPY ./conf/php.ini /usr/local/etc/php/conf.d/
+
+#RUN mkdir -p /var/www/html/system/storage /var/www/html/system/storage/cache /var/www/html/system/storage/logs /var/www/html/system/storage/download \ 
+#	/var/www/html/system/storage/upload /var/www/html/system/storage/modification /var/www/html/system/storage/session /var/www/html/system/image/cache /var/www/html/system/storage/logs/
+
+#RUN chmod -R 755 /var/www/html/system/storage /var/www/html/system/storage/cache /var/www/html/system/storage/logs /var/www/html/system/storage/download \
+#        /var/www/html/system/storage/upload /var/www/html/system/storage/modification /var/www/html/system/storage/session /var/www/html/system/image/cache /var/www/html/system/storage/logs/ 
+
+RUN chown -R www-data:www-data /var/www/html/
+
+RUN a2enmod rewrite ssl
+
+

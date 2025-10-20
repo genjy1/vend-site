@@ -10,10 +10,13 @@
       <? echo $filter ?>
       <div class="lc">
       <div class="products">
-        <? if ($youtube) { ?> <?php /*echo $youtube['link']*/ ?>
+        <!--<? if ($youtube) { ?> <?php /*echo $youtube['link']*/ ?>
         <a href="tel:88007757349" style="clear: both;display: block; margin-bottom: 30px"> 
           <img class="lazy" data-src="image/catalog/123/banner-kkt-lost-version.png?v=2" alt="" style="max-width: 100%;">
-        </a><?}?>
+        </a><?}?> -->
+
+          <div class="products-banner"></div>
+
         <h1><?php echo $heading_title; ?></h1>
         <div class="grid">
           <?php foreach ($products as $product) { ?>
@@ -111,7 +114,7 @@
 
 <script>
 $(document).ready(function() {
-  $("#feedback").feedback();
+  // $("#feedback").feedback();
   $(".request").on("click", function(e){
     e.stopPropagation();
     $("#request").find('input[name="product"]').val($(this).prev().text());

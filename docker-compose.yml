@@ -1,33 +1,55 @@
 version: '3'
 services:
   vend-shop-com:
-    build: ./
-    
+    build:
+      context: .
+      dockerfile: ./dockerfiles/web.docker
+    container_name: site_web
     ports:
       - "80:80"
       - "443:443"
     volumes:
       - ./public_html:/var/www/html:rw
-      - ./tools:/var/www/tools:rw	
+      - ./tools:/var/www/tools:rw
       - ./sql:/var/www/sql:rw
+    networks:
+      - site-network
     depends_on:
       - mysql
     command: >
       bash -c "dos2unix /var/www/tools/start.sh && bash /var/www/tools/start.sh" 
 
   mysql:
-    image: mysql:5.7
+#    image: mysql:5.7
+    build: 
+      context: .
+      dockerfile: ./dockerfiles/mysql.docker
+    container_name: site_mysql
+    hostname: mysql
     ports:
       - "3306:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
+    networks:
+      - site-network
     environment:
       - MYSQL_ROOT_PASSWORD=opencart
       - MYSQL_DATABASE=opencart
 
   adminer:
     image: adminer:latest
+    container_name: site_adminer
     environment:
       ADMINER_DEFAULT_SERVER: mysql
+    networks:
+      - site-network
     depends_on:
       - mysql
     ports:
       - "8080:8080"
+
+
+networks:
+  site-network:
+    driver: bridge
+

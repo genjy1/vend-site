@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?php echo $title; ?></title>
 <base href="<?php echo $base; ?>" />
+  <link href="/video-js.min.css" rel="stylesheet" />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WWRJPN3');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWRJPN3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <? if(strpos($class, "common-home") !== false){ ?>
 <!-- <meta name="yandex-verification" content="736c4da9ed9f419a" /> -->
@@ -18,9 +32,25 @@
 <?php } ?>
 <link rel="preload" as="font">
 <link href="/catalog/view/theme/default/stylesheet/stylesheet.css?ver=2.0.0-8" rel="stylesheet" id="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js@1/src/toastify.min.css">
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
+
+<script>
+  function getAnalytics() {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WWRJPN3');
+ console.log("getAnalytics")
+}
+
+</script>
+  <script src="/catalog/view/javascript/new.js"></script>
+
 
 <!-- Google Tag Manager -->
 <script>
@@ -31,17 +61,9 @@ if (typeof navigator.userAgent !== "undefined") {
 } else {
 	getAnalytics();
 }
-
-function getAnalytics() {
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WWRJPN3');
- console.log("getAnalytics")
-}
-
 </script>
+
+  <!-- Google tag (gtag.js) -->
 
 
 <!-- End Google Tag Manager -->
@@ -58,11 +80,41 @@ function getAnalytics() {
 -->
 <?php echo $push; ?>
 
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="catalog/view/theme/default/stylesheet/swiper-bundle.min.css">
+  <script src="https://www.google.com/recaptcha/api.js?render=<?php echo RECAPTCHA_SITE_KEY ?>"></script>
+  <script>
+grecaptcha.ready(function() {
+    grecaptcha.execute('6LenhE8qAAAAAFC-Rd-l5TeTtRMXw-z0EVLjwmLx', {action: 'homepage'}).then(function(token) {
+        fetch('index.php?route=extension/module/recaptcha/validateCaptcha', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({token: token})  // Токен передается в теле запроса
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.log('Валидация прошла успешно');
+            } else {
+                console.error('Ошибка валидации reCAPTCHA');
+            }
+        })
+        .catch(error => {
+            console.error('Ошибка при запросе:', error);
+        });
+    });
+});
+  </script>
+
+  <!-- calltouch -->
+  <script>
+  (function(w,d,n,c){w.CalltouchDataObject=n;w[n]=function(){w[n]["callbacks"].push(arguments)};if(!w[n]["callbacks"]){w[n]["callbacks"]=[]}w[n]["loaded"]=false;if(typeof c!=="object"){c=[c]}w[n]["counters"]=c;for(var i=0;i<c.length;i+=1){p(c[i])}function p(cId){var a=d.getElementsByTagName("script")[0],s=d.createElement("script"),i=function(){a.parentNode.insertBefore(s,a)},m=typeof Array.prototype.find === 'function',n=m?"init-min.js":"init.js";s.async=true;s.src="https://mod.calltouch.ru/"+n+"?id="+cId;if(w.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",i,false)}else{i()}}})(window,document,"ct","a32r4yxz");
+  </script>
+  <!-- calltouch -->
+
 </head>
 <body class="<?php echo $class; ?> <?php echo $browser; ?>">
-<script src="https://www.google.com/recaptcha/api.js?render=6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6"></script>
 <script src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript" ></script>
 <?php foreach ($scripts as $script) { ?>
 <script src="<?php echo $script; ?>" type="text/javascript" defer></script>
@@ -74,9 +126,9 @@ function getAnalytics() {
 <!--
 <script>new WOW().init();</script>-->
 <!--<script src="https://unpkg.com/swiper/swiper-bundle.js" defer></script>
---><script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
 
 <!-- Google Tag Manager (noscript) -->
+<script src="catalog/view/javascript/swiper-bundle.min.js"></script>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWRJPN3"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
@@ -155,7 +207,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <li><a href="/category/avtomaty/hits/" class="c16">Хиты продаж</a></li>
                             <li><a href="/category/katalog-bu-avtomatov/?pomosch" class="c13">Оборудование б/у</a></li>
                         </ul>-->
-                      
+
                         <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
                          <ul>
                           <?php foreach ($children as $child) { ?>

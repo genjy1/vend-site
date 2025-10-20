@@ -165,4 +165,9 @@ class ControllerStartupStartup extends Controller {
 		// OpenBay Pro
 		$this->registry->set('openbay', new Openbay($this->registry));					
 	}
+
+	public function preAction() 
+	{
+		$this->registry->set('recaptcha', new Action('module/recaptcha/validateCaptcha'));
+	}
 }

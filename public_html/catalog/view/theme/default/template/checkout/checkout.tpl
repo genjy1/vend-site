@@ -73,21 +73,37 @@ e.preventDefault();
           var value2 = $('[name=telephone]').val();
           
 if(value1 != '' && value2 != ''){
-	$.ajax({
-     url: 'index.php?route=checkout/confirm',
-     type: 'post',
-     data: $('.cart input[type=\'text\']'),
-     dataType: 'json',
-     success: function(json) {
-       console.log(json)
-       if (json['redirect']) {
-          location = json['redirect'];
-       }
-     },
-     error: function(xhr, ajaxOptions, thrownError) {
-       alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-     }
-   });
+  const ct_site_id = '49728';
+  let ct_data = {
+    fio: value1,
+    phoneNumber: value2,
+    subject: 'Заявка из корзины',
+    sessionId: window.call_value,
+    requestUrl: location.href,
+  };
+  $.ajax({
+      url: 'https://api.calltouch.ru/calls-service/RestAPI/requests/'+ct_site_id+'/register/',
+      dataType: 'json',
+      type: 'POST',
+      data: ct_data,
+  });
+  $.ajax({
+    url: 'index.php?route=checkout/confirm',
+    type: 'post',
+    data: $('.cart input[type="text"]').serialize(), // <--- фикс
+    dataType: 'json',
+    success: function(json) {
+      console.log(json);
+      if (json.redirect) {
+        location = json.redirect;
+      } else if (json.error) {
+        alert(json.error);
+      }
+    },
+    error: function(xhr, ajaxOptions, thrownError) {
+      alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+    }
+  });
 }            
 
         });

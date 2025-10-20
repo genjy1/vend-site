@@ -575,7 +575,6 @@ items: [{
         }, 400);
       });
 
-      $("#offerform").feedback();
       $("#getOffer, .getoffer").on("click", function(){
         $("#offer .zvonok").text($(this).text());
         $("#offer, .winoverlay").show();
@@ -777,7 +776,7 @@ items: [{
       //   }
       // });
 
-      $("#feedback").feedback();
+      // $("#feedback").feedback();
 
       $('.top div').on('click', function(){
        $('.top div').removeClass('active');
