@@ -1,88 +1,130 @@
 <?php
 class ControllerCommonFeedback extends Controller {
-    public function index() {
-        $json = [];
-        $ok = false;
+	public function index() {
 
-        // Читаем данные из php://input с ограничением размера
-        $input = file_get_contents("php://input");
-        if (strlen($input) > 1_000_000) { // 1MB лимит
-            $json['error'] = 'Payload too large';
-            return $this->sendResponse($json);
-        }
+		$template = "";
 
-        if (!empty($input)) {
-            $data = json_decode($input, true);
+		$json = array();
 
-            if (json_last_error() === JSON_ERROR_NONE) {
-                $ok = true;
-            } else {
-                $json['error'] = 'Invalid JSON format';
-                return $this->sendResponse($json);
-            }
-        } else {
-            $json['error'] = 'Empty request';
-            return $this->sendResponse($json);
-        }
+		$data = array();
+		
+		
+		$ok = false;
+    
+		//file_put_contents("/var/www/vend-shop.com/public_html/debug", print_r($json, false), FILE_APPEND);
 
-        if ($ok) {
-            // Добавляем дату
-            $data['date'] = date('d-m-Y');
+		if(isset($this->request->post['data'])){
+			$data = html_entity_decode($this->request->post['data']);
+			$data = json_decode($data, true);
+			$json['data'] = $data;
+			$ok = true;
+		} else {
+			$json['error'] = 1;
+			$this->response->addHeader('Content-Type: application/json');
+			$this->response->setOutput(json_encode($json));
+			$ok = false;
+			//exit;
+		}
+		
+	// КААААААСТЫЛЬ! На Ваш велосипед))))
+		
+	if ($ok) {
 
-            // Логируем в system/storage/logs
-            $this->log->write('Feedback: ' . print_r($data, true));
+		$data['date'] = date('d-m-Y');
 
-            // Безопасный список шаблонов
-            $allowed = ['callback', 'feedback', 'support', 'request'];
-            if (!isset($data['template']) || !in_array($data['template'], $allowed)) {
-                $json['error'] = 'Invalid template';
-                return $this->sendResponse($json);
-            }
-            $template = $data['template'];
+		$f = fopen($_SERVER['DOCUMENT_ROOT'].'/mailslog','a');
+		fwrite($f, print_r($data, TRUE));
+		fclose($f);	
 
-            // Тема письма
-            $subject = (!empty($data['subject'])) ? $data['subject'] : 'Новое уведомление';
+		//$ddd = file_put_contents($_SERVER['DOCUMENT_ROOT']."/debug", $this->config->get('config_mail_smtp_username'), FILE_APPEND);
 
-            // Сохраняем email, если валиден
-            if (isset($data['email']) && filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-                if (file_exists(DIR_APPLICATION . 'model/extension/mail.php')) {
-                    $this->load->model("extension/mail");
-                    $this->model_extension_mail->addMail($data['email']);
-                }
-            }
+    	        file_put_contents($_SERVER['DOCUMENT_ROOT']."/mails", $data, FILE_APPEND);
 
-            // Формируем письмо
-            $messageHtml = $this->load->view('common/feedback/' . $template, $data);
+			//print_r($_SERVER['DOCUMENT_ROOT']);
+			
 
-            try {
-                $mail = new Mail($this->config->get('config_mail'));
-                $mail->setTo($this->config->get('config_email'));
-                $mail->setFrom($this->config->get('config_email'));
-                $mail->setSender($this->config->get('config_name'));
-                $mail->setSubject(html_entity_decode($subject, ENT_QUOTES, 'UTF-8'));
-                $mail->setHtml($messageHtml);
-                $mail->send();
+		// Проверяем была ли отправлена форма
+		if (!empty($data['recaptcha_response'])) {
+		 	
+		     // Создаем POST запрос
+		    $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+		    $recaptcha_secret = '6Lcn7DgpAAAAAD_JnNF74xcvgnxfBDC7aF_7-yhL';
+		    $recaptcha_response = $data['recaptcha_response'];
+		 
+		    // Отправляем POST запрос и декодируем результаты ответа
+		    $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
+		    $recaptcha = json_decode($recaptcha);
+		 
+		 	file_put_contents($_SERVER['DOCUMENT_ROOT']."/debugm", print_r($recaptcha, true), FILE_APPEND);
+		 
+		    // Принимаем меры в зависимости от полученного результата
+		    if ($recaptcha->score >= 0.5) { 
+		    	//print_r(111);
+			// Проверка пройдена - отправляем сообщение.*/
 
-                $json['success'] = true;
-            } catch (Exception $e) {
-                $this->log->write('Mail send error: ' . $e->getMessage());
-                $json['error'] = 'Mail send failed';
-            }
+				$template = $data['template'];
 
-            if ($template === 'callback') {
-                $json['callback'] = true;
-            }
+				if(isset($data["subject"]) && $data["subject"] != "" && $data["subject"] !="undefined"){
+					$subject = $data["subject"];
+				} else {
+					$subject = "Новое уведомление";
+				}
 
-            return $this->sendResponse($json);
-        }
-    }
+		    if(isset($data['email']) && filter_var($data['email'], FILTER_VALIDATE_EMAIL))
+		    {
+		      $this->load->model("extension/mail");
+		      $this->model_extension_mail->addMail($data['email']);
+		    }
+		    
+		    	$maildata = $this->load->view('common/feedback/'.$template, $data) . "\n\n\n";
+		    	
+		    	
+		    	
+		    	
+				$mail = new Mail();
+				$mail->protocol = $this->config->get('config_mail_protocol');
+				$mail->parameter = $this->config->get('config_mail_parameter');
+				$mail->smtp_hostname = $this->config->get('config_mail_smtp_hostname');
+				$mail->smtp_username = $this->config->get('config_mail_smtp_username');
+				$mail->smtp_password = html_entity_decode($this->config->get('config_mail_smtp_password'), ENT_QUOTES, 'UTF-8');
+				$mail->smtp_port = $this->config->get('config_mail_smtp_port');
+				$mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
+			
+				$mail->setTo($this->config->get('config_email'));
+				$mail->setFrom($this->config->get('config_mail_smtp_username'));
+				$mail->setSender(html_entity_decode($this->config->get('config_email'), ENT_QUOTES, 'UTF-8'));
+				$mail->setSubject(html_entity_decode($subject, ENT_QUOTES, 'UTF-8'));
+				$mail->setHtml($this->load->view('common/feedback/'.$template, $data));
+				$mail->setText("");
+				$mail->send();
 
-    /**
-     * Хелпер для JSON-ответов
-     */
-    private function sendResponse(array $json) {
-        $this->response->addHeader('Content-Type: application/json');
-        $this->response->setOutput(json_encode($json));
-        return;
-    }
+				$json['success'] = true;
+
+				if ($template == "callback") {
+					$json['callback'] = true;
+				}
+
+				
+
+				$this->response->addHeader('Content-Type: application/json');
+				$this->response->setOutput(json_encode($json));
+
+		} else {
+			// Проверка не пройдена. Показываем ошибку.
+			//print_r(222);
+			$json['error'] = 1;
+			
+			file_put_contents($_SERVER['DOCUMENT_ROOT']."/debugm", print_r($json, true), FILE_APPEND);
+			
+					$this->response->addHeader('Content-Type: application/json');
+					$this->response->setOutput(json_encode($json));
+					//exit;
+		    }
+		 
+		}
+	  }
+
+
+	}
+
 }

@@ -31,7 +31,7 @@
     </div>
 <script>
 $(document).ready(function() {
-  // $("#feedback").feedback();
+  $("#feedback").feedback();
 });
 </script>
 <?php echo $footer; ?>

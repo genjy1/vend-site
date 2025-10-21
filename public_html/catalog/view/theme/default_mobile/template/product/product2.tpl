@@ -768,7 +768,7 @@ items: [{
       //   }
       // });
 
-      // $("#feedback").feedback();
+      $("#feedback").feedback();
 
       $('.top div').on('click', function(){
        $('.top div').removeClass('active');

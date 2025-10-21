@@ -40,6 +40,7 @@
 </script>
   <script>
     $(document).ready(function(){
+      $("#win, #request, #fast").feedback();
       $(".callme").on("click", function(){
         $(".win_white:eq(0), .winoverlay").show();
       });

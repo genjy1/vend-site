@@ -2,4 +2,4 @@ FROM mysql:5.7
 
 COPY ./sql/init.sql /docker-entrypoint-initdb.d/
 COPY ./sql/vend_db.sql /tmp/vend_db.sql
-COPY ./conf/my.cnf /etc/
+#COPY ./conf/my.cnf /etc/

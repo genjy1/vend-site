@@ -1,6 +1,7 @@
         <div class="map">
           <div class="top">
-            <div class="active" data-block="maplive">Карта проезда</div><div  data-block="images">Как пройти в офис</div><div data-block="video">Как пройти в офис (видео)</div>
+            <div class="active" data-block="maplive">Карта проезда</div>
+            <div  data-block="images">Как пройти в офис</div>
           </div>
           <div class="cont">
             <div class="maplive">
@@ -15,25 +16,6 @@
               <? } ?>
               </ul>
             </div>
-              <div class="video" >
-                  <video
-                          id="my-video"
-                          class="video-js"
-                          controls
-                          preload="auto"
-                          width="720"
-                          height="460"
-                          data-setup="{}"
-                  >
-                      <source src="/image/cache/catalog/video.mp4" type="video/mp4" />
-                      <p class="vjs-no-js">
-                          To view this video please enable JavaScript, and consider upgrading to a
-                          web browser that
-                          <a href="https://videojs.com/html5-video-support/" target="_blank"
-                          >supports HTML5 video</a
-                          >
-                      </p>
-                  </video>              </div>
           </div>
         </div>
         <script type="text/javascript">
@@ -53,14 +35,4 @@
             $('.cont .'+div).show();
            })
         });
-
-
-
        </script>
-        <script src="/video.min.js"></script>
-        <style>
-            .video-js{
-                width: 80% !important;
-                margin: 0 auto !important;
-            }
-        </style>

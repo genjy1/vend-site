@@ -2,7 +2,8 @@ FROM php:8.2-apache
 
 RUN apt-get update \
   && apt-get install -y \
-                     wait-for-it \
+                     nano \
+		     wait-for-it \
                      unzip \
                      libfreetype6-dev \
                      libjpeg62-turbo-dev \
@@ -26,7 +27,7 @@ COPY ./conf/apache2.conf /etc/apache2/apache2.conf
 
 COPY ./conf/www.vend-shop.conf /etc/apache2/sites-enabled/ 
 
-COPY ./conf/php.ini /usr/local/etc/php/conf.d/
+#COPY ./conf/php.ini /usr/local/etc/php/conf.d/
 
 #RUN mkdir -p /var/www/html/system/storage /var/www/html/system/storage/cache /var/www/html/system/storage/logs /var/www/html/system/storage/download \ 
 #	/var/www/html/system/storage/upload /var/www/html/system/storage/modification /var/www/html/system/storage/session /var/www/html/system/image/cache /var/www/html/system/storage/logs/
@@ -36,6 +37,6 @@ COPY ./conf/php.ini /usr/local/etc/php/conf.d/
 
 RUN chown -R www-data:www-data /var/www/html/
 
-RUN a2enmod rewrite ssl
+RUN a2enmod rewrite ssl headers
 
 

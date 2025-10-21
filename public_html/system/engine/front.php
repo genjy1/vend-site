@@ -1,8 +1,4 @@
 <?php
-if (isset($_GET['_route_'])) {
-    unset($_GET['_route_']);
-}
-
 final class Front {
 	private $registry;
 	private $pre_action = array();

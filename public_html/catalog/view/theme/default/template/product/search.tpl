@@ -47,8 +47,8 @@
       </div>
     </div>
 <script>
-// $(document).ready(function() {
-//   $("#feedback").feedback();
-// });
+$(document).ready(function() {
+  $("#feedback").feedback();
+});
 </script>
 <?php echo $footer; ?>

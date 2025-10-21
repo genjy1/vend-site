@@ -18,15 +18,15 @@
   <?php } ?>
   <div class="products products1">
  
-    <!--<?php if(isset($youtube['image'])) { ?>
+    <?php if(isset($youtube['image'])) { ?>
     <div class="products-banner">
-      <img src="/image/catalog/123/banner-kkt-lost-version.png?v=2" alt="" width="100%" />
+        <a href="/arenda/"><img src="image/catalog/123/banner-kkt-lost-version.png?v=2" alt="" width="100%" /></a>
+       <!-- <a href="tel:88007757349">8-800-775-73-49</a>
+        <a href="#callme"><img src="image/catalog/123/banner-kkt-callme.png" alt="" /></a>
+      -->
     </div>
 
-    <?php } ?> -->
-
-    <div class="products-banner"></div>
-
+    <?php } ?>
     <!--
     <?php if(isset($youtube['image'])) { ?>
       <a href="<?php echo $youtube['link'] ?>" style="clear: both;display: block; margin-bottom: 30px"> 
@@ -63,7 +63,19 @@
     </div>
     <?php echo $pagination; ?>
     <?php echo $content_bottom; ?>
+    
 
+
+<script src="https://www.google.com/recaptcha/api.js?render=6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6', { action: 'contact' }).then(function (token) {
+                var recaptchaResponse = document.getElementById('recaptchaResponseCat');
+                recaptchaResponse.value = token;
+            });
+        });
+    </script>
+    
     <div class="catchform" id="catchform">
       <form id="feedback" data-template="request" data-subject="Не нашли товар">
         <div class="title">Не нашли автомат под свой товар? Оставьте заявку, мы свяжемся с вами и подберем оборудование для Вашего бизнеса!</div>
@@ -100,6 +112,7 @@
               <textarea name="note" required placeholder="Какие автоматы интересуют?"></textarea>
           </div>
           <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?>">
+			<input type="hidden" name="recaptcha_response" id="recaptchaResponseCat">
           <div class="prv">
             Нажимая на кнопку "отправить", вы даете согласие на обработку <a href="https://vend-shop.com/privacy/">персональных данных</a>.
           </div>
@@ -115,7 +128,7 @@
   </div>
   <script>
     $(document).ready(function() {
-      // $("#feedback").feedback();
+      $("#feedback").feedback();
       $(".request").on("click", function(e){
         e.stopPropagation();
         $("#request").find('input[name="product"]').val($(this).prev().text());

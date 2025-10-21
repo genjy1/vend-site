@@ -7,15 +7,15 @@ if [ ! -f /var/www/tools/projectloaded.lock ]; then
     
     echo "Loading current database"
 
-#if [ -f /var/www/sql/vend_back.sql ]  
-#then
-# mysql -u root -h mysql --password=opencart opencart < /var/www/sql/vend_back.sql 
-#fi 
+if [ -f /var/www/sql/vend_back.sql ]  
+then
+ mysql -u root -h mysql --password=opencart opencart < /var/www/sql/vend_back.sql 
+fi 
     
-#if [ ! -f /var/www/sql/vend_back.sql ]  
-#then 
-#  mysql -u root -h mysql --password=opencart opencart < /var/www/sql/vend_db.sql 
-#fi
+if [ ! -f /var/www/sql/vend_back.sql ]  
+then 
+  mysql -u root -h mysql --password=opencart opencart < /var/www/sql/vend_db.sql 
+fi
 
     echo "generating new localhost ssl-cert"
 

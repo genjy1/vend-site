@@ -392,7 +392,17 @@ items: [{
 
 
     </div>
-
+    
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6', { action: 'contact' }).then(function (token) {
+                var recaptchaResponse = document.getElementById('recaptchaResponseProdOld');
+                recaptchaResponse.value = token;
+            });
+        });
+    </script>
+    
     <div class="questform">
       <div class="title">Есть вопросы? Задайте их менеджеру!</div>
       <div class="subtitle">Можете позвонить по телефону 8 (800) 775-73-49 или задать через форму ниже</div>
@@ -432,6 +442,7 @@ items: [{
           </div>
           <textarea placeholder="Какие автоматы интересуют?" required name="note"></textarea>
         </div>
+        <input type="hidden" name="recaptcha_response" id="recaptchaResponseProdOld">
         <button id="submit" class="submit">Отправить заявку</button>
         <div class="prv">
             Нажимая на кнопку "отправить", вы даете согласие на обработку <a href="https://vend-shop.com/privacy/">персональных данных</a>.
@@ -814,7 +825,7 @@ items: [{
         }
       });
 
-      // $("#feedback").feedback();
+      $("#feedback").feedback();
 
       $('.top div').on('click', function(){
        $('.top div').removeClass('active');

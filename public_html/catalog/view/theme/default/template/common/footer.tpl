@@ -46,23 +46,31 @@
     </footer>
     <?php echo $feedback; ?>
 
+    <div class="help">
+      <h2>Какой тип автоматов Вас интересует?</h2>
+      <div class="selects">
+        <?php foreach($help['categories'] as $category){ ?>
+        <div>
+          <a href="<?php echo $category['href'] ?>?pomosch"> <?php echo $category['name'] ?> </a>
+        </div>
+        <?php } ?>
+        
+        <div>
+          <select name="" id="helpcats">
+            <?php foreach($categories as $category) { ?>
+            <option value="<?php echo $category['href'] ?>?pomosch"><?php echo $category['name'] ?></option>
+            <? } ?>
+          </select>
+        </div>
+
+
+      </div>
+      <a href="javascript:void(0)" class="close" id="pomoschnet" onclick="ym(22761283, 'reachGoal', 'pomoschnet'); return true;">Спасибо, я сам разберусь</a>
+    </div>
+
+    <div class="showHelp" id="pomoschviz" onclick="ym(22761283, 'reachGoal', 'pomoschviz'); return true;"></div>
+
     <?php echo $scripts; ?>
-  <script>
-    var _ctreq_jivo = function (sub) {
-        var sid = '49728';
-        var jc = jivo_api.getContactInfo(); var fio = ''; var phone = ''; var email = '';
-        if (!!jc.client_name) { fio = jc.client_name; } if (!!jc.phone) { phone = jc.phone; } if (!!jc.email) { email = jc.email; }
-        var ct_data = { fio: fio, phoneNumber: phone, email: email, subject: sub, requestUrl: location.href, sessionId: window.call_value };
-        var request = window.ActiveXObject ? new ActiveXObject("Microsoft.XMLHTTP") : new XMLHttpRequest();
-        var post_data = Object.keys(ct_data).reduce(function (a, k) { if (!!ct_data[k]) { a.push(k + '=' + encodeURIComponent(ct_data[k])); } return a }, []).join('&');
-        var url = 'https://api.calltouch.ru/calls-service/RestAPI/' + sid + '/requests/orders/register/';
-        if (!window.ct_snd_flag) {
-            window.ct_snd_flag = 1; setTimeout(function () { window.ct_snd_flag = 0; }, 10000);
-            request.open("POST", url, true); request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); request.send(post_data);
-        }
-    }
-    window.jivo_onIntroduction = function () { _ctreq_jivo('JivoSite посетитель оставил контакты'); }
-    window.jivo_onCallStart = function () { _ctreq_jivo('JivoSite обратный звонок'); }
-  </script>
+
 </body>
 </html>

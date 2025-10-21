@@ -242,29 +242,6 @@ header div.top .lc {
     overflow: visible;
 }
 
-.btn-submit{
-    clear: both;
-    width: 233px;
-    padding-left: 32px;
-    font-family: FuturaPTHeavy;
-    color:  #ffffff;
-    font-size: 13px;
-    font-weight: 800;
-    border-radius: 30px;
-    line-height: 20px;
-    text-align: center;
-    text-transform: uppercase;
-    border-width: 1px;
-    border-color:  #ffffff;
-    border-style: solid;
-    min-width: 220px;
-    padding-right: 43px;
-    height: 50px;
-    display: block;
-    margin: 0  auto;
-    background: transparent;
-}
-
 header div.top div.cart {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -420,8 +397,7 @@ form {
 [type="checkbox"]:not(:checked)+label,
 [type="checkbox"]:checked+label {
     position: relative;
-    padding-left: 30px;
-    padding-top:5px;
+    padding-left: 0;
     cursor: pointer;
 }
 

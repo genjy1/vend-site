@@ -126,49 +126,61 @@
         </div>
         </div>
         <?php echo $content_bottom; ?>
+        
+        <script src="https://www.google.com/recaptcha/api.js?render=6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6', { action: 'contact' }).then(function (token) {
+                var recaptchaResponse = document.getElementById('recaptchaResponseCtlgOld');
+                recaptchaResponse.value = token;
+            });
+        });
+    </script>
+        
         <div class="catchform" id="catchform">
-          <form id="feedback" data-template="request" data-subject="Не нашли товар">
-            <div class="title">Не нашли автомат под свой товар? Оставьте заявку, мы свяжемся с вами и подберем оборудование для Вашего бизнеса!</div>
-            <input placeholder="Как вас зовут" name="name">
-            <div class="teldiv"><input type="tel" name="ft" maxlength="2" value = "+7" required >
-              <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
-              <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required ></div>
-              <input placeholder="Email" name="email" required>
-              <input type="text" name="region" required placeholder="Ваш регион">
-              <div class="radios">
-                  <div>
-                    <input type="radio" checked="checked" name="firma" id="c_fiz" value="Физическое лицо"> <label for="c_fiz"> <span></span>Физическое лицо</label>
-                  </div>
-                  <div>
-                    <input type="radio" name="firma" id="c_jur" value="Юридическое лицо"> <label for="c_jur"> <span></span>Юридическое лицо </label>
-                  </div>
-              </div>
-              <div class="radios has">
-                  <div>
-                    <input type="radio" checked="checked" name="has" id="c_has_y" value="Да"> <label for="c_has_y"> <span></span>У меня есть автоматы</label>
-                  </div>
-                  <div>
-                    <input type="radio" name="has" id="c_has_no" value="Нет"> <label for="c_has_no"> <span></span>У меня нет автоматов </label>
-                  </div>
+      <form id="feedback" data-template="request" data-subject="Не нашли товар">
+        <div class="title">Не нашли автомат под свой товар? Оставьте заявку, мы свяжемся с вами и подберем оборудование для Вашего бизнеса!</div>
+        <input placeholder="Как вас зовут" name="name">
+        <div class="teldiv"><input type="tel" name="ft" maxlength="2" value = "+7" required >
+          <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
+          <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required ></div>
+          <input placeholder="Email" name="email" required>
+          <input type="text" name="region" required placeholder="Ваш регион">
+          <div class="radios">
+              <div>
+                <input type="radio" checked="checked" name="firma" id="c_fiz" value="Физическое лицо"> <label for="c_fiz"> <span></span>Физическое лицо</label>
               </div>
               <div>
-                  <input type="checkbox" name="credit" id="c_crdit"><label for="c_crdit"> Кредит/лизинг</label>
+                <input type="radio" name="firma" id="c_jur" value="Юридическое лицо"> <label for="c_jur"> <span></span>Юридическое лицо </label>
               </div>
-              <div class="amount">
-                  <input type="text" name="amount" required placeholder="Количество автоматов">
-              </div>
-
-              <div class="note">
-                  <textarea name="note" required placeholder="Какие автоматы интересуют?"></textarea>
-              </div>
-              <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
-              <div class="prv">
-                Нажимая на кнопку "отправить", вы даете согласие на обработку <a href="https://vend-shop.com/privacy/">персональных данных</a>.
-              </div>
-
-              <button type="submit" id="submit" class="submit">Отправить заявку</button>
-            </form>
           </div>
+          <div class="radios has">
+              <div>
+                <input type="radio" checked="checked" name="has" id="c_has_y" value="Да"> <label for="c_has_y"> <span></span>У меня есть автоматы</label>
+              </div>
+              <div>
+                <input type="radio" name="has" id="c_has_no" value="Нет"> <label for="c_has_no"> <span></span>У меня нет автоматов </label>
+              </div>
+          </div>
+          <div>
+              <input type="checkbox" name="credit" id="c_crdit"><label for="c_crdit"> Кредит/лизинг</label> 
+          </div>
+          <div class="amount">
+              <input type="text" name="amount" required placeholder="Количество автоматов">
+          </div>
+          
+          <div class="note">
+              <textarea name="note" required placeholder="Какие автоматы интересуют?"></textarea>
+          </div>
+          <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
+			<input type="hidden" name="recaptcha_response" id="recaptchaResponseCtlgOld">
+          <div class="prv">
+            Нажимая на кнопку "отправить", вы даете согласие на обработку <a href="https://vend-shop.com/privacy/">персональных данных</a>.
+          </div>
+
+          <button type="submit" id="submit" class="submit">Отправить заявку</button>
+        </form>
+      </div>
         <div class="cattext">
         	<? if($issub == ''){ ?>
         	<? echo $description ?>
@@ -195,7 +207,7 @@
     </div>
 <script>
 $(document).ready(function() {
-  // $("#feedback").feedback();
+  $("#feedback").feedback();
   $(".request").on("click", function(e){
     e.stopPropagation();
     $("#request").find('input[name="product"]').val($(this).prev().text());
