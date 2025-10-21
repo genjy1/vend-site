@@ -759,7 +759,7 @@ $("#calc input").on("change", function(){
     //   }
     // });
 
-    $("#feedback").feedback();0
+    // $("#feedback").feedback();0
 
     $('.top div').on('click', function(){
      $('.top div').removeClass('active');

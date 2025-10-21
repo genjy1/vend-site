@@ -157,7 +157,7 @@ class ModelCatalogCategory extends Model {
 			$map_id = $map['id'];
 			$image = $this->db->getField("SELECT image FROM __spare_images WHERE map_id=?i",$map_id);
       $pins = $this->db->getField("SELECT pins FROM __spare_images WHERE map_id=?i",$map_id);
-			$items = $this->db->getRows("SELECT * FROM __spare_list WHERE map_id=?i ORDER BY num", $map_id);
+			$items = $this->db->getRows("SELECT * FROM __spare_list WHERE map_id=?i ORDER BY num DESC", $map_id);
 			foreach ($items as $key => $value) {
 				$items[$key]['name'] = $this->getProductName($value['product_id']);
 				$items[$key]['image'] = $this->getProductImage($value['product_id']);

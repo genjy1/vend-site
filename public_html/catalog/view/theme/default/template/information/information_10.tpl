@@ -111,17 +111,6 @@
           </div>
         </div>
       </div>
-      
-      <script src="https://www.google.com/recaptcha/api.js?render=6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6"></script>
-    <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6', { action: 'contact' }).then(function (token) {
-                var recaptchaResponse = document.getElementById('recaptchaResponseInfo');
-                recaptchaResponse.value = token;
-            });
-        });
-    </script>
-      
       <div class="lc">
         <form class="catchform2" id="catchform2" data-template="category" data-subject="Вопрос по мониторингу VendShop Online">
           <div class="title">Остались вопросы? Мы с Вами свяжемся!</div>
@@ -130,14 +119,8 @@
             <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
             <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required ></div>
           <input placeholder="Email*" name="email" required>
-          <input type="hidden" name="recaptcha_response" id="recaptchaResponseInfo">
           <button id="submit" class="submit">Отправить заявку</button>
         </form>
       </div>
     </div>
-    <script>
-      $(document).ready(function(){
-        $("#catchform2").feedback();
-      });
-    </script>
 <?php echo $footer; ?>

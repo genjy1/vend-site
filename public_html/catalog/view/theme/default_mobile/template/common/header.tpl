@@ -11,8 +11,7 @@
 <?php if ($keywords) { ?>
 <meta name="keywords" content= "<?php echo $keywords; ?>" />
 <?php } ?>
-
-
+    <link rel="stylesheet" href="/video-js.min.css">
 <!-- Google Tag Manager -->
 <script>
 if (typeof navigator.userAgent !== "undefined") {

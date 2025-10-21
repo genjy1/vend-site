@@ -2,19 +2,8 @@
     <div class="win_white">
       <a class="open_close" href="javascript:void(0)"></a>
       <div class="zvonok">Обратный звонок</div>
-      
-      <script src="https://www.google.com/recaptcha/api.js?render=6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6"></script>
-    <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6', { action: 'contact' }).then(function (token) {
-                var recaptchaResponse = document.getElementById('recaptchaResponseF');
-                recaptchaResponse.value = token;
-            });
-        });
-    </script>
-      
       <div class="formochka">
-        <form data-template="request" id="win" data-subject="Обратный звонок">
+        <form data-template="request" id="winMain" data-subject="Обратный звонок">
           Имя <span>*</span> <br>
           <input type="text" name="name" required>
           Номер Вашего телефона<span>*</span><br>
@@ -59,7 +48,6 @@
               <textarea name="note" required></textarea>
           </div>
           <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?>">
-          <input type="hidden" name="recaptcha_response" id="recaptchaResponseF">
           <button id="submit" class="submit">Отправить заявку</button>
           <div class="prv">
             Нажимая на кнопку "отправить", вы даете согласие на обработку <a href="https://vend-shop.com/privacy/">персональных данных</a>.
@@ -74,17 +62,6 @@
       <div class="zaiavka_2">Наши специалисты скоро с вами свяжутся</div>
     </div>
     <div class="win_white">
-    
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6"></script>
-    <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6', { action: 'contact' }).then(function (token) {
-                var recaptchaResponse = document.getElementById('recaptchaResponseF2');
-                recaptchaResponse.value = token;
-            });
-        });
-    </script>
-    
       <a class="open_close" href="javascript:void(0)"></a>
       <div class="zvonok">Запросить цену</div>
       <div class="formochka">
@@ -134,8 +111,6 @@
           </div>
           <input type="hidden" name="product">
           <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
-          <input type="hidden" name="recaptcha_response" id="recaptchaResponseF2">
-          
           
           <button id="submit" class="submit">Отправить заявку</button>
           <div class="prv">
@@ -144,16 +119,6 @@
         </form>
       </div>
     </div>
-    
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6"></script>
-    <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6', { action: 'contact' }).then(function (token) {
-                var recaptchaResponse = document.getElementById('recaptchaResponseF3');
-                recaptchaResponse.value = token;
-            });
-        });
-    </script>
     
     <div class="win_white">
       <a class="open_close" href="javascript:void(0)"></a>
@@ -204,9 +169,6 @@
               <textarea name="note" required></textarea>
           </div>
           <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
-          <input type="hidden" name="recaptcha_response" id="recaptchaResponseF3">
-          
-          
           <button id="submit" class="submit">Отправить заявку</button>
           <div class="prv">
             Нажимая на кнопку "отправить", вы даете согласие на обработку <a href="https://vend-shop.com/privacy/">персональных данных</a>.
@@ -248,21 +210,11 @@
       </div>
     </div>
 
-<script src="https://www.google.com/recaptcha/api.js?render=6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6"></script>
-    <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6', { action: 'contact' }).then(function (token) {
-                var recaptchaResponse = document.getElementById('recaptchaResponseF4');
-                recaptchaResponse.value = token;
-            });
-        });
-    </script>
-
     <div class="win_white" id="offer">
       <a class="open_close" href="javascript:void(0)"></a>
       <div class="zvonok">Оставить заявку</div>
       <div class="formochka">
-        <form data-template="request" id="win" data-subject="Обратный звонок">
+        <form data-template="request" id="winProduct" data-subject="Обратный звонок">
           Имя <span>*</span> <br>
           <input type="text" name="name" required>
           Номер Вашего телефона<span>*</span><br>
@@ -307,7 +259,6 @@
               <textarea name="note" required></textarea>
           </div>
           <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
-          <input type="hidden" name="recaptcha_response" id="recaptchaResponseF4">
           <div id="options"></div>
           <div id="options2"></div>
           

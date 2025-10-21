@@ -271,56 +271,58 @@
   <?php echo $cases; ?>
   </div> </div>
   <section class="homenews" data-bg="catalog/view/theme/default/stylesheet/img/home/company_people_2.jpg"><? echo $content_bottom; ?></section>
-  <section class="callbackform">
-    <h2>Оставьте заявку на автомат</h2>
-    <div class="subtitle">или другую нашу продукцию</div>
-    <form data-template="request" id="feedback">
-      <div class="wl"><span>Заполните поля:</span></div>
-      <div class="formcol">
-        <input type="text" placeholder="Как вас зовут" name="name" required>
-        <input type="text" placeholder="Электронная почта" name="email" required >
-        <input type="text" name="region" required placeholder="Ваш регион">
-        <div class="radios has">
-              <div>
-                <input type="radio" checked="checked" name="has" id="h_has_y" value="Да"> <label for="h_has_y"> <span></span>У меня есть автоматы</label>
-              </div>
+    <div class="callbackform">
+        <h2>Оставьте заявку на автомат</h2>
+        <div class="subtitle">или другую нашу продукцию</div>
+        <form data-template="request" id="feedback" data-subject="Заявка с главной страницы" class="feedback-form">
+            <div class="wl"><span>Заполните поля:</span></div>
+            <div class="input-groups">
+                <div class="formcol">
 
-              <div>
-                <input type="radio" name="has" id="h_has_no" value="Нет"> <label for="h_has_no"> <span></span>У меня нет автоматов </label>
-              </div>
-        </div>
-        <textarea placeholder="Какие автоматы интересуют?" name="note"></textarea>
-      </div>
-      <div class="formcol tel">
-        <div class="teldiv"><input type="tel" name="ft" maxlength="2" value = "+7" required >
-            <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
-            <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required >
-        </div>
-        <input type="text" name="amount" required placeholder="Количество автоматов">
-        <div class="radios">
-              <div>
-                <input type="radio" checked="checked" name="firma" id="h_fiz" value="Физическое лицо"> 
-                <label for="h_fiz"> <span></span>Физическое лицо</label>
-              </div>
-              <div>
-                <input type="radio" name="firma" id="h_jur" value="Юридическое лицо"> 
-                <label for="h_jur"> <span></span>Юридическое лицо </label>
-              </div>
-        </div>
-        <div class="credit">
-            <input type="checkbox" name="credit" id="crdit"><label for="crdit"> Кредит/лизинг</label> 
-        </div>
+                    <input type="text" placeholder="Как вас зовут" name="name" required>
+                    <input type="text" placeholder="Электронная почта" name="email" required >
+                    <input type="text" name="region" required placeholder="Ваш регион">
+                    <div class="radios has">
+                        <div>
+                            <input type="radio" checked="checked" name="has" id="h_has_y" value="Да"> <label for="h_has_y"> <span></span>У меня есть автоматы</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="has" id="h_has_no" value="Нет"> <label for="h_has_no"> <span></span>У меня нет автоматов </label>
+                        </div>
+                    </div>
+                    <textarea placeholder="Какие автоматы интересуют?" name="note"></textarea>
+                </div>
+                <div class="formcol tel">
+                    <div class="teldiv"><input type="tel" name="ft" maxlength="2" value = "+7" required >
+                        <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
+                        <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required >
+                    </div>
+                    <input type="text" name="amount" required placeholder="Количество автоматов">
+                    <div class="radios">
+                        <div>
+                            <input type="radio" checked="checked" name="firma" id="h_fiz" value="Физическое лицо">
+                            <label for="h_fiz"> <span></span>Физическое лицо</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="firma" id="h_jur" value="Юридическое лицо">
+                            <label for="h_jur"> <span></span>Юридическое лицо </label>
+                        </div>
+                    </div>
+                    <div class="credit">
+                        <input type="checkbox" name="credit" id="crdit"><label for="crdit"> Кредит/лизинг</label>
+                    </div>
+                </div>
+                <div class="formcol last">
+                    <div class="ftel">Или позвоните телефону:</div>
+                    <div class="numtel">8-800-775-73-49</div>
+                    <div class="text">бесплатный звонок по России</div>
+                </div>
+            </div>
+            <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)  ?>">
+            <button type="submit" class="btn-submit" >Отправить заявку</button>
+        </form>
     </div>
-      
-      <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
-      <a href="javascript:void(0)" id="submit" class="goto submit">Отправить заявку</a>
-      <div class="formcol last">
-        <div class="ftel">Или позвоните телефону:</div>
-        <div class="numtel">8-800-775-73-49</div>
-        <div class="text">бесплатный звонок по России</div>
-      </div>
-    </form>
-  </section>
   
   <div class="homeshare">
     <h2>Хотите быть в курсе новостей вендинга, акций и скидок? <br>

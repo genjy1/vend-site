@@ -102,9 +102,11 @@ php_value docref_ext 0
 	AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript
 </IfModule>
 
-<FilesMatch ".(gif|jpeg|png|swf|js|css|pdf|ico)$"> 
-	Header set Cache-Control «max-age=1234000» 
-</FilesMatch>
+<IfModule mod_headers.c>
+    <FilesMatch ".(gif|jpeg|png|swf|js|css|pdf|ico)$">
+        Header set Cache-Control «max-age=1234000»
+    </FilesMatch>
+</IfModule>
 
 <IfModule mod_rewrite.c>
     RewriteEngine On

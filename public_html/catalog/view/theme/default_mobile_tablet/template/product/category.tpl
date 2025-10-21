@@ -105,7 +105,7 @@
 
 <script>
 $(document).ready(function() {
-  $("#feedback").feedback();
+  // $("#feedback").feedback();
   $(".request").on("click", function(e){
     e.stopPropagation();
     $("#request").find('input[name="product"]').val($(this).prev().text());

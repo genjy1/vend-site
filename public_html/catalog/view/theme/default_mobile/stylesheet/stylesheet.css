@@ -82,6 +82,30 @@ body {
    overflow-x: hidden; 
 }
 
+.btn-submit{
+  clear: both;
+  margin: 0 auto 0;
+  width: 233px;
+  padding-left: 32px;
+  text-align: center;
+  font-family: FuturaPTHeavy;
+  color:  #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: 30px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border-width: 1px;
+  border-color:  #ffffff;
+  border-style: solid;
+  min-width: 220px;
+  padding-right: 43px;
+  height: 50px;
+  display: inline-block;
+  background: transparent;
+}
+
 .lc {
   overflow: hidden;
   *zoom: 1; clear: both;
@@ -4963,6 +4987,18 @@ padding-top: 4px;
     max-height: 72px;
     margin-bottom: 4px;
 }
+
+.products-banner {
+  display: block;
+  background: url("/image/catalog/123/banner-kkt-lost-version.png?v=2") no-repeat center;
+  background-size: contain;
+  max-width: 1140px;
+  @media screen and (max-width: 425px) {
+    height: calc(120px - 20%);
+  }
+  height: 120px;
+}
+
 .caseh1 h1{
     text-align: center;
     text-transform: uppercase;
