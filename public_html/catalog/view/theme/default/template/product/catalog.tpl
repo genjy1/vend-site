@@ -189,7 +189,7 @@ $(document).ready(function(){
         </div>
         <div>
           <div class="title">Акции </div>
-          <a href="/blog/aktsii/"><img class="lazy" data-src="/image/catalog/catalog/acc.png" alt=""></a>
+          <a href="/blog/aktsii"><img class="lazy" data-src="/image/catalog/catalog/acc.png" alt=""></a>
         </div>
       </div>
       <div class="line l5">

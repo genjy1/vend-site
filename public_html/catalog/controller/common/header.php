@@ -175,7 +175,8 @@ class ControllerCommonHeader extends Controller {
 				if($category['category_id'] == 66){
 					$href = $this->url->link('information/information', 'information_id=' . 10, true);
 				} elseif($category['category_id'] == 65){
-					$href = "/blog/aktsii/";
+					$href = "/index.php?route=product/category&path=65";
+//					$href = $this->url->link('product/category', 'path=' . $category['category_id'], true);
 				}else {
 					$href = $this->url->link('product/category', 'path=' . $category['category_id'], true);
 				}
