@@ -11,7 +11,7 @@
             <ul class="policies__list">
                 <li class="policies__item"><a class="policies__link" href="/agreement">Согласие на обработку данных</a></li>
                 <li class="policies__item"><a class="policies__link" href="/privacy">Политика конфиденциальности</a></li>
-                <li class="policies__item"><a class="policies__link" href="#">Согласие на рассылку</a></li>
+                <li class="policies__item"><a class="policies__link" href="/metrika">Согласие на обработку персональных данных с помощью сервиса «Яндекс Метрика»</a></li>
                 <li class="policies__item"><a class="policies__link" href="/cookies">Политика обработки файлов cookies</a></li>
             </ul>
         </aside>
