@@ -103,8 +103,12 @@ const forms = document.querySelectorAll('#winMain, #request, #fast, #winProduct'
 
 forms.forEach(form => {
 
+    console.log(form.querySelectorAll('a'))
 
-
+    form.querySelectorAll('a').forEach((link) => {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel','noopener noreferrer');
+    })
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -123,3 +127,5 @@ forms.forEach(form => {
         sendCalltouchData(data);
     });
 });
+
+
