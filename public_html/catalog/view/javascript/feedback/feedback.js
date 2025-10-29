@@ -1,46 +1,56 @@
 'use strict';
 
-// Общие элементы
+// === Общие элементы ===
 const overlay = document.querySelector('.winoverlay');
 
-// Сообщения
-const showSuccessMessage = () => {
-    Toastify({
-        text: 'Вы успешно отправили форму!',
-        style: {
-            background: '#4a259b',
-            right: '45vw',
-            padding: '20px'
-        }
-    }).showToast();
-};
+// === НАСТРОЙКИ TOASTIFY ===
+const TOAST_STACK_LIMIT = 5; // максимум одновременных уведомлений
+const TOAST_DURATION = 4000; // миллисекунд
 
-const showErrorMessage = (msg) => {
-    Toastify({
+let activeToasts = []; // активные уведомления
+
+// === Универсальный показ уведомлений ===
+const showToast = (msg, background = '#4a259b') => {
+    // Удаляем старые тосты, если превышен лимит
+    if (activeToasts.length >= TOAST_STACK_LIMIT) {
+        const oldest = activeToasts.shift();
+        oldest?.remove();
+    }
+
+    const toast = Toastify({
         text: msg,
+        duration: TOAST_DURATION,
+        gravity: 'top',
+        position: 'right',
+        stopOnFocus: true,
+        offset: { x: 20, y: 20 + activeToasts.length * 70 },
         style: {
-            right: '35vw',
-            padding: '20px',
-            background: 'red'
+            background,
+            padding: '18px 22px',
+            borderRadius: '8px',
+            fontSize: '15px',
+            boxShadow: '0 4px 10px rgba(0,0,0,0.15)',
+        },
+        callback: () => {
+            activeToasts = activeToasts.filter(t => t !== toast.el);
         }
-    }).showToast();
+    });
+
+    toast.showToast();
+    activeToasts.push(toast.el);
 };
 
-// Подсветка label рядом с чекбоксом (привязана к форме)
-const highlightAgreement = (agreementCheckbox) => {
-    if (!agreementCheckbox) return;
+const showSuccessMessage = () => showToast('Вы успешно отправили форму!');
+const showErrorMessage = msg => showToast(msg, 'red');
 
-    // Добавляем класс на сам чекбокс (label подсветится через CSS-селектор + .prv)
-    agreementCheckbox.classList.add('checkbox-error');
-
-    // Убираем подсветку через 1.5 секунды
-    setTimeout(() => {
-        agreementCheckbox.classList.remove('checkbox-error');
-    }, 1500);
+// === Подсветка чекбокса ===
+const highlightAgreement = (checkbox) => {
+    if (!checkbox) return;
+    checkbox.classList.add('checkbox-error');
+    setTimeout(() => checkbox.classList.remove('checkbox-error'), 1500);
 };
 
-
-// Сбор данных формы
+// === Сбор данных формы ===
 const getFeedback = (form) => {
     const formData = Object.fromEntries(new FormData(form));
     const today = new Date().toLocaleDateString('ru-RU');
@@ -48,6 +58,7 @@ const getFeedback = (form) => {
     formData.phone = formData.ft + formData.code + formData.phone;
     delete formData.ft;
     delete formData.code;
+
     formData.template = form.dataset.template;
     formData.date = today;
     formData.subject = form.dataset.subject;
@@ -55,7 +66,7 @@ const getFeedback = (form) => {
     return formData;
 };
 
-// Отправка данных
+// === Отправка данных ===
 const sendFeedback = async (form, data) => {
     try {
         const res = await fetch('index.php?route=common/feedback', {
@@ -79,7 +90,7 @@ const sendFeedback = async (form, data) => {
     }
 };
 
-// Отправка в Calltouch
+// === Отправка в Calltouch ===
 const sendCalltouchData = (data) => {
     const ct_site_id = '49728';
     jQuery.ajax({
@@ -98,27 +109,24 @@ const sendCalltouchData = (data) => {
     });
 };
 
-// Привязка логики ко всем формам
+// === Привязка логики к формам ===
 const forms = document.querySelectorAll('#winMain, #request, #fast, #winProduct');
 
 forms.forEach(form => {
-
-    console.log(form.querySelectorAll('a'))
-
-    form.querySelectorAll('a').forEach((link) => {
+    // Все ссылки в форме открываются в новой вкладке
+    form.querySelectorAll('a').forEach(link => {
         link.setAttribute('target', '_blank');
-        link.setAttribute('rel','noopener noreferrer');
-    })
+        link.setAttribute('rel', 'noopener noreferrer');
+    });
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', e => {
         e.preventDefault();
 
         const data = getFeedback(form);
         const agreement = form.querySelector('input[name="agreement"]');
-        if (agreement) agreement.required = true;
 
         if (agreement && !agreement.checked) {
-            highlightAgreement(agreement); // теперь подсветка ищет label внутри текущей формы
+            highlightAgreement(agreement);
             showErrorMessage('Поставьте галочку согласия на обработку персональных данных');
             return;
         }
@@ -127,5 +135,3 @@ forms.forEach(form => {
         sendCalltouchData(data);
     });
 });
-
-
