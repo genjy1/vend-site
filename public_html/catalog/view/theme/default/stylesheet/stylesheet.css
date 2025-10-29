@@ -2195,6 +2195,52 @@ a.return, .thanks a.gotoshop {
 }
 
 
+/* Красная рамка и тень вокруг чекбокса */
+/* Ошибка чекбокса */
+.checkbox-error {
+  outline: 2px solid #ff4d4d;
+  box-shadow: 0 0 8px rgba(255, 77, 77, 0.7);
+  border-radius: 4px;
+  animation: shake 0.4s ease;
+}
+
+/* Плавное исчезновение рамки */
+.checkbox-error.fade-out {
+  outline: 2px solid transparent;
+  box-shadow: none;
+  transition: outline 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект встряхивания */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(-4px); }
+  30% { transform: translateX(4px); }
+  45% { transform: translateX(-4px); }
+  60% { transform: translateX(4px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+/* Подсветка текста рядом с чекбоксом */
+.checkbox-error + .prv {
+  color: red !important;
+  transition: color 0.3s ease;
+}
+
+/* Плавное мигание, чтобы привлекало внимание */
+@keyframes pulse {
+  0%, 100% { color: red; }
+  50% { color: #ff8c8c; }
+}
+
+.checkbox-error + .prv {
+  animation: pulse 0.8s ease-in-out 2;
+}
+
+
+
+
 
 .product .block3 .delivery .title {
   font-size: 34px;
