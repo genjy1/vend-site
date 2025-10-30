@@ -4,31 +4,40 @@
 const overlay = document.querySelector('.winoverlay');
 
 // === НАСТРОЙКИ TOASTIFY ===
-const TOAST_STACK_LIMIT = 5; // максимум одновременных уведомлений
-const TOAST_DURATION = 4000; // миллисекунд
+const TOAST_STACK_LIMIT = 5;
+const TOAST_DURATION = 4000;
+let activeToasts = [];
 
-let activeToasts = []; // активные уведомления
+// === Проверка мобильного устройства ===
+const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
 
 // === Универсальный показ уведомлений ===
 const showToast = (msg, background = '#4a259b') => {
-    // Удаляем старые тосты, если превышен лимит
     if (activeToasts.length >= TOAST_STACK_LIMIT) {
         const oldest = activeToasts.shift();
         oldest?.remove();
     }
 
+    const baseY = isMobile() ? 10 : 20;
+    const position = isMobile() ? 'center' : 'right';
+    const gravity = isMobile() ? 'bottom' : 'top';
+
     const toast = Toastify({
         text: msg,
         duration: TOAST_DURATION,
-        gravity: 'top',
-        position: 'right',
+        gravity,
+        position,
         stopOnFocus: true,
-        offset: { x: 20, y: 20 + activeToasts.length * 70 },
+        offset: { x: isMobile() ? 0 : 20, y: baseY + activeToasts.length * 70 },
         style: {
             background,
-            padding: '18px 22px',
-            borderRadius: '8px',
-            fontSize: '15px',
+            padding: isMobile() ? '14px 18px' : '18px 22px',
+            borderRadius: '10px',
+            fontSize: isMobile() ? '14px' : '15px',
+            maxWidth: isMobile() ? '90%' : '340px',
+            width: 'auto',
+            textAlign: 'center',
+            margin: isMobile() ? '0 auto' : 'initial',
             boxShadow: '0 4px 10px rgba(0,0,0,0.15)',
         },
         callback: () => {
@@ -47,7 +56,9 @@ const showErrorMessage = msg => showToast(msg, 'red');
 const highlightAgreement = (checkbox) => {
     if (!checkbox) return;
     checkbox.classList.add('checkbox-error');
+    if (navigator.vibrate) navigator.vibrate(100); // лёгкая вибрация
     setTimeout(() => checkbox.classList.remove('checkbox-error'), 1500);
+    checkbox.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
 
 // === Сбор данных формы ===
@@ -77,9 +88,20 @@ const sendFeedback = async (form, data) => {
 
         if (res.ok) {
             form.reset();
+
             const modal = form.closest('.win_white');
-            if (modal) modal.style.display = 'none';
-            if (overlay) overlay.style.display = 'none';
+            if (modal) {
+                modal.style.transition = 'opacity 0.3s ease';
+                modal.style.opacity = '0';
+                setTimeout(() => modal.style.display = 'none', 300);
+            }
+
+            if (overlay) {
+                overlay.style.transition = 'opacity 0.3s ease';
+                overlay.style.opacity = '0';
+                setTimeout(() => overlay.style.display = 'none', 300);
+            }
+
             showSuccessMessage();
         } else {
             showErrorMessage(`Ошибка ${res.status}: не удалось обработать заявку`);
@@ -113,7 +135,6 @@ const sendCalltouchData = (data) => {
 const forms = document.querySelectorAll('#winMain, #request, #fast, #winProduct');
 
 forms.forEach(form => {
-    // Все ссылки в форме открываются в новой вкладке
     form.querySelectorAll('a').forEach(link => {
         link.setAttribute('target', '_blank');
         link.setAttribute('rel', 'noopener noreferrer');
@@ -134,4 +155,10 @@ forms.forEach(form => {
         sendFeedback(form, data);
         sendCalltouchData(data);
     });
+});
+
+// === Улучшение UX для мобильных устройств ===
+window.addEventListener('resize', () => {
+    activeToasts.forEach(t => t.remove());
+    activeToasts = [];
 });

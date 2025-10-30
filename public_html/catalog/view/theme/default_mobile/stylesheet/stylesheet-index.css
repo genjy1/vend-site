@@ -12,6 +12,13 @@ td {
     vertical-align: middle;
 }
 
+.toastify {
+    position: fixed !important;
+    z-index: 99999 !important;
+    pointer-events: auto !important;
+}
+
+
 a img {
     border: none;
 }
