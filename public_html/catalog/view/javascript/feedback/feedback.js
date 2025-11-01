@@ -79,38 +79,50 @@ const getFeedback = (form) => {
 
 // === Отправка данных ===
 const sendFeedback = async (form, data) => {
+    const submitButtons = form.querySelectorAll('button[type="submit"]');
+    submitButtons.forEach(btn => btn.disabled = true);
+
+    console.log(submitButtons);
+
     try {
         const res = await fetch('index.php?route=common/feedback', {
             method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
-            headers: { "Content-Type": "application/json" }
         });
 
-        if (res.ok) {
-            form.reset();
-
-            const modal = form.closest('.win_white');
-            if (modal) {
-                modal.style.transition = 'opacity 0.3s ease';
-                modal.style.opacity = '0';
-                setTimeout(() => modal.style.display = 'none', 300);
-            }
-
-            if (overlay) {
-                overlay.style.transition = 'opacity 0.3s ease';
-                overlay.style.opacity = '0';
-                setTimeout(() => overlay.style.display = 'none', 300);
-            }
-
-            showSuccessMessage();
-        } else {
+        if (!res.ok) {
             showErrorMessage(`Ошибка ${res.status}: не удалось обработать заявку`);
+            return;
         }
+
+        form.reset();
+
+        const modal = form.closest('.win_white');
+        if (modal) {
+            modal.style.transition = 'opacity 0.3s ease';
+            modal.style.opacity = '0';
+            setTimeout(() => modal.style.display = 'none', 300);
+        }
+
+        const overlay = document.querySelector('.overlay'); // <- добавить поиск явно
+        if (overlay) {
+            overlay.style.transition = 'opacity 0.3s ease';
+            overlay.style.opacity = '0';
+            setTimeout(() => overlay.style.display = 'none', 300);
+        }
+
+        showSuccessMessage();
+
     } catch (err) {
         console.error('Ошибка отправки формы:', err);
         showErrorMessage('Ошибка сети. Повторите попытку позже.');
+    } finally {
+        submitButtons.forEach(btn => btn.disabled = false);
+        location.reload()
     }
 };
+
 
 // === Отправка в Calltouch ===
 const sendCalltouchData = (data) => {

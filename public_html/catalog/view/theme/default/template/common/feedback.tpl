@@ -12,46 +12,13 @@
             <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
             <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required >
           </div>
-          Email<br>
-          <input type="email" name="email" required>
-          <div>
-              Ваш регион <span>*</span><br>
-              <input type="text" name="region" required>
-          </div>
-          <div class="radios">
-              <div>
-                <input type="radio" checked="checked" name="firma" id="fiz" value="Физическое лицо"> <label for="fiz"> <span></span>Физическое лицо</label>
-              </div>
-              <div>
-                <input type="radio" name="firma" id="jur" value="Юридическое лицо"> <label for="jur"> <span></span>Юридическое лицо </label>
-              </div>
-          </div>
-          <div>
-              Какое количество автоматов интересует? <span>*</span><br>
-              <input type="text" name="amount" required value="1">
-          </div>
-          <div>
-              <input type="checkbox" class="credit-input" name="credit" id="crdit1"><label for="crdit1"> Кредит/лизинг</label> 
-          </div>
-          <div class="radios has">
-                <br>
-                Eсть ли у Вас автоматы? <br><br>
-              <div>
-                <input type="radio" checked="checked" name="has" id="has_y" value="Да"> <label for="has_y"> <span></span>Да</label>
-              </div>
-              <div>
-                <input type="radio" name="has" id="has_no" value="Нет"> <label for="has_no"> <span></span>Нет </label>
-              </div>
-          </div>
-          <div class="note">
-              Какие автоматы интересуют? <span>*</span>
-              <textarea name="note" required></textarea>
-          </div>
           <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?>">
-          <button id="submit" class="submit">Отправить заявку</button>
-            <input type="checkbox" name="agreement" id="CallbackAgreement">
-            <label for="CallbackAgreement" class="prv">Даю <a href="/agreement">согласие на обработку моих персональных данных</a> в соответствии с
+          <button id="submit" type="submit" class="submit">Отправить заявку</button>
+            <div class="agreement-container">
+              <input type="checkbox" name="agreement" id="CallbackAgreement">
+              <label for="CallbackAgreement" class="prv agreement-label">Даю <a href="/agreement">согласие на обработку моих персональных данных</a> в соответствии с
                 <a href="/privacy">политикой конфиденциальности</a> в целях обработки моего обращения и взаимодействия с компанией.</label>
+            </div>
 
         </form>
       </div>
@@ -75,48 +42,15 @@
             <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
             <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required >
           </div>
-          Email<br>
-          <input type="email" name="email" required>
-          <div>
-              Ваш регион <span>*</span><br>
-              <input type="text" name="region" required>
-          </div>
-          <div class="radios">
-              <div>
-                <input type="radio" checked="checked" name="firma" id="fiz_f" value="Физическое лицо"> <label for="fiz_f"> <span></span>Физическое лицо</label>
-              </div>
-              <div>
-                <input type="radio" name="firma" id="jur_f" value="Юридическое лицо"> <label for="jur_f"> <span></span>Юридическое лицо </label>
-              </div>
-          </div>
-          <div>
-              Какое количество автоматов интересует? <span>*</span><br>
-              <input type="text" name="amount" required value="1">
-          </div>
-          <div>
-              <input type="checkbox" class="credit-input" name="credit" id="crdit"><label for="crdit"> Кредит/лизинг</label> 
-          </div>
-          <div class="radios has">
-                <br>
-                Eсть ли у Вас автоматы? <br><br>
-              <div>
-                <input type="radio" checked="checked" name="has" id="has_y" value="Да"> <label for="has_y"> <span></span>Да</label>
-              </div>
-              <div>
-                <input type="radio" name="has" id="has_no" value="Нет"> <label for="has_no"> <span></span>Нет </label>
-              </div>
-          </div>
-          <div class="note">
-              Какие автоматы интересуют? <span>*</span>
-              <textarea name="note" required></textarea>
-          </div>
           <input type="hidden" name="product">
           <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
           
-          <button id="submit" class="submit">Отправить заявку</button>
-            <input type="checkbox" name="agreement" id="AgreementRequestPrice">
-            <label for="AgreementRequestPrice" class="prv">Даю <a href="/agreement">согласие на обработку моих персональных данных</a> в соответствии с
+          <button id="submit" type="submit" class="submit">Отправить заявку</button>
+            <div class="agreement-container">
+              <input type="checkbox" name="agreement" id="AgreementRequestPrice">
+              <label for="AgreementRequestPrice" class="prv agreement-label">Даю <a href="/agreement">согласие на обработку моих персональных данных</a> в соответствии с
                 <a href="/privacy">политикой конфиденциальности</a> в целях обработки моего обращения и взаимодействия с компанией.</label>
+            </div>
         </form>
       </div>
     </div>
@@ -134,46 +68,14 @@
             <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
             <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required >
           </div>
-          Email<br>
-          <input type="email" name="email" required>
-          <div>
-              Ваш регион <span>*</span><br>
-              <input type="text" name="region" required>
-          </div>
-          <div class="radios">
-              <div>
-                <input type="radio" checked="checked" name="firma" id="fiz_s" value="Физическое лицо"> <label for="fiz_s"> <span></span>Физическое лицо</label>
-              </div>
-              <div>
-                <input type="radio" name="firma" id="jur_s" value="Юридическое лицо"> <label for="jur_s"> <span></span>Юридическое лицо </label>
-              </div>
-          </div>
-          <div>
-              Какое количество автоматов интересует? <span>*</span><br>
-              <input type="text" name="amount" required value="1">
-          </div>
-          <div>
-              <input type="checkbox" class="credit-input" name="credit" id="crdit_a"><label for="crdit_a"> Кредит/лизинг</label> 
-          </div>
-          <div class="radios has">
-                <br>
-                Eсть ли у Вас автоматы? <br><br>
-              <div>
-                <input type="radio" checked="checked" name="has" id="has_y_a" value="Да"> <label for="has_y_a"> <span></span>Да</label>
-              </div>
-              <div>
-                <input type="radio" name="has" id="has_no_a" value="Нет"> <label for="has_no_a"> <span></span>Нет </label>
-              </div>
-          </div>
-          <div class="note">
-              Какие автоматы интересуют? <span>*</span>
-              <textarea name="note" required></textarea>
-          </div>
           <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
-          <button id="submit" class="submit">Отправить заявку</button>
+          <button id="submit" type="submit" class="submit">Отправить заявку</button>
+          <div class="agreement-container">
             <input type="checkbox" name="agreement" id="agreement_request">
-            <label for="agreement_request" class="prv">Даю <a href="/agreement">согласие на обработку моих персональных данных</a> в соответствии с
-                <a href="/privacy">политикой конфиденциальности</a> в целях обработки моего обращения и взаимодействия с компанией.</label>       </form>
+            <label for="agreement_request" class="prv agreement-label">Даю <a href="/agreement">согласие на обработку моих персональных данных</a> в соответствии с
+              <a href="/privacy">политикой конфиденциальности</a> в целях обработки моего обращения и взаимодействия с компанией.</label>
+          </div>
+        </form>
       </div>
     </div>
     <div class="win_white" id="calc">
@@ -223,49 +125,16 @@
             <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
             <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required >
           </div>
-          Email<br>
-          <input type="email" name="email" required>
-          <div>
-              Ваш регион <span>*</span><br>
-              <input type="text" name="region" required>
-          </div>
-          <div class="radios">
-              <div>
-                <input type="radio" checked="checked" name="firma" id="fiz_oz" value="Физическое лицо"> <label for="fiz_oz"> <span></span>Физическое лицо</label>
-              </div>
-              <div>
-                <input type="radio" name="firma" id="jur_oz" value="Юридическое лицо"> <label for="jur_oz"> <span></span>Юридическое лицо </label>
-              </div>
-          </div>
-          <div>
-              Какое количество автоматов интересует? <span>*</span><br>
-              <input type="text" name="amount" required value="1">
-          </div>
-          <div>
-              <input type="checkbox" class="credit-input" name="credit" id="crdit_oz"><label for="crdit_oz"> Кредит/лизинг</label> 
-          </div>
-          <div class="radios has">
-                <br>
-                Eсть ли у Вас автоматы? <br><br>
-              <div>
-                <input type="radio" checked="checked" name="has" id="has_y_oz" value="Да"> <label for="has_y_oz"> <span></span>Да</label>
-              </div>
-              <div>
-                <input type="radio" name="has" id="has_no_oz" value="Нет"> <label for="has_no_oz"> <span></span>Нет </label>
-              </div>
-          </div>
-          <div class="note">
-              Какие автоматы интересуют? <span>*</span>
-              <textarea name="note" required></textarea>
-          </div>
-          <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
+                    <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
           <div id="options"></div>
           <div id="options2"></div>
           
-          <button id="submit" class="submit">Отправить заявку</button>
-            <input type="checkbox" name="agreement" id="agreement_main">
-            <label for="agreement_main" class="prv">Даю <a href="/agreement">согласие на обработку моих персональных данных</a> в соответствии с
+          <button id="submit" type="submit" class="submit">Отправить заявку</button>
+            <div class="agreement-container">
+              <input type="checkbox" name="agreement" id="agreement_main">
+              <label for="agreement_main" class="prv agreement-label">Даю <a href="/agreement">согласие на обработку моих персональных данных</a> в соответствии с
                 <a href="/privacy">политикой конфиденциальности</a> в целях обработки моего обращения и взаимодействия с компанией.</label>
+            </div>
         </form>
       </div>
     </div>
