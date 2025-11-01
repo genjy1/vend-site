@@ -99,7 +99,6 @@
     <a href="javascript:void(0)" class="callme avtomat-link">Подобрать автомат</a>
 </div>
 <script>
-
     $(document).ready(function(){
         $(".avtomat-form select").styler().change(function(){
             window.location.href = $(this).val()
@@ -109,6 +108,45 @@
         })
     })
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const COOKIE_KEY = 'cookieAccepted';
+        const cookieNotice = document.getElementById('cookieNotice');
+        const cookieBtn = document.getElementById('cookieAcceptBtn');
+
+        const enableGTM = () => {
+            (function(w,d,s,l,i){
+                w[l]=w[l]||[];
+                w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+                const f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),
+                    dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;
+                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WWRJPN3');
+        };
+
+        // Проверка согласия
+        if (localStorage.getItem(COOKIE_KEY)) {
+            enableGTM();
+        } else {
+            setTimeout(() => {
+                cookieNotice.classList.remove('hidden');
+                cookieNotice.classList.add('visible');
+            }, 1000);
+        }
+
+        // Обработка нажатия
+        cookieBtn.addEventListener('click', () => {
+            localStorage.setItem(COOKIE_KEY, '1');
+            cookieNotice.classList.remove('visible');
+            setTimeout(() => cookieNotice.remove(), 400);
+            enableGTM();
+        });
+    });
+</script>
+
 <?php echo $top_module; ?>
 <section class="avtwrap2">
     <div class="col">
@@ -116,26 +154,10 @@
             <!--<h2>Каталог</h2>-->
         </a>
         <div class="video" id="video" style="min-height: 300px;">
-            <!--<iframe frameborder="0" height="270" src="https://www.youtube.com/embed/QNpwdVRiNI0" style="max-width:100%;" width="515"></iframe>-->
             <iframe width="536" height="332" src="https://rutube.ru/play/embed/a38bf72e18f8c00a302f03fc778a9654/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
         </div>
-        <script>
-            /* setTimeout(function(){
-               $("#video").html('<iframe frameborder="0" height="270" src="https://www.youtube.com/embed/QNpwdVRiNI0" style="max-width:100%;" width="515"></iframe>')
-             }, 5000)*/
-        </script>
-
-        <!-- <a href="/category/avtomaty/" class="goto">Перейти в раздел</a>-->
-
     </div>
     <div class="col">
-        <!--<a href="/category/avtomaty/">
-        <div>
-            <h2>Акции <br>и скидки</h2>
-        </div>
-        </a>
-        <a href="/blog/aktsii/" class="goto">Перейти в раздел</a>
-        -->
         <h2>Мы - производители</h2>
         <p>Наша компания обеспечивает полный цикл производства торгового оборудования от проектирования и изготовления
             корпусов до программного обеспечения</p>
@@ -144,7 +166,7 @@
     </div>
 </section>
 
-<section class="reswrap" style="background: #fff;"><!--data-bg="catalog/view/theme/default/stylesheet/img/new/rows.png"-->
+<section class="reswrap" style="background: #fff;">
     <div class="reasons">
         <h2>7 причин заказать автомат у нас</h2>
         <div class="row1">
@@ -207,32 +229,6 @@
 <div class="lc home">
     <div class="banwrap">
         <?php echo $cases; ?>
-    </div>
-    <!--<div class="homevideo">
-    <iframe frameborder="0" height="315" src="https://www.youtube.com/embed/kpEP0iC1P9s" style="max-width:100%" width="560"></iframe>
-    </div>-->
-
-
-    <!--
-      <section class="black">
-      <div class="lc">
-        <div class="cols">
-            <div class="col">
-                <img class="lazy" data-src="/image/vcards.png" alt="">
-            </div>
-            <div class="col">
-                <h2>VENDSHOP CARD</h2>
-                <p>
-                    Комплект VendShop CARD создан для реализации программ лояльности в вашей вендинговой сети.
-                    Считыватель VENDSHOP CARD осуществляет прием платежей с бесконтактных смарт карт (ключей).
-                    Комплект дает возможность проводить акции и устанавливать специальные цены со скидками  на товары для владельцев карт, согласно выбранным датам и времени.
-                </p>
-                <a href="https://vend-shop.com/loyalcart/" class="goto g2">Подробнее о картах</a>
-            </div>
-        </div>
-
-      </div>
-      </section>-->
     <section class="bot" data-bg="catalog/view/theme/default/stylesheet/img/home/company_people_2.jpg"><? echo $content_bottom; ?></section>
     <section class="cfwrap" data-bg="catalog/view/theme/default/stylesheet/img/home16/feed.png">
         <div class="callbackform">
@@ -406,3 +402,12 @@
 
 </script>
 <?php echo $footer; ?>
+    <div id="cookieNotice" class="cookie-notice hidden">
+        <p>
+            Мы используем файлы cookie для улучшения работы сайта.
+            Продолжая использовать сайт, вы соглашаетесь с
+            <a href="/privacy" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a>
+            и <a href="/metrika" target="_blank" rel="noopener noreferrer">согласием на обработку персональных данных</a>.
+        </p>
+        <button id="cookieAcceptBtn">Согласен</button>
+    </div>
