@@ -50,6 +50,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </script>
   <script src="/catalog/view/javascript/new.js"></script>
+  <script src="/catalog/view/javascript/hide_links.js"></script>
 
 
 <!-- Google Tag Manager -->
