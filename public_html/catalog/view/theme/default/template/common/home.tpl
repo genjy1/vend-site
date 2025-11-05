@@ -402,12 +402,9 @@
 
 </script>
 <?php echo $footer; ?>
-    <div id="cookieNotice" class="cookie-notice hidden">
+    <div id="cookieNotice" class="cookie-notice hidden" role="alertdialog" aria-live="polite" aria-label="Сообщение о cookie">
         <p>
-            Мы используем файлы cookie для улучшения работы сайта.
-            Продолжая использовать сайт, вы соглашаетесь с
-            <a href="/privacy" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a>
-            и <a href="/metrika" target="_blank" rel="noopener noreferrer">согласием на обработку персональных данных</a>.
+            Мы используем файлы <a href="/cookie">cookie</a> и <a href="/metrika">Яндекс. Метрику</a> для улучшения работы сайта.
         </p>
         <button id="cookieAcceptBtn">Согласен</button>
     </div>
