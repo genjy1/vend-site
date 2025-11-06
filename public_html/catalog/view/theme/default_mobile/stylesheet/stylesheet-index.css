@@ -18,6 +18,10 @@ td {
     pointer-events: auto !important;
 }
 
+.policies.hidden {
+    display: none;
+}
+
 
 a img {
     border: none;
@@ -1308,8 +1312,8 @@ input[type="checkbox"]+label {
 .help {
     z-index: 99;
     position: fixed;
-    bottom: -530px;
     background: #fff;
+    bottom: 0;
     width: 1170px;
     max-width: 90%;
     left: 50%;
@@ -1317,7 +1321,15 @@ input[type="checkbox"]+label {
     transform: translate(-50%, 0);
     box-shadow: 0px 0px 2px #4a259b;
     opacity: 1;
-    display: none;
+    display: block;
+    visibility: visible;
+    transition: ease-in .3s;
+}
+
+.help.hidden {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .showHelp {
@@ -1820,21 +1832,6 @@ a.goto {
     display: block;
 }
 
-.help {
-    z-index: 99;
-    position: fixed;
-    bottom: -530px;
-    background: #fff;
-    width: 1170px;
-    max-width: 90%;
-    left: 50%;
-    border-radius: 4px;
-    transform: translate(-50%, 0);
-    box-shadow: 0px 0px 2px #4a259b;
-    opacity: 1;
-    display: none;
-}
-
 .help h2 {
     font-size: 22px;
     margin: 30px;
@@ -1950,15 +1947,15 @@ a.goto {
     overflow-y: auto !important;
 }
 
-.help.open {
-    display: block;
-    animation: openhelp 0.6s linear forwards;
-}
+/*.help.open {*/
+/*    display: block;*/
+/*    animation: openhelp 0.6s linear forwards;*/
+/*}*/
 
-.help.hide {
-    display: block;
-    animation: hidehelp 0.7s linear forwards;
-}
+/*.help.hide {*/
+/*    display: block;*/
+/*    animation: hidehelp 0.7s linear forwards;*/
+/*}*/
 
 
 

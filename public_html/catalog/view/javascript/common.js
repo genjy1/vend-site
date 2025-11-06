@@ -592,31 +592,6 @@ window.onload = function () {
 	}
 }
 function documentReady1(){
-	if (localStorage.getItem('showHelp') != 'hide') {
-		$(".help").removeClass("hide").addClass("open");
-	} else {
-		$(".help").addClass("hide").removeClass("open");
-	}
-
-	$(".help .close").on("click", function () {
-		$(".help").addClass("hide").removeClass("open");
-		localStorage.setItem('showHelp', 'hide');
-	});
-
-	$(".help .selects a").on("click", function () {
-		localStorage.setItem('showHelp', 'hide');
-	});
-
-	$("#helpcats").on("change", function () {
-		localStorage.setItem('showHelp', 'hide');
-	});
-
-
-
-	$(".showHelp").on("click", function () {
-		$(".help").removeClass("hide").addClass("open");
-		localStorage.setItem('showHelp', 'show');
-	});
 
 	href = location.href;
 	href = href.replace(/\?tmpl=\d/i, "");
@@ -679,13 +654,6 @@ function documentReady1(){
 		});
 	}
 }
-$(document).click(function(e){
-	let el = $(e.target)
-	if (!el.closest(".help.open").length) {
-		$(".help").addClass("hide").removeClass("open");
-		localStorage.setItem('showHelp', 'hide');
-	}
-})
 $(document).ready(function () {
 	if (typeof navigator.userAgent !== "undefined") {
 		if (navigator.userAgent.indexOf('Lighthouse') < 0) {
@@ -697,3 +665,19 @@ $(document).ready(function () {
 	$($(".monitor a.download")[0]).attr("href", "/image/SM6367-S.pdf")
 });
 
+
+const helpButton = document.querySelector('.showHelp');
+const helpWrapper = document.querySelector('.help');
+const closeHelpWrapper = document.querySelector('#pomoschnet');
+
+helpWrapper.classList.add('hidden');
+helpButton.addEventListener('click', function(e) {
+	e.preventDefault();
+
+	helpWrapper.classList.toggle('hidden');
+})
+
+closeHelpWrapper.addEventListener('click', function(e) {
+	e.preventDefault();
+	helpWrapper.classList.toggle('hidden');
+})
