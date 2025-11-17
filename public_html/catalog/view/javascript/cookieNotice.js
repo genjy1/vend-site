@@ -63,6 +63,8 @@ const enableAnalytics = () => {
 // Пользователь уже дал согласие
 if (localStorage.getItem(COOKIE_KEY)) {
     enableAnalytics();
+    cookieNotice.classList.remove('visible');
+    cookieNotice.classList.add('hidden');
 } else {
     setTimeout(() => {
         cookieNotice.classList.remove('hidden');
@@ -71,7 +73,7 @@ if (localStorage.getItem(COOKIE_KEY)) {
 }
 
 // Принимаем cookies
-cookieBtn.addEventListener('click', (e) => {
+cookieBtn?.addEventListener('click', (e) => {
     cookieBtn.disabled = true;
 
     localStorage.setItem(COOKIE_KEY, '1');
