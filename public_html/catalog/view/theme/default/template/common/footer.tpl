@@ -44,9 +44,18 @@
         <div class="cop">2003-<?php echo date('Y'); ?> © VendShop – надежные <a href="https://vend-shop.com">торговые автоматы для Вашего вендингового бизнеса</a></div>
       </div>
     </footer>
+    <div id="cookieNotice" class="cookie-notice visible" role="alertdialog" aria-live="polite" aria-label="Сообщение о cookie">
+      <p>
+        Мы используем файлы <a href="/cookie">cookie</a> и <a href="/metrika">Яндекс. Метрику</a> для улучшения работы сайта.
+      </p>
+      <button id="cookieAcceptBtn">Согласен</button>
+    </div>
+
+
     <?php echo $feedback; ?>
 
     <?php echo $scripts; ?>
+
   <script>
     var _ctreq_jivo = function (sub) {
         var sid = '49728';
@@ -64,5 +73,6 @@
     window.jivo_onIntroduction = function () { _ctreq_jivo('JivoSite посетитель оставил контакты'); }
     window.jivo_onCallStart = function () { _ctreq_jivo('JivoSite обратный звонок'); }
   </script>
+
 </body>
 </html>
