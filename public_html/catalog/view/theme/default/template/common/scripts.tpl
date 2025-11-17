@@ -267,3 +267,4 @@
 <script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=0c876d500cf85fe091c58e7f9df2eff0" charset="UTF-8" async></script>
 <!-- Toastify -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js@1/src/toastify.min.js" defer></script>
+<script type="text/javascript" src="/catalog/view/javascript/cookieNotice.js"></script>
