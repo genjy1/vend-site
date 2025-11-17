@@ -1326,10 +1326,93 @@ input[type="checkbox"]+label {
     transition: ease-in .3s;
 }
 
+#submit:disabled {
+    background-color: #ccc; /* серый фон для неактивной кнопки */
+    color: #666; /* серый текст */
+    border: 1px solid #aaa;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: not-allowed;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+    #submit:disabled {
+        width: 100%; /* кнопка растягивается на всю ширину экрана */
+        padding: 15px; /* увеличиваем padding для удобства на тачскринах */
+        font-size: 1.1rem; /* чуть больше шрифт */
+        border-radius: 8px; /* более мягкие углы */
+    }
+}
+
 .help.hidden {
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
+}
+
+#cookieNotice > p > a {
+    color: #37A322;
+    text-decoration: underline;
+}
+
+#cookieNotice > p > a:visited {
+    color: #37A322;
+    text-decoration: underline;
+}
+
+.cookie-notice {
+    position: fixed;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px;
+    width: calc(100% - 40px);
+    background: #4a259b;
+    color: #fff;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    z-index: 9999;
+    transition: bottom 0.6s ease, opacity 0.4s;
+    opacity: 0;
+}
+
+.cookie-notice.hidden {
+    pointer-events: none;
+}
+
+.cookie-notice.visible {
+    bottom: 20px;
+    opacity: 1;
+}
+
+.cookie-notice button {
+    background: #fff;
+    color: #4a259b;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.cookie-notice button:hover {
+    background: #e7e2f9;
+}
+
+.showHelp.hidden {
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .showHelp {

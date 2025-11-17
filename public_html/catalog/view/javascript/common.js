@@ -37,8 +37,12 @@ function loadImage(el) {
 		el.css('background-image', 'url(' + el.data("bg") + ')').addClass("loaded");
 	}
 	el.find("[data-bg]").map(function () {
-		if ($(this).visible(1)) {
-			$(this).css('background-image', 'url(' + $(this).data("bg") + ')');
+		try {
+			if ($(this).visible(1)) {
+				$(this).css('background-image', 'url(' + $(this).data("bg") + ')');
+			}
+		} catch (e) {
+			return false;
 		}
 	});
 
@@ -46,16 +50,15 @@ function loadImage(el) {
 
 function lazyLoadImages() {
 	$("section").map(function () {
-		if ($(this).visible(1)) {
-			loadImage($(this));
-			loadImage($(this).next("section"));
+		try {
+			if ($(this).visible(1)) {
+				loadImage($(this));
+				loadImage($(this).next("section"));
+			}
+		} catch (e) {
+			return false;
 		}
 	});
-	// $("[data-bg]").map(function(){
-	//   if($(this).visible(1)){
-	//     $(this).css('background-image', 'url(catalog/view/theme/default/stylesheet/' + $(this).data("bg") + ')');
-	//   }
-	// });
 }
 $(window).scroll(function () {
 	lazyLoadImages();
@@ -670,14 +673,19 @@ const helpButton = document.querySelector('.showHelp');
 const helpWrapper = document.querySelector('.help');
 const closeHelpWrapper = document.querySelector('#pomoschnet');
 
-helpWrapper.classList.add('hidden');
-helpButton.addEventListener('click', function(e) {
+helpWrapper?.classList.add('hidden');
+helpButton?.addEventListener('click', function(e) {
 	e.preventDefault();
 
-	helpWrapper.classList.toggle('hidden');
+	if (helpWrapper.classList.contains('hidden')) {
+		helpWrapper.classList.remove('hidden');
+	} else {
+		helpWrapper.classList.add('hidden');
+	}
+
 })
 
-closeHelpWrapper.addEventListener('click', function(e) {
+closeHelpWrapper?.addEventListener('click', function(e) {
 	e.preventDefault();
 	helpWrapper.classList.toggle('hidden');
 })

@@ -4575,12 +4575,19 @@ margin-left: 6px;
   bottom: -27vw!important;
 }
 
+button.reset {
 
-.help{
+  display: flex;
+  border: none;
+  color: #e01186;
+  background: transparent;
+}
+
+.help {
   z-index: 99;
   position: fixed;
-  bottom: -530px;
   background: #fff;
+  bottom: 0;
   width: 1170px;
   max-width: 90%;
   left: 50%;
@@ -4588,7 +4595,15 @@ margin-left: 6px;
   transform: translate(-50%, 0);
   box-shadow: 0px 0px 2px #4a259b;
   opacity: 1;
-  display: none;
+  display: block;
+  visibility: visible;
+  transition: ease-in .3s;
+}
+
+.help.hidden {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .help h2{
