@@ -80,7 +80,10 @@ const getFeedback = (form) => {
 // === Отправка данных ===
 const sendFeedback = async (form, data) => {
     const submitButtons = form.querySelectorAll('button[type="submit"]');
-    submitButtons.forEach(btn => btn.disabled = true);
+    submitButtons.forEach(btn => {
+        btn.disabled = true;
+        btn.textContent = 'Отправка...';
+    });
 
     console.log(submitButtons);
 
@@ -118,7 +121,10 @@ const sendFeedback = async (form, data) => {
         console.error('Ошибка отправки формы:', err);
         showErrorMessage('Ошибка сети. Повторите попытку позже.');
     } finally {
-        submitButtons.forEach(btn => btn.disabled = false);
+        submitButtons.forEach(btn => {
+            btn.disabled = false
+            btn.textContent = 'Отправить заявку';
+        });
         location.reload()
     }
 };
@@ -144,7 +150,7 @@ const sendCalltouchData = (data) => {
 };
 
 // === Привязка логики к формам ===
-const forms = document.querySelectorAll('#winMain, #request, #fast, #winProduct');
+const forms = document.querySelectorAll('#winMain, #request, #fast, #winProduct, #feedback');
 
 forms.forEach(form => {
     form.querySelectorAll('a').forEach(link => {
