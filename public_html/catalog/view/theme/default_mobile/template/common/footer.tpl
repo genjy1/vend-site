@@ -89,7 +89,12 @@
   width:270px;
 }
 </style>
-
+    <div id="cookieNotice" class="cookie-notice" role="alertdialog" aria-live="polite" aria-label="Сообщение о cookie">
+        <p>
+            Мы используем файлы <a href="/cookie">cookie</a> и <a href="/metrika">Яндекс. Метрику</a> для улучшения работы сайта.
+        </p>
+        <button id="cookieAcceptBtn">Согласен</button>
+    </div>
 <script>new WOW().init();</script>
 
     <div style="display: none" id="arenza"></div>

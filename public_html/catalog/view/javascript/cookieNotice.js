@@ -1,34 +1,44 @@
+// ==============================
+//  CONFIG
+// ==============================
 const COOKIE_KEY = 'cookieAccepted';
+const GTM_ID = 'GTM-WWRJPN3';
+
+// ==============================
+//  DOM ELEMENTS
+// ==============================
 const cookieNotice = document.querySelector('#cookieNotice');
 const cookieBtn = document.querySelector('#cookieAcceptBtn');
 const showHelp = document.querySelector('.showHelp');
 
-// JivoSite кнопка появится ПОЗЖЕ → используем MutationObserver
+
+// ==============================
+//  JIVOSITE HANDLING
+// ==============================
 let jivoBtn = null;
 
 const findJivoButton = () => {
     if (jivoBtn) return;
 
-    // Jivo рендерит <jdiv>, поэтому ищем ТЕГ jdiv
     const btn = document.querySelector('jdiv');
     if (btn) {
         jivoBtn = btn;
-        jivoBtn.style.display = 'none'; // скрываем до согласия
+        jivoBtn.style.display = 'none';
     }
 };
 
-// Наблюдаем за DOM, чтобы поймать jdiv, когда он появится
-const observer = new MutationObserver(() => findJivoButton());
-observer.observe(document.body, { childList: true, subtree: true });
+const observeJivo = () => {
+    const observer = new MutationObserver(() => findJivoButton());
+    observer.observe(document.body, { childList: true, subtree: true });
+    findJivoButton();
+};
 
-// Стартовая попытка
-findJivoButton();
 
-// Скрываем help до согласия
-showHelp?.classList?.add('hidden');
-
-// Безопасная загрузка GTM
+// ==============================
+//  GTM LOADING
+// ==============================
 const loadGTM = () => {
+    if (window.__gtmLoaded) return;
     window.__gtmLoaded = true;
 
     window.dataLayer = window.dataLayer || [];
@@ -39,47 +49,74 @@ const loadGTM = () => {
 
     const script = document.createElement('script');
     script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-WWRJPN3';
-
+    script.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
     script.referrerPolicy = 'strict-origin-when-cross-origin';
     script.crossOrigin = 'anonymous';
 
     document.head.appendChild(script);
 };
 
-// Разрешение аналитики
+
+// ==============================
+//  USER CONSENT + ANALYTICS
+// ==============================
 const enableAnalytics = () => {
     loadGTM();
 
-    showHelp?.classList?.remove('hidden');
+    if (showHelp?.classList) {
+        showHelp.classList.remove('hidden');
+    }
 
-    if (jivoBtn) jivoBtn.style.display = 'block';
+    if (jivoBtn) {
+        jivoBtn.style.display = 'block';
+    }
 
     if (typeof ym === 'function') {
         ym(22761283, 'reachGoal', 'click-question');
     }
 };
 
-// Пользователь уже дал согласие
-if (localStorage.getItem(COOKIE_KEY)) {
-    enableAnalytics();
-    cookieNotice.classList.remove('visible');
-    cookieNotice.classList.add('hidden');
-} else {
-    setTimeout(() => {
-        cookieNotice.classList.remove('hidden');
-        cookieNotice.classList.add('visible');
-    }, 1000);
-}
 
-// Принимаем cookies
-cookieBtn?.addEventListener('click', (e) => {
-    cookieBtn.disabled = true;
+// ==============================
+//  COOKIE NOTICE LOGIC
+// ==============================
+const showCookieNotice = () => {
+    cookieNotice?.classList?.remove('hidden');
+    cookieNotice?.classList?.add('visible');
+};
 
-    localStorage.setItem(COOKIE_KEY, '1');
+const hideCookieNotice = () => {
+    cookieNotice?.classList?.remove('visible');
+    setTimeout(() => cookieNotice?.remove(), 400);
+};
 
-    cookieNotice.classList.remove('visible');
-    setTimeout(() => cookieNotice.remove(), 400);
 
-    enableAnalytics();
-});
+// ==============================
+//  INITIALIZATION
+// ==============================
+const init = () => {
+    observeJivo();
+
+    showHelp?.classList?.add('hidden');
+
+    const consentGiven = Boolean(localStorage.getItem(COOKIE_KEY));
+
+    if (consentGiven) {
+        enableAnalytics();
+        cookieNotice?.classList?.remove('visible');
+        cookieNotice?.classList?.add('hidden');
+    } else {
+        setTimeout(showCookieNotice, 1000);
+    }
+
+    cookieBtn?.addEventListener('click', () => {
+        cookieBtn.disabled = true;
+
+        localStorage.setItem(COOKIE_KEY, '1');
+
+        hideCookieNotice();
+        enableAnalytics();
+    });
+};
+
+init();
