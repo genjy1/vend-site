@@ -168,8 +168,8 @@
         </div>
 <? } else{ ?>
   <? if($avtomat) {?>
-    <a href="javascript:void(0)" class="getoffer" style="margin-left: 0;">получить индивидуальное предложение</a>
-   <a class="request buy-kredit" style="margin-left:20px;line-height: 40px; display: block !important">Купить в кредит</a>
+    <button class="getoffer" data-target="#offer" style="margin-left: 0;">получить индивидуальное предложение</a>
+    <button class="request buy-kredit" data-subject="Купить в кредит" data-target="#fast" style="margin-left:20px;line-height: 40px; display: block !important">Купить в кредит</a>
     <a class="getlis" id="getLis" href="#lising-box" data-width="600" style="
     float: right;
     margin-right: 25px;

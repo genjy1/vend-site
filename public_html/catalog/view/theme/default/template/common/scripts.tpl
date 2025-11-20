@@ -8,25 +8,25 @@
         // $("#offer")
         // $("#win")
         // $("#fast")
-        $(".callme:not(.postform), a[href=\"#callme\"]").on("click", function(e){
-            e.preventDefault();
-            $(".win_white:eq(0), .winoverlay").show();
-
-            if ($("body").hasClass("common-home")) {
-
-                $("#win").attr("data-subject", "Обратный звонок");
-                $("#win").closest(".win_white").find(".zvonok").text( $(this).text())
-
-                if ($(this).text() == "Оставить заявку") {
-                    $("#win").attr("data-subject", "Заявка с главной страницы");
-                }
-
-            }
-            if($(this).hasClass("proposal")){
-                $("#win").attr("data-subject", $(this).text());
-            }
-
-        });
+        // $(".callme:not(.postform), a[href=\"#callme\"]").on("click", function(e){
+        //     e.preventDefault();
+        //     $(".win_white:eq(0), .winoverlay").show();
+        //
+        //     if ($("body").hasClass("common-home")) {
+        //
+        //         $("#win").attr("data-subject", "Обратный звонок");
+        //         $("#win").closest(".win_white").find(".zvonok").text( $(this).text())
+        //
+        //         if ($(this).text() == "Оставить заявку") {
+        //             $("#win").attr("data-subject", "Заявка с главной страницы");
+        //         }
+        //
+        //     }
+        //     if($(this).hasClass("proposal")){
+        //         $("#win").attr("data-subject", $(this).text());
+        //     }
+        //
+        // });
         $(".banner-coffee-link").click(function(){
             $("#win").attr("data-subject", "Главный баннер");
             $("#win").closest(".win_white").find(".zvonok").text( $(this).text())
@@ -37,9 +37,6 @@
         })
         $(".price .request").on("click", function(e){
             $("form[data-subject='Запрос цены']").attr("data-subject", "Форма Рассрочка 0%");
-        });
-        $(".open_close, .winoverlay").on("click", function(){
-            $(".win_white, .winoverlay").hide();
         });
 
         $(".callme.postform").on("click", function(e){
@@ -251,9 +248,9 @@
             });
         }
 
-        $(".callme").click(function(){
-            $(".win_white:eq(0) .zvonok").text("Обратный звонок")
-        })
+        // $(".callme").click(function(){
+        //     $(".win_white:eq(0) .zvonok").text("Обратный звонок")
+        // })
         $(".lc .textcontent button[type=button]").on("click", function(){
             $(".win_white:eq(0), .winoverlay").show();
             $(".win_white:eq(0) .zvonok").text("Рассрочка и кредит")

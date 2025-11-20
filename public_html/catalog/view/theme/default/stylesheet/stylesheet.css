@@ -2044,6 +2044,7 @@ a.return, .thanks a.gotoshop {
 
 .agreement-container {
   margin-top: 40px;
+  display: flex;
 }
 
 .swiper-wrapper:hover {
@@ -2127,6 +2128,36 @@ button[type="submit"]:disabled {
   color: #1a1a1a;
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 0.25rem;
+}
+
+.btn-submit{
+  clear: both;
+  width: 233px;
+  padding-left: 32px;
+  font-family: FuturaPTHeavy, serif;
+  color:  #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: 30px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border-width: 1px;
+  border-color:  #ffffff;
+  border-style: solid;
+  min-width: 220px;
+  padding-right: 43px;
+  height: 50px;
+  display: block;
+  margin: 0  auto;
+  background: transparent;
+  transition: all ease-in 0.3s;
+}
+
+.btn-submit:hover{
+  cursor: pointer;
+  background: #fff;
+  color: #4A259B;
 }
 
 .cookies-policy h3 {
@@ -3337,17 +3368,14 @@ a.goto{font-family: FuturaPTHeavy;color:  #ffffff;font-size: 13px;font-weight: 8
 }
 
 .win_white {
-  display: none;
-  left: 50%;
-  margin-left: -300px;
-  position: fixed;
   top: 100px;
   width: 600px;
   z-index: 11;
   height: 540px;
   background: #fff;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
+  border-radius: 5px ;
 }
 .zvonok {
   color: #333;
@@ -3364,7 +3392,14 @@ a.goto{font-family: FuturaPTHeavy;color:  #ffffff;font-size: 13px;font-weight: 8
   height: 35px;
   width: 35px;
   margin-bottom: 0;
+  border: none;
+  outline: none;
 }
+
+.open_close:hover {
+  cursor: pointer;
+}
+
 .win_white form, .leasing-form {
   margin: 0 auto;
   display: block;
@@ -3429,7 +3464,7 @@ button.reset:hover {
 
     margin: 0.8rem 0;
 }
-.win_white button, .leasing-form > button[type="submit"] {
+.win_white button:not(.open_close), .leasing-form > button[type="submit"] {
   width: 220px;
   height: 50px;
   border-radius: 30px;
@@ -3468,17 +3503,32 @@ button.reset:hover {
   text-align: center;
   margin-top: 17px;
 }
-.winoverlay{
-  background: #333;
-  opacity: .4;
+
+.winoverlay {
+  backdrop-filter: blur(8px);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 10;
-  display: none;
   width: 100%;
   height: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
+  overflow: hidden;
+  transition: opacity .2s ease-in, visibility .2s ease-in;
 }
+
+.winoverlay.visible {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+}
+
+
 .filteritem{
   padding: 8px 15px;
   margin-left: -15px;
@@ -4778,7 +4828,7 @@ header a{
   position: relative;
 }
 .cart .options div label span + span{position: absolute;width: 520px;}
-.getoffer{width: 363px!important;align-items: center;text-align: center;padding-top: 19px;}
+.getoffer{width: 363px!important;align-items: center;text-align: center;}
 #offer form{
   margin-top: 32px;
 }
@@ -6247,19 +6297,64 @@ header #logo div {
   display: flex;
   justify-content: center;
 }
-.banner-coffee .callme, .banner-coffee a {
+/* ------------------------------
+   Базовые стили для всех кнопок и ссылок
+------------------------------ */
+/* базовые кнопки/ссылки */
+.banner-coffee .callme,
+.banner-coffee button,
+.banner-coffee-link {
   color: #0c0c0c;
-  background: #fff;
   border-radius: 10px;
   padding: 23px 32px;
   font-size: 20px;
-  display: inline-block;
+  border: 1px solid transparent;
   text-decoration: none;
   margin-top: 50px;
+  outline: none;
+  font-family: FuturaPTBook, sans-serif;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  display: inline-block;
 }
-.banner-coffee .callme:hover, .banner-coffee a:hover {
-  background: #f6f5f5;
+
+/* цветные кнопки */
+.btn-red { background-color: #ff0000; }
+.btn-white { background-color: #ffffff; }
+.btn-orange { background-color: #ff8000; }
+
+/* hover цветных кнопок с полупрозрачным фоном */
+.btn-red:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: white;
+  border: 1px solid #ff0000;
+  backdrop-filter: blur(8px);
 }
+
+.btn-white:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #0c0c0c; /* контрастный цвет текста для белого фона */
+  border: 1px solid #0c0c0c;
+  backdrop-filter: blur(8px);
+}
+
+.btn-orange:hover {
+  background-color: rgba(255, 128, 0, 0.5);
+  color: white;
+  border: 1px solid #ff8000;
+  backdrop-filter: blur(8px);
+}
+
+/* hover обычных ссылок, не окрашенных в цвет */
+.banner-coffee-link:hover:not(.btn-red):not(.btn-white):not(.btn-orange) {
+  border: 1px solid white;
+  color: white;
+  backdrop-filter: blur(8px);
+  background: inherit;
+}
+
+
+
 .sliderContent {
   position: relative;
 }

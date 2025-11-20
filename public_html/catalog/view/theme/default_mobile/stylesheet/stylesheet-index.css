@@ -496,31 +496,6 @@ footer a {
     color: #fff;
 }
 
-.win_white {
-    display: none;
-    left: 50%;
-    margin-left: -160px;
-    position: fixed;
-    top: 18px;
-    width: 320px;
-    z-index: 11;
-    height: 500px;
-    background: #fff;
-}
-
-
-.winoverlay {
-    background: #333;
-    opacity: .4;
-    z-index: 10;
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-}
-
 a.goto {
     font-family: FuturaPTHeavy;
     color: #ffffff;
@@ -1753,18 +1728,6 @@ section.top .container {
     padding-left: 24px;
 }
 
-.win_white {
-    display: none;
-    left: 50%;
-    margin-left: -160px;
-    position: fixed;
-    top: 18px;
-    width: 320px;
-    z-index: 11;
-    height: 500px;
-    background: #fff;
-}
-
 .zvonok {
     color: #333;
     font-family: FuturaPTHeavy;
@@ -1814,7 +1777,7 @@ section.top .container {
     color: #e01186;
 }
 
-.win_white button {
+.win_white button:not(.open_close) {
     width: 220px;
     height: 50px;
     border-radius: 30px;
@@ -1854,18 +1817,6 @@ section.top .container {
     color: #333;
     text-align: center;
     margin-top: 17px;
-}
-
-.winoverlay {
-    background: #333;
-    opacity: .4;
-    z-index: 10;
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
 }
 
 a.goto {
@@ -2030,18 +1981,6 @@ a.goto {
     overflow-y: auto !important;
 }
 
-/*.help.open {*/
-/*    display: block;*/
-/*    animation: openhelp 0.6s linear forwards;*/
-/*}*/
-
-/*.help.hide {*/
-/*    display: block;*/
-/*    animation: hidehelp 0.7s linear forwards;*/
-/*}*/
-
-
-
 @keyframes openhelp {
     0% {
         bottom: -530px;
@@ -2113,7 +2052,84 @@ a.goto {
     line-height: 1.2;
 }
 
-.banner-coffee .callme, .banner-coffee a {
+/* Адаптация под мобильные */
+@media (max-width: 992px) {
+    
+    button.callme {
+        outline: none;
+        border: 1px solid transparent;
+        font-family: FuturaPTBook;
+    }
+    
+    .btn-orange{
+        background: #ff8000 !important;
+    }
+    
+    .btn-red {
+        background: #ff0000 !important;
+    }
+    
+    .btn-white {
+        background: #fff !important;
+    }
+    
+    .banner-coffee .lc {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .banner-coffee img {
+        max-width: 280px;
+        margin-bottom: 20px;
+    }
+
+    .banner-coffee .title {
+        font-size: 32px;
+    }
+
+    .banner-coffee .desc {
+        font-size: 18px;
+    }
+
+    .winoverlay {
+        backdrop-filter: blur(8px);
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transition: opacity .2s ease-in, visibility .2s ease-in;
+    }
+
+    .winoverlay.visible {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .win_white {
+        top: 100px;
+        width: calc(600px - 50%);
+        z-index: 11;
+        height: 540px;
+        background: #fff;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        border-radius: 5px ;
+    }
+
+}
+
+.banner-coffee .callme, .banner-coffee button {
     color: #0c0c0c;
     background: #fff;
     border-radius: 10px;

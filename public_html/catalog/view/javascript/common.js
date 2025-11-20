@@ -685,6 +685,7 @@ helpButton?.addEventListener('click', function(e) {
 
 })
 
+
 closeHelpWrapper?.addEventListener('click', function(e) {
 	e.preventDefault();
 	helpWrapper.classList.toggle('hidden');

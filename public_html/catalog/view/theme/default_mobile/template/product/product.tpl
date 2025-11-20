@@ -113,8 +113,8 @@
       <button value="Цена по запросу" class="request">Цена по запросу</button><a class="fastorder">Быстрый заказ</a>
       <? } else{ ?>
       <? if($avtomat) {?>
-      <a href="javascript:void(0)" class="getoffer">получить индивидуальное предложение</a>
-       <a class="fastorder buy-kredit">Купить в кредит</a>
+      <button data-target="#offer" href="javascript:void(0)" class="btn getoffer">получить индивидуальное предложение</button>
+       <button data-target="#fast" data-subject="Купить в кредит" class="btn buy-kredit">Купить в кредит</button>
       <? } else { ?>
       <? if($category_id == 3) { ?>
       <button id="add" value="В корзину">В корзину</button><a class="fastorder getoffer">запросить прайс

@@ -1,17 +1,14 @@
 'use strict';
 
-// === Общие элементы ===
-const overlay = document.querySelector('.winoverlay');
-
-// === НАСТРОЙКИ TOASTIFY ===
+/* ============================================================
+   TOASTIFY
+============================================================ */
 const TOAST_STACK_LIMIT = 5;
 const TOAST_DURATION = 4000;
 let activeToasts = [];
 
-// === Проверка мобильного устройства ===
 const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
 
-// === Универсальный показ уведомлений ===
 const showToast = (msg, background = '#4a259b') => {
     if (activeToasts.length >= TOAST_STACK_LIMIT) {
         const oldest = activeToasts.shift();
@@ -19,14 +16,12 @@ const showToast = (msg, background = '#4a259b') => {
     }
 
     const baseY = isMobile() ? 10 : 20;
-    const position = isMobile() ? 'center' : 'right';
-    const gravity = isMobile() ? 'bottom' : 'top';
 
     const toast = Toastify({
         text: msg,
         duration: TOAST_DURATION,
-        gravity,
-        position,
+        gravity: isMobile() ? 'bottom' : 'top',
+        position: isMobile() ? 'center' : 'right',
         stopOnFocus: true,
         offset: { x: isMobile() ? 0 : 20, y: baseY + activeToasts.length * 70 },
         style: {
@@ -35,10 +30,9 @@ const showToast = (msg, background = '#4a259b') => {
             borderRadius: '10px',
             fontSize: isMobile() ? '14px' : '15px',
             maxWidth: isMobile() ? '90%' : '340px',
-            width: 'auto',
             textAlign: 'center',
-            margin: isMobile() ? '0 auto' : 'initial',
             boxShadow: '0 4px 10px rgba(0,0,0,0.15)',
+            color: 'white',
         },
         callback: () => {
             activeToasts = activeToasts.filter(t => t !== toast.el);
@@ -52,40 +46,112 @@ const showToast = (msg, background = '#4a259b') => {
 const showSuccessMessage = () => showToast('Вы успешно отправили форму!');
 const showErrorMessage = msg => showToast(msg, 'red');
 
-// === Подсветка чекбокса ===
-const highlightAgreement = (checkbox) => {
+
+/* ============================================================
+   ПОДСВЕТКА ЧЕКБОКСА СОГЛАСИЯ
+============================================================ */
+const highlightAgreement = checkbox => {
     if (!checkbox) return;
     checkbox.classList.add('checkbox-error');
-    if (navigator.vibrate) navigator.vibrate(100); // лёгкая вибрация
+    if (navigator.vibrate) navigator.vibrate(100);
+
     setTimeout(() => checkbox.classList.remove('checkbox-error'), 1500);
     checkbox.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
 
-// === Сбор данных формы ===
-const getFeedback = (form) => {
-    const formData = Object.fromEntries(new FormData(form));
-    const today = new Date().toLocaleDateString('ru-RU');
 
-    formData.phone = formData.ft + formData.code + formData.phone;
-    delete formData.ft;
-    delete formData.code;
+/* ============================================================
+   МОДАЛЬНАЯ СИСТЕМА
+============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
 
-    formData.template = form.dataset.template;
-    formData.date = today;
-    formData.subject = form.dataset.subject;
+    const overlay = document.querySelector('.winoverlay');
+    if (!overlay) return;
 
-    return formData;
+    const modals = overlay.querySelectorAll('.win_white');
+    const buttons = document.querySelectorAll(
+        '.callme, .request, .getoffer, .btn.buy-kredit , .fastorder, .callcall, .callme.banner-coffee-link'
+    );
+
+    modals.forEach(modal => {
+        modal.addEventListener('click', (e) => {
+            e.stopPropagation();
+        })
+    })
+
+    function hideAllModals() {
+        modals.forEach(m => {
+            m.style.display = 'none';
+            m.style.opacity = '0';
+        });
+    }
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = btn.dataset.target;
+            const subject = btn.dataset.subject;
+
+            hideAllModals();
+
+            const modal = overlay.querySelector(target);
+            if (modal) {
+                modal.style.display = 'block';
+                if (subject !== undefined) {
+                    modal.querySelector('.zvonok').textContent = subject
+                }
+                requestAnimationFrame(() => {
+                    modal.style.opacity = '1';
+                });
+            }
+
+            overlay.classList.add('visible');
+        });
+    });
+
+    overlay.querySelectorAll('.open_close').forEach(closeBtn => {
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.remove('visible');
+            hideAllModals();
+        });
+    });
+
+    overlay.addEventListener('click', e => {
+        if (e.target === overlay) {
+            overlay.classList.remove('visible');
+            hideAllModals();
+        }
+    });
+});
+
+
+/* ============================================================
+   СБОР ДАННЫХ ФОРМЫ
+============================================================ */
+const getFeedback = form => {
+    const data = Object.fromEntries(new FormData(form));
+
+    data.phone = data.ft + data.code + data.phone;
+    delete data.ft;
+    delete data.code;
+
+    data.template = form.dataset.template;
+    data.subject = form.dataset.subject;
+    data.date = new Date().toLocaleDateString('ru-RU');
+
+    return data;
 };
 
-// === Отправка данных ===
+
+/* ============================================================
+   ОТПРАВКА ФОРМЫ (AJAX)
+============================================================ */
 const sendFeedback = async (form, data) => {
+
     const submitButtons = form.querySelectorAll('button[type="submit"]');
     submitButtons.forEach(btn => {
         btn.disabled = true;
         btn.textContent = 'Отправка...';
     });
-
-    console.log(submitButtons);
 
     try {
         const res = await fetch('index.php?route=common/feedback', {
@@ -95,7 +161,7 @@ const sendFeedback = async (form, data) => {
         });
 
         if (!res.ok) {
-            showErrorMessage(`Ошибка ${res.status}: не удалось обработать заявку`);
+            showErrorMessage(`Ошибка ${res.status}: не удалось отправить заявку`);
             return;
         }
 
@@ -103,45 +169,41 @@ const sendFeedback = async (form, data) => {
 
         const modal = form.closest('.win_white');
         if (modal) {
-            modal.style.transition = 'opacity 0.3s ease';
             modal.style.opacity = '0';
             setTimeout(() => modal.style.display = 'none', 300);
         }
 
-        const overlay = document.querySelector('.overlay'); // <- добавить поиск явно
-        if (overlay) {
-            overlay.style.transition = 'opacity 0.3s ease';
-            overlay.style.opacity = '0';
-            setTimeout(() => overlay.style.display = 'none', 300);
-        }
+        const overlay = document.querySelector('.winoverlay');
+        if (overlay) overlay.classList.remove('visible');
 
         showSuccessMessage();
 
     } catch (err) {
-        console.error('Ошибка отправки формы:', err);
-        showErrorMessage('Ошибка сети. Повторите попытку позже.');
+        showErrorMessage('Ошибка соединения. Попробуйте позже.');
     } finally {
         submitButtons.forEach(btn => {
-            btn.disabled = false
+            btn.disabled = false;
             btn.textContent = 'Отправить заявку';
         });
-        location.reload()
     }
 };
 
 
-// === Отправка в Calltouch ===
-const sendCalltouchData = (data) => {
+/* ============================================================
+   CALLTOUCH
+============================================================ */
+const sendCalltouchData = data => {
     const ct_site_id = '49728';
+
     jQuery.ajax({
         url: `https://api.calltouch.ru/calls-service/RestAPI/requests/${ct_site_id}/register/`,
-        dataType: 'json',
         type: 'POST',
+        dataType: 'json',
         data: {
             fio: data.name,
             phoneNumber: data.phone,
             email: data.email,
-            subject: data.subject || 'Заявка с сайта vend-shop.com',
+            subject: data.subject,
             sessionId: window.call_value,
             requestUrl: location.href,
             comment: data.note
@@ -149,33 +211,43 @@ const sendCalltouchData = (data) => {
     });
 };
 
-// === Привязка логики к формам ===
-const forms = document.querySelectorAll('#winMain, #request, #fast, #winProduct, #feedback');
 
-forms.forEach(form => {
-    form.querySelectorAll('a').forEach(link => {
-        link.setAttribute('target', '_blank');
-        link.setAttribute('rel', 'noopener noreferrer');
-    });
+/* ============================================================
+   ОБРАБОТКА ВСЕХ ФОРМ ВНУТРИ МОДАЛОК
+============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
 
-    form.addEventListener('submit', e => {
-        e.preventDefault();
+    const forms = document.querySelectorAll('.win_white form');
 
-        const data = getFeedback(form);
-        const agreement = form.querySelector('input[name="agreement"]');
+    forms.forEach(form => {
 
-        if (agreement && !agreement.checked) {
-            highlightAgreement(agreement);
-            showErrorMessage('Поставьте галочку согласия на обработку персональных данных');
-            return;
-        }
+        form.querySelectorAll('a').forEach(a => {
+            a.setAttribute('target', '_blank');
+            a.setAttribute('rel', 'noopener noreferrer');
+        });
 
-        sendFeedback(form, data);
-        sendCalltouchData(data);
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            const data = getFeedback(form);
+            const agreement = form.querySelector('input[name="agreement"]');
+
+            if (agreement && !agreement.checked) {
+                highlightAgreement(agreement);
+                showErrorMessage('Поставьте галочку согласия на обработку данных');
+                return;
+            }
+
+            sendFeedback(form, data);
+            sendCalltouchData(data);
+        });
     });
 });
 
-// === Улучшение UX для мобильных устройств ===
+
+/* ============================================================
+   ОЧИСТКА ТОСТОВ ПРИ РЕСАЙЗЕ
+============================================================ */
 window.addEventListener('resize', () => {
     activeToasts.forEach(t => t.remove());
     activeToasts = [];
