@@ -3,6 +3,7 @@
 // ==============================
 const COOKIE_KEY = 'cookieAccepted';
 const GTM_ID = 'GTM-WWRJPN3';
+const YM_COUNTER = 22761283;
 
 // ==============================
 //  DOM ELEMENTS
@@ -11,26 +12,40 @@ const cookieNotice = document.querySelector('#cookieNotice');
 const cookieBtn = document.querySelector('#cookieAcceptBtn');
 const showHelp = document.querySelector('.showHelp');
 
+// ==============================
+//  STATE
+// ==============================
+let jivoBtn = null;
+let jivoObserverStarted = false;
+
 
 // ==============================
 //  JIVOSITE HANDLING
 // ==============================
-let jivoBtn = null;
-
-const findJivoButton = () => {
+const detectJivo = () => {
     if (jivoBtn) return;
 
     const btn = document.querySelector('jdiv');
-    if (btn) {
-        jivoBtn = btn;
+    if (!btn) return;
+
+    jivoBtn = btn;
+
+    // Показываем или скрываем в зависимости от согласия
+    if (window.__analyticsEnabled) {
+        jivoBtn.style.display = 'block';
+    } else {
         jivoBtn.style.display = 'none';
     }
 };
 
 const observeJivo = () => {
-    const observer = new MutationObserver(() => findJivoButton());
+    if (jivoObserverStarted) return;
+    jivoObserverStarted = true;
+
+    const observer = new MutationObserver(detectJivo);
     observer.observe(document.body, { childList: true, subtree: true });
-    findJivoButton();
+
+    detectJivo();
 };
 
 
@@ -61,18 +76,25 @@ const loadGTM = () => {
 //  USER CONSENT + ANALYTICS
 // ==============================
 const enableAnalytics = () => {
-    loadGTM();
+    if (window.__analyticsEnabled) return;
+    window.__analyticsEnabled = true;
 
-    if (showHelp?.classList) {
+    loadGTM();
+    detectJivo();
+
+    // показываем кнопку help
+    if (showHelp) {
         showHelp.classList.remove('hidden');
     }
 
+    // если jivo уже есть — покажем
     if (jivoBtn) {
         jivoBtn.style.display = 'block';
     }
 
+    // Яндекс.Метрика
     if (typeof ym === 'function') {
-        ym(22761283, 'reachGoal', 'click-question');
+        ym(YM_COUNTER, 'reachGoal', 'click-question');
     }
 };
 
@@ -81,13 +103,19 @@ const enableAnalytics = () => {
 //  COOKIE NOTICE LOGIC
 // ==============================
 const showCookieNotice = () => {
-    cookieNotice?.classList?.remove('hidden');
-    cookieNotice?.classList?.add('visible');
+    if (cookieNotice) {
+        cookieNotice.classList.remove('hidden');
+        cookieNotice.classList.add('visible');
+    }
 };
 
 const hideCookieNotice = () => {
-    cookieNotice?.classList?.remove('visible');
-    setTimeout(() => cookieNotice?.remove(), 400);
+    if (!cookieNotice) return;
+
+    cookieNotice.classList.remove('visible');
+    setTimeout(() => {
+        if (cookieNotice) cookieNotice.remove();
+    }, 400);
 };
 
 
@@ -97,26 +125,29 @@ const hideCookieNotice = () => {
 const init = () => {
     observeJivo();
 
-    showHelp?.classList?.add('hidden');
+    if (showHelp) {
+        showHelp.classList.add('hidden');
+    }
 
     const consentGiven = Boolean(localStorage.getItem(COOKIE_KEY));
 
     if (consentGiven) {
         enableAnalytics();
-        cookieNotice?.classList?.remove('visible');
-        cookieNotice?.classList?.add('hidden');
+        if (cookieNotice) cookieNotice.remove();
     } else {
         setTimeout(showCookieNotice, 1000);
     }
 
-    cookieBtn?.addEventListener('click', () => {
-        cookieBtn.disabled = true;
+    if (cookieBtn) {
+        cookieBtn.addEventListener('click', () => {
+            cookieBtn.disabled = true;
 
-        localStorage.setItem(COOKIE_KEY, '1');
+            localStorage.setItem(COOKIE_KEY, '1');
 
-        hideCookieNotice();
-        enableAnalytics();
-    });
+            hideCookieNotice();
+            enableAnalytics();
+        });
+    }
 };
 
 init();
