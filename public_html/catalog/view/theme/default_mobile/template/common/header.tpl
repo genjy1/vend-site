@@ -12,25 +12,6 @@
 <meta name="keywords" content= "<?php echo $keywords; ?>" />
 <?php } ?>
     <link rel="stylesheet" href="/video-js.min.css">
-<!-- Google Tag Manager -->
-<script>
-if (typeof navigator.userAgent !== "undefined") {
-	if (navigator.userAgent.indexOf('Lighthouse') < 0) {
-		getAnalytics();
-	}
-} else {
-	getAnalytics();
-}
-
-function getAnalytics() {
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WWRJPN3');}</script>
-
-<!-- End Google Tag Manager -->
-
 <?php foreach ($styles as $style) { ?><!--rel="<?php echo $style['rel']; ?>"--> 
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="preload" media="<?php echo $style['media']; ?>" onload="this.rel='<?php echo $style['rel']; ?>'" as="style" />
 <?php } ?>
@@ -105,7 +86,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <?php } ?>
               <a href="/category/avtomaty/katalog-bu-avtomatov/">б/у автоматы</a>
          </div>
-         <div class="callme">
+         <div class="callme" data-target="#winMain">
            <span><? echo $callme ?></span>
          </div>
        </div>

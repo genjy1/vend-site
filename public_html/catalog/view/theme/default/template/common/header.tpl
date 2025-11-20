@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?php echo $title; ?></title>
 <base href="<?php echo $base; ?>" />
-  <link href="/video-js.min.css" rel="stylesheet" />
+<link href="/video-js.min.css" rel="stylesheet" />
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -161,7 +161,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div class="lc">
-        <div class="callme"><? echo $callme ?></div>
+        <div class="callme" data-target="#winMain"><? echo $callme ?></div>
         <div class="telm">
           <div><a href="tel:<?php echo $telephone1; ?>"><?php echo $telephone1; ?></a></div>
           <div>Для звонков по Москве</div>
