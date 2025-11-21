@@ -4888,8 +4888,11 @@ header a{
     padding-bottom: 10px;
 }
 .cartadded a{
+    display: block;
     justify-content: center;
     margin-bottom: 10px;
+    height: auto;
+    padding: 10px 20px;
 }
 .cartadded img{
   width: 100px;
