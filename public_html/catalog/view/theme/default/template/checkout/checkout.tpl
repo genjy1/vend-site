@@ -12,104 +12,23 @@
       <div class="cart">
         <h1>Контактная информация</h1>
         <div class="checkout">
-          <div class="field l">
-            <label>Имя<span class="req">*</span></label>
-            <input name="firstname"  type="text" required="required">
-          </div>
-          <div class="field r"  type="text">
-            <label>Телефон<span class="req">*</span></label>
-            <input name="telephone"  type="text" required="required">
-          </div>
-          <div class="field r">
-            <label>Email</label>
-            <input name="email"  type="text">
-          </div>
-<!--javascript:void(0)-->
-          <div class="buttons"><a href="javascript:history.go(-2);" class="return">Вернуться в магазин</a>
-            <div class="checkout"><a href="" id="nextstep">Дальше</a></div>
-          </div>
+          <form method="post" id="checkout">
+            <div class="form-group">
+              <label for="firstname">Имя<span class="req">*</span></label>
+              <input class="input input-text" name="firstname" id="firstname"  type="text" required>
+            </div>
+            <div class="form-group"  type="text">
+              <label for="telephone">Телефон<span class="req">*</span></label>
+              <input class="input input-text" name="telephone" id="telephone"  type="text" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input class="input input-text" name="email" id="email"  type="text">
+            </div>
+            <button type="submit" class="btn btn-submit-checkout">Дальше</button>
+          </form>
         </div>
       </div>
     </div>
-    <style>
-    	.error{
-    		border:1px #f00 solid;
-    	}
-    </style>
-<script>
-$("#nextstep").on('click', function(e){
-e.preventDefault();
-      	$('.cart').find('input').map(function(el){
-      		
-          name = $(this).attr('name');
-
-          type = $(this).attr('type');
-
-          value = $(this).val();
-
-          required = $(this).attr('required');
-
-          if(required !== undefined){
-            if(value == ''){
-              error = true;
-              console.log(name + ' is required');
-              $(this).addClass('error');
-              return false;
-            }else{
-            	$(this).removeClass('error');	
-            }
-          }
-
-          pattern = $(this).attr('pattern');
-          if(pattern !== undefined){
-            if(value.search(new RegExp(pattern,'i')) < 0){
-              error = true;
-              console.log('wrong pattern');
-              return false;
-            }
-          }
-          
-          var value1 = $('[name=firstname]').val();
-          var value2 = $('[name=telephone]').val();
-          
-if(value1 != '' && value2 != ''){
-  const ct_site_id = '49728';
-  let ct_data = {
-    fio: value1,
-    phoneNumber: value2,
-    subject: 'Заявка из корзины',
-    sessionId: window.call_value,
-    requestUrl: location.href,
-  };
-  $.ajax({
-      url: 'https://api.calltouch.ru/calls-service/RestAPI/requests/'+ct_site_id+'/register/',
-      dataType: 'json',
-      type: 'POST',
-      data: ct_data,
-  });
-  $.ajax({
-    url: 'index.php?route=checkout/confirm',
-    type: 'post',
-    data: $('.cart input[type="text"]').serialize(), // <--- фикс
-    dataType: 'json',
-    success: function(json) {
-      console.log(json);
-      if (json.redirect) {
-        location = json.redirect;
-      } else if (json.error) {
-        alert(json.error);
-      }
-    },
-    error: function(xhr, ajaxOptions, thrownError) {
-      alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-    }
-  });
-}            
-
-        });
-
-	
-
-});
-</script>
+<script type="module" src="/catalog/view/javascript/feedback/checkout.js" ></script>
 <?php echo $footer; ?>
