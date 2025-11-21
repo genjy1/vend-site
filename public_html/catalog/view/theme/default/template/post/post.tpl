@@ -36,7 +36,7 @@
         <? } ?>
 
         <?php if($form) { ?>
-            <a href="javascript:void(0)" class="callme postform">Оставьте заявку прямо сейчас</a>
+          <button data-target="#offer" class="btn callme postform">Оставьте заявку прямо сейчас</button>
         <?php } ?>
       </div>
       
