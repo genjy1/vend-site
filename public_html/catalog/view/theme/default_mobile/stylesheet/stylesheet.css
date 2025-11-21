@@ -4245,8 +4245,6 @@ input[type="checkbox"] + label span:first-child, input[type="checkbox"]:checked 
   padding: 10px 15px;
 }
 
-.fastorder.getoffer {
-}
 
 .cartadded .buts {
   top: 0;
@@ -5895,3 +5893,124 @@ color: #4a259b;
   width: auto;
 }
 
+.btn {
+  background: #4A259B;
+  color: #fff;
+  font-family: FuturaPTBook, sans-serif;
+  border: 0;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  letter-spacing: 0.2px;
+  transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+.btn:hover {
+  background: #5C2EC3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(74, 37, 155, 0.35);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(74, 37, 155, 0.3);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#checkout {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.input {
+  border-radius: 10px;
+}
+
+.input-text {
+  padding: 12px 15px;
+  font-family: FuturaPTBook, sans-serif;
+  border: 2px solid #e3e3e3;
+  background: #f4f4f4;
+  border-radius: 10px;
+  font-size: 17px;
+  transition: border-color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+.cart {
+  padding: 20px 0;
+}
+
+.input-text:hover {
+  border-color: #b2b2b2;
+  background: #fafafa;
+}
+
+.input-text:focus {
+  outline: none;
+  border-color: #4A259B;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(74, 37, 155, 0.18);
+}
+
+.btn:hover {
+  cursor: pointer;
+  border: 1px solid #000000;
+}
+
+.btn.btn-submit-checkout {
+  position: relative;
+  overflow: hidden;
+  background: #4A259B;
+  color: #fff;
+  transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+.btn.btn-submit-checkout:hover {
+  background: #5C2EC3; /* чуть ярче */
+  transform: translateY(-2px); /* лёгкое поднятие */
+  box-shadow: 0 6px 16px rgba(74, 37, 155, 0.35); /* красивое “свечение” */
+}
+
+.btn.btn-submit-checkout:active {
+  transform: translateY(0); /* ощущение клика */
+  box-shadow: 0 3px 8px rgba(74, 37, 155, 0.3);
+}
+
+/* Для сочетания с ripple — слой контента выше */
+.btn.btn-submit-checkout > * {
+  position: relative;
+  z-index: 1;
+}
+
+.btn.btn-submit-checkout .ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  background: rgba(255, 255, 255, 0.45);
+  animation: ripple-effect 600ms ease-out;
+  pointer-events: none;
+}
+
+@keyframes ripple-effect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+
+/* hover обычных ссылок, не окрашенных в цвет */
+.banner-coffee-link:hover:not(.btn-red):not(.btn-white):not(.btn-orange) {
+  border: 1px solid white;
+  color: white;
+  backdrop-filter: blur(8px);
+  background: inherit;
+}

@@ -104,6 +104,8 @@ class ControllerCheckoutConfirm extends Controller {
                 throw new Exception('Не удалось создать заказ (addOrder вернул 0). Проверьте обязательные поля.');
             }
 
+            $this->cart->clear();
+
             $json['success'] = true;
             $json['order_id'] = $order_id;
             $json['redirect'] = $this->url->link('checkout/success');
@@ -119,6 +121,8 @@ class ControllerCheckoutConfirm extends Controller {
 
             $this->response->addHeader('Content-Type: application/json');
             $this->response->setOutput(json_encode($json, JSON_UNESCAPED_UNICODE));
+
+
         }
     }
 }
