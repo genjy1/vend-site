@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const modals = overlay.querySelectorAll('.win_white');
     const buttons = document.querySelectorAll(
-        '.callme, .request, .getoffer, .btn.buy-kredit , .fastorder, .callcall, .callme.banner-coffee-link'
+        '.callme, .request, button.getoffer, .btn.buy-kredit , .fastorder, .callcall, .callme.banner-coffee-link'
     );
 
     modals.forEach(modal => {
