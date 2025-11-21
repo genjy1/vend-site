@@ -6,12 +6,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const form = document.querySelector('#checkout');
     const ct_site_id = 49728;
-    let isSubmitting = false;
+    const buttonLabel = 'Дальше';
 
     if (!form) {
         console.error('Checkout form not found');
         return;
     }
+
+    const submitButton = form.querySelector('.btn.btn-submit-checkout');
+    if (!submitButton) {
+        console.error('Submit button not found');
+        return;
+    }
+
+    let isSubmitting = false;
 
     // ---------------------------
     // SAFE JSON PARSER
@@ -31,9 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.btn.btn-submit-checkout');
 
     const createRipple = (button, e) => {
+        if (isSubmitting) return; // не рисовать ripple при отправке
+
         const rect = button.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
-
         const x = e.clientX - rect.left - size / 2;
         const y = e.clientY - rect.top - size / 2;
 
@@ -43,13 +52,26 @@ document.addEventListener('DOMContentLoaded', () => {
         ripple.style.height = size + 'px';
         ripple.style.left = x + 'px';
         ripple.style.top = y + 'px';
+        ripple.style.position = 'absolute';
+        ripple.style.borderRadius = '50%';
+        ripple.style.backgroundColor = 'rgba(255,255,255,0.4)';
+        ripple.style.transform = 'scale(0)';
+        ripple.style.opacity = '1';
+        ripple.style.pointerEvents = 'none';
+        ripple.style.transition = 'transform 0.6s ease-out, opacity 0.6s ease-out';
 
         button.appendChild(ripple);
+
+        requestAnimationFrame(() => {
+            ripple.style.transform = 'scale(2.5)';
+            ripple.style.opacity = '0';
+        });
 
         setTimeout(() => ripple.remove(), 600);
     };
 
     buttons.forEach(btn => {
+        btn.style.position = 'relative'; // чтобы ripple позиционировался правильно
         btn.addEventListener('click', (e) => createRipple(btn, e));
     });
 
@@ -65,16 +87,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         isSubmitting = true;
+        submitButton.disabled = true; // блокируем кнопку
+        submitButton.textContent = 'Отправка...';
 
         try {
             const fd = new FormData(e.target);
-            const data = Object.fromEntries(fd);
+            const data = Object.fromEntries(fd.entries());
 
             const firstname = (data.firstname || '').trim();
             const phone = (data.telephone || '').trim();
 
             if (!firstname || !phone) {
-                isSubmitting = false;
                 Toastify({
                     text: "Заполните все поля",
                     duration: 2500,
@@ -107,20 +130,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             );
 
-            const [confirmRes, callTouchRes] = await Promise.all([
-                confirmPromise,
-                callTouchPromise
-            ]);
+            const [confirmRes, callTouchRes] = await Promise.all([confirmPromise, callTouchPromise]);
 
             if (!confirmRes.ok) {
                 console.error('Checkout confirm request failed:', confirmRes.status);
-                isSubmitting = false;
                 return;
             }
 
             if (!callTouchRes.ok) {
                 console.error('CallTouch request failed:', callTouchRes.status);
-                isSubmitting = false;
                 return;
             }
 
@@ -150,6 +168,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Checkout error:', err);
         } finally {
             isSubmitting = false;
+            submitButton.disabled = false; // разблокируем кнопку
+            submitButton.textContent = buttonLabel;
         }
     });
 
