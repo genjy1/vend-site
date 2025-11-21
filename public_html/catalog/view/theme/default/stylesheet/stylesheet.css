@@ -6344,6 +6344,10 @@ header #logo div {
   border-radius: 10px;
 }
 
+.btn.prosal {
+  margin-top: 16px;
+}
+
 .input-text {
   padding: 12px 15px;
   font-family: FuturaPTBook, sans-serif;
