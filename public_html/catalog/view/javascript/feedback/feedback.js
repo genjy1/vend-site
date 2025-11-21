@@ -218,6 +218,8 @@ const sendCalltouchData = data => {
 document.addEventListener('DOMContentLoaded', () => {
 
     const forms = document.querySelectorAll('.win_white form');
+    const form = document.querySelector('.feedback-form');
+
 
     forms.forEach(form => {
 
@@ -242,6 +244,22 @@ document.addEventListener('DOMContentLoaded', () => {
             sendCalltouchData(data);
         });
     });
+
+    form?.addEventListener('submit', e => {
+        e.preventDefault();
+
+        const data = getFeedback(form);
+        const agreement = form.querySelector('input[name="agreement"]');
+
+        if (agreement && !agreement.checked) {
+            highlightAgreement(agreement);
+            showErrorMessage('Поставьте галочку согласия на обработку данных');
+            return;
+        }
+
+        sendFeedback(form, data);
+        sendCalltouchData(data);
+    })
 });
 
 
