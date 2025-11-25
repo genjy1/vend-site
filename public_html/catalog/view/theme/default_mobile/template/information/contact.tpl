@@ -83,48 +83,30 @@
             });
         });
     </script>
-          
-          <form data-template="request" data-subject="Форма связи" id="feedback">
-            <input placeholder="Как вас зовут" name="name" value="<? echo $name ?>">
-            <input required placeholder="Контактный телефон*" name="phone" value="<? echo $phone ?>">
-            <input placeholder="Электронная почта" name="email" value="<?php echo $email ?>">
-            <input type="text" name="region" required placeholder="Ваш регион">
-            <div class="radios">
-              <div>
-                <input type="radio" checked="checked" name="firma" id="fiz" value="Физическое лицо"> <label for="fiz"> <span></span>Физическое лицо</label>
-                
-                <br>
-              </div>
-              <div>
-                <input type="radio" name="firma" id="jur" value="Юридическое лицо"> <label for="jur"> <span></span>Юридическое лицо </label>
-              </div>
-            </div>
-            <div class="radios has">
-                <br>
-              <div>
-                <input type="radio" checked="checked" name="has" id="has_y" value="Да"> <label for="has_y"> <span></span>У меня есть автоматы</label>
-              </div>
 
-              <div>
-                <input type="radio" name="has" id="has_no" value="Нет"> <label for="has_no"> <span></span>У меня нет автоматов </label>
-                <br>
-                <br>
-              </div>
-           </div>
-           <div>
-            <div class="amount">
-              <input type="text" name="amount" required placeholder="Количество автоматов">
-          </div>
-              <input type="checkbox" name="credit" id="crdit"><label for="crdit"> Кредит/лизинг</label> 
-          </div>
-            <textarea placeholder="Какие автоматы интересуют?" name="note"><? echo $enquiry ?></textarea>
-            <div class="prv">
-            Нажимая на кнопку "отправить", вы даете согласие на обработку <a href="https://vend-shop.com/privacy/">персональных данных</a>.
-          </div>
-            <button type="submit" class="submit">Отправить заявку</button>
-          <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
-			<input type="hidden" name="recaptcha_response" id="recaptchaResponseCont">
-            
+          <form data-template="request" id="winProduct" data-subject="Обратный звонок">
+            Имя <span>*</span> <br>
+            <input type="text" name="name" required>
+            Номер Вашего телефона<span>*</span><br>
+            <div class="teldiv">
+              <input type="tel" name="ft" maxlength="2" value = "+7" required >
+              <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
+              <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required >
+            </div>
+            <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
+            <div id="options"></div>
+            <div id="options2"></div>
+
+            <button id="submit" type="submit" class="submit">Отправить заявку</button>
+            <div class="agreement-container">
+              <input type="checkbox" name="agreement" id="agreement_main">
+              <label for="agreement_main" class="prv agreement-label">
+                <p class="label__agreement-text">
+                  Даю <a href="/agreement">согласие на обработку моих персональных данных</a> в соответствии с
+                  <a href="/privacy">политикой конфиденциальности</a> в целях обработки моего обращения и взаимодействия с компанией.
+                </p>
+              </label>
+            </div>
           </form>
         </div>
         <? echo $content_bottom; ?>
