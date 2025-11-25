@@ -149,7 +149,7 @@
   $("#preloader").fadeOut(300);
  </script>
 <? if(!$price){ ?>
-  <button value="Цена по запросу" class="request">Цена по запросу</button><a class="fastorder">Быстрый заказ</a>
+  <button value="Цена по запросу" class="request">Цена по запросу</button><button data-target="#fast" class="fastorder btn">Быстрый заказ</button>
   <a class="getlis" id="getLis" href="#lising-box" data-width="600" style="display: none">Лизинг</a>
     <div id="lising-box" style="display: none;">
           <iframe id="arenzaWidget" src="https://crmpro.arenza.ru/partners/oec0z3hqc2Xo6DoPaaxV95TBoVqBMvl-8QOordPLLHs/widget?iframe=true" height="100%" width="100%" frameborder="0"> </iframe>
@@ -182,23 +182,7 @@
     margin-right: 25px;
     margin-top: 20px;
     clear: both;
-    width: 300px!important;
-" onclick="javascript:otpform.start({
-view: 'modal',
-accessID: '7390',
-tradeID: '14798',
-creditFirstPaymentFrom: '0',
-creditFirstPaymentTo: '90',
-creditTermFrom: '3',
-creditTermTo: '36',
-creditType: '2',
-hostname: 'https://vend-shop.com/blog/rassrochka-oformlena/',
-items: [{
-	'name': '<?php echo $heading_title; ?>',
-	'price': <?php echo (int)str_replace(" ", "", $price); ?>,
-	'count': 1,
-}],
-});" type="button">Рассрочка 0%</button>
+    width: 300px!important;" type="button">Рассрочка 0%</button>
 
     <div id="lising-box" style="display: none;">
           <iframe id="arenzaWidget" src="https://crmpro.arenza.ru/partners/oec0z3hqc2Xo6DoPaaxV95TBoVqBMvl-8QOordPLLHs/widget?iframe=true" height="100%" width="100%" frameborder="0"> </iframe>
@@ -996,8 +980,8 @@ items: [{
   <div class="cin">
     <img class="lazy" data-src="<? echo $mini ?>" alt="">
     <div class="buts">
-      <a href="javascript:void(0)" class="getoffer continue">продолжить выбор товара</a>
-      <a href="/cart/" class="getoffer">оформить заявку</a>
+      <button href="javascript:void(0)" class="getoffer continue">продолжить выбор товара</button>
+      <button href="/cart/" class="getoffer">оформить заявку</button>
     </div>
   </div>
 </div>

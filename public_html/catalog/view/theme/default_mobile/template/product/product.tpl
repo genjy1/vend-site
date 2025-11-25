@@ -110,7 +110,7 @@
     </div>
     <div class="price">
       <? if(!$price){ ?>
-      <button value="Цена по запросу" class="request">Цена по запросу</button><a class="fastorder">Быстрый заказ</a>
+      <button value="Цена по запросу" class="request">Цена по запросу</button><button data-target="#fast" class="fastorder btn">Быстрый заказ</button>
       <? } else{ ?>
       <? if($avtomat) {?>
       <button data-target="#offer" href="javascript:void(0)" class="btn getoffer">получить индивидуальное предложение</button>
