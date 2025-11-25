@@ -217,10 +217,7 @@ const sendCalltouchData = data => {
 ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
 
-    const forms = document.querySelectorAll('.win_white form, .feedback-form, #winProduct, .leasing-form');
-    // const form = document.querySelector('.feedback-form');
-    // const winProductForm = document.querySelector('#winProduct');
-
+    const forms = document.querySelectorAll('.win_white form, .feedback-form, #winProduct, .leasing-form, #feedback, #catchform2');
 
     forms.forEach(form => {
 
@@ -245,38 +242,6 @@ document.addEventListener('DOMContentLoaded', () => {
             sendCalltouchData(data);
         });
     });
-    //
-    // form?.addEventListener('submit', e => {
-    //     e.preventDefault();
-    //
-    //     const data = getFeedback(form);
-    //     const agreement = form.querySelector('input[name="agreement"]');
-    //
-    //     if (agreement && !agreement.checked) {
-    //         highlightAgreement(agreement);
-    //         showErrorMessage('Поставьте галочку согласия на обработку данных');
-    //         return;
-    //     }
-    //
-    //     sendFeedback(form, data);
-    //     sendCalltouchData(data);
-    // })
-    //
-    // winProductForm?.addEventListener('submit', e => {
-    //     e.preventDefault();
-    //
-    //     const data = getFeedback(form);
-    //     const agreement = form.querySelector('input[name="agreement"]');
-    //
-    //     if (agreement && !agreement.checked) {
-    //         highlightAgreement(agreement);
-    //         showErrorMessage('Поставьте галочку согласия на обработку данных');
-    //         return;
-    //     }
-    //
-    //     sendFeedback(form, data);
-    //     sendCalltouchData(data);
-    // })
 });
 
 
