@@ -32,7 +32,7 @@
         <div><a href="<? echo $image['popup'] ?>" rel="fullfanc" <?php if($key != 0) { ?> data-fancybox="fullfancy" <?php } ?> ><img data-popup="<? echo $image['popup'] ?>" data-popup2="<? echo $image['popup2'] ?>" src="<? echo $image['thumb'] ?>"></a></div>
         <? } ?>
       </div>
-      <div class="price" style="margin: 15px 0 30px"> 
+      <div class="price" style="margin: 15px 0 30px">
       <? if(!$special) { ?>
       <div class="pr"><? if($avtomat) {?> <span>от</span> <? } ?><?php echo $price; ?>
       </div>
@@ -75,7 +75,7 @@
           <?php } ?>
         </div>
         <?php } ?>
-        <div class="pdf">
+        <div class="pdf<?= count($downloads) < 1 ? 'hidden' : '' ?>">
           <?php if(!empty($downloads) && $category_id!= 3){ ?>
           <?php foreach($downloads as $download){ ?>
           <a href="<?php echo $download['href']; ?>" title="">
@@ -83,23 +83,25 @@
           </a>
           <span><?php echo $download['size'] . ", " . strtoupper($download['ext']);?></span>
           <?php } ?>
-          
+
           <?php } ?>
+        </div>
+        <div class="calculator-btn__wrapper">
           <? if($category_id!= 250 && $category_id!= 60 && $category_id!= 3){ ?>
-          <a class="calc">Рассчитать окупаемость</a>
+          <button data-target="#calc" class="text-btn calculator-btn">Рассчитать окупаемость</button>
           <? } ?>
         </div>
       </div>
       <div class="price">
       <?
-      if (strpos($video, "autoplay") > 0) $video = $video."&mute=1&enablejsapi=1"; 
-    
+      if (strpos($video, "autoplay") > 0) $video = $video."&mute=1&enablejsapi=1";
+
       $s1 = strpos($video, "/embed/");
-      $s2 = strpos($video, "?"); 
+      $s2 = strpos($video, "?");
       if (!$s2) $s2 = strlen($video);
       $id = substr($video, $s1 + 7, $s2 - $s1 - 7);
-      if (strpos($video, '?') > 0 && $id) 
-      $video = $video.'&loop=1&playlist='.$id; 
+      if (strpos($video, '?') > 0 && $id)
+      $video = $video.'&loop=1&playlist='.$id;
       else $video = $video.'/?loop=1&playlist='.$id;
 
       if($video != ''){ ?>
@@ -124,7 +126,7 @@
       <? } ?>
       <? } ?>
       <? } ?>
-     
+
       <a class="getlis" id="getLis" href="#lising-box" data-width="600" style="display: none">Лизинг</a>
      <!-- <script crossorigin="anonymous"
  src="https://shop.otpbank.ru/form/js/form.min.js">

@@ -107,8 +107,10 @@
           <?php } ?>
 
         <?php } ?>
+      </div>
+      <div class="calculator-btn__wrapper">
         <? if($category_id!= 250 && $category_id!= 60 && $category_id!= 3){ ?>
-          <a class="calc">Рассчитать окупаемость</a>
+        <button data-target="#calc" class="text-btn calculator-btn">Рассчитать окупаемость</button>
         <? } ?>
       </div>
     </div>

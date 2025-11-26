@@ -849,6 +849,26 @@ form ul li {
   border: 1px solid #ccc;
 }
 
+.calculator-btn {
+  display: flex;
+  text-align: center;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.calculator-btn:before {
+  content: '';
+  display: block;
+  position: relative;
+  left: -10px;
+  width: 18px; /* ← конкретная ширина */
+  height: 22px; /* ← конкретная высота */
+  background: url(img/svg2/icon_calc.svg) no-repeat;
+}
+
 [type="checkbox"]:not(:checked) + label:after, [type="checkbox"]:checked + label:after {
   content: '\2714';
   position: absolute;
@@ -1031,6 +1051,20 @@ footer a {
 .formochka span {
   color: #e01186;
 }
+
+.text-btn {
+  background: transparent;
+  color: #E01186;
+  font-family: FuturaPTBook, sans-serif;
+  border: 0;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  letter-spacing: 0.2px;
+  transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
 
 @media (max-width: 992px) {
 
@@ -2592,7 +2626,7 @@ ul.pagination li.active span {
   background: #e01186;
   color: #fff;
 }
-.product .description {
+.product-description {
   margin-top: 30px;
   position: relative;
   overflow: hidden;
@@ -4220,7 +4254,7 @@ input[type="checkbox"] + label span:first-child, input[type="checkbox"]:checked 
 
 .teldiv {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .teldiv input:nth-child(1) {
@@ -4231,6 +4265,10 @@ input[type="checkbox"] + label span:first-child, input[type="checkbox"]:checked 
 .teldiv input:nth-child(2) {
   width: 60px!important;
   margin-right: 15px;
+}
+
+.text-white {
+  color: #fff;
 }
 
 .teldiv input:nth-child(3) {
