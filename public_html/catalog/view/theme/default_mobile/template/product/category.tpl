@@ -68,40 +68,16 @@
                         <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
                         <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required ></div>
                         <input placeholder="Email" name="email" required>
-                        <input type="text" name="region" required placeholder="Ваш регион">
-                        <div class="radios">
-                            <div>
-                                <input type="radio" checked="checked" name="firma" id="c_fiz" value="Физическое лицо"> <label for="c_fiz"> <span></span>Физическое лицо</label>
-                            </div>
-                            <div>
-                            <input type="radio" name="firma" id="c_jur" value="Юридическое лицо"> <label for="c_jur"> <span></span>Юридическое лицо </label>
-                            </div>
+                        <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
+                        <button type="submit" id="submit" class="submit">Отправить заявку</button>
+                        <div class="agreement-container">
+                            <input type="checkbox" name="agreement" id="agreement_main">
+                            <label for="agreement_main" class="prv agreement-label">
+                                <p class="label__agreement-text">
+                                    Даю <a href="/agreement">согласие на обработку персональных данных</a> в соответствии с <a href="/privacy">политикой конфиденциальности</a>
+                                </p>
+                            </label>
                         </div>
-                        <div class="radios has">
-                            <div>
-                                <input type="radio" checked="checked" name="has" id="c_has_y" value="Да"> <label for="c_has_y"> <span></span>У меня есть автоматы</label>
-                            </div>
-                        <div>
-                        <input type="radio" name="has" id="c_has_no" value="Нет"> <label for="c_has_no"> <span></span>У меня нет автоматов </label>
-                        </div>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="credit" id="c_crdit"><label for="c_crdit"> Кредит/лизинг</label> 
-                    </div>
-                    <div class="amount">
-                        <input type="text" name="amount" required placeholder="Количество автоматов">
-                    </div>
-          
-                    <div class="note">
-                        <textarea name="note" required placeholder="Какие автоматы интересуют?"></textarea>
-                    </div>
-                    <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
-					<input type="hidden" name="recaptcha_response" id="recaptchaResponseCat">
-
-                    <div class="prv">
-                         Нажимая на кнопку "отправить", вы даете согласие на обработку <a href="https://vend-shop.com/privacy/">персональных данных</a>.
-                    </div>
-                    <button type="submit" id="submit" class="submit">Отправить заявку</button>
                 </form>
                 </div>
             </div>
