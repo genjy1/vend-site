@@ -79,36 +79,28 @@
             <img class="last_img lazy" data-src="image/comp_7.jpg" alt="">
         </div>
         
-        <script src="https://www.google.com/recaptcha/api.js?render=6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6"></script>
-    <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6Lcn7DgpAAAAAOtz5NCMN3R4TUUc-JjHYSzKUCJ6', { action: 'contact' }).then(function (token) {
-                var recaptchaResponse = document.getElementById('recaptchaResponseInf');
-                recaptchaResponse.value = token;
-            });
-        });
-    </script>
-        
         <div class="pink_form">
             <div class="lc">
                 <div class="text_form">Не нашли автомат под свой товар? Оставьте заявку, мы свяжемся с вами и подберем оборудование для Вашего бизнеса!</div>
                 <div class="p_form">
-                    <form action="" id="catchform2" data-template="category" data-subject="Вопрос по мониторингу VendShop Online">
-                        <p><input placeholder="Как вас зовут" name="name"></p>
-                        <p><div class="teldiv"><input type="tel" name="ft" maxlength="2" value = "+7" required >
-            <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
-            <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required ></div></p>
-                        <p><input placeholder="Email*" name="email" required></p>
-                        <input type="hidden" name="recaptcha_response" id="recaptchaResponseInf">
-                        <p><button id="submit" class="submit">Отправить заявку</button></p>
+                    <form class="catchform2" id="catchform2" data-template="category" data-subject="Вопрос по мониторингу VendShop Online">
+                        <input placeholder="Как вас зовут" name="name">
+                        <div class="teldiv"><input type="tel" name="ft" maxlength="2" value = "+7" required >
+                            <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
+                            <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required ></div>
+                        <input placeholder="Email" name="email" required>
+                        <button type="submit" id="submit" class="submit btn">Отправить заявку</button>
+                        <div class="agreement-container ">
+                            <input type="checkbox" name="agreement" id="agreement_main">
+                            <label for="agreement_main" class="prv agreement-label">
+                                <p class="label__agreement-text">
+                                    Даю <a href="/agreement">согласие на обработку персональных данных</a> в соответствии с <a href="/privacy">политикой конфиденциальности</a>
+                                </p>
+                            </label>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-      $(document).ready(function(){
-        $("#catchform2").feedback();
-      });
-    </script>
 <?php echo $footer; ?>
