@@ -673,7 +673,10 @@ class ModelCheckoutOrder extends Model {
 
                 } catch (Exception $e) {
                     error_log(json_encode($e->getMessage()));
-                    file_put_contents(dirname(__DIR__ . '/../../../system/storage/error.log'), json_encode($e->getMessage()), FILE_APPEND);
+                    file_put_contents(__DIR__ . '/../../../system/storage/error.json', json_encode([
+                            'time' => date('Y-m-d H:i:s'),
+                            'message' => $e->getMessage()
+                        ]) . PHP_EOL, FILE_APPEND);
                 }
 				// Admin Alert Mail
 				if ($this->config->get('config_order_mail')) {
