@@ -22,7 +22,6 @@ td {
     display: none;
 }
 
-
 a img {
     border: none;
 }
@@ -274,6 +273,10 @@ header div.top .lc {
     display: block;
     margin: 0  auto;
     background: transparent;
+}
+
+.btn-submit.footer-form__submit {
+    margin: 10px auto;
 }
 
 header div.top div.cart {

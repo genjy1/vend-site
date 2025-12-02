@@ -295,7 +295,15 @@
                 </div>
             </div>
             <input type="hidden" name="url" value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)  ?>">
-            <button type="submit" class="btn-submit" >Отправить заявку</button>
+            <button type="submit" class="btn-submit footer-form__submit" >Отправить заявку</button>
+            <div class="agreement-container">
+                <input type="checkbox" name="agreement" id="agreement_main">
+                <label for="agreement_main" class="prv agreement-label">
+                    <p class="label__agreement-text">
+                        Даю <a href="/agreement" style="color: #37A322">согласие на обработку персональных данных</a> в соответствии с <a href="/privacy" style="color: #37A322">политикой конфиденциальности</a>
+                    </p>
+                </label>
+            </div>
         </form>
     </div>
   
