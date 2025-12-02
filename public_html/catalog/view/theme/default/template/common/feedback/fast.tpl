@@ -6,7 +6,6 @@
 </head>
 <body style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;">
 <div>Имя: <? echo $name ?></div>
-<div>Email: <? echo $email ?></div>
 <div>Телeфон: <? echo $ft ?><? echo $code ?><? echo $phone ?></div>
 <div>Автомат: <? echo $product ?></div>
 </body>
