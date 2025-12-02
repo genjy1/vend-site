@@ -221,7 +221,7 @@
                     <input type="checkbox" name="agreement" id="agreement_main">
                     <label for="agreement_main" class="prv agreement-label">
                         <p class="label__agreement-text">
-                            Даю <a href="/agreement">согласие на обработку персональных данных</a> в соответствии с <a href="/privacy">политикой конфиденциальности</a>
+                            Даю <a href="/agreement" style="color: #37A322">согласие на обработку персональных данных</a> в соответствии с <a href="/privacy" style="color: #37A322">политикой конфиденциальности</a>
                         </p>
                     </label>
                 </div>
