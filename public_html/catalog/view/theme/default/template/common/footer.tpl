@@ -21,7 +21,7 @@
                 <div>Для звонков по Москве</div>
               </div>
             </div>
-            <div class="callme">Перезвоните мне</div>
+            <div class="callme" data-target="#winMain">Перезвоните мне</div>
           </div>
           <div class="footcol">
             <div class="title">Информация</div>
