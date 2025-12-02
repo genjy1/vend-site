@@ -12,12 +12,12 @@
 <meta name="keywords" content= "<?php echo $keywords; ?>" />
 <?php } ?>
     <link rel="stylesheet" href="/video-js.min.css">
-<?php foreach ($styles as $style) { ?><!--rel="<?php echo $style['rel']; ?>"--> 
+<?php foreach ($styles as $style) { ?><!--rel="<?php echo $style['rel']; ?>"-->
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="preload" media="<?php echo $style['media']; ?>" onload="this.rel='<?php echo $style['rel']; ?>'" as="style" />
 <?php } ?>
 
 <?php foreach ($links as $link) { ?><!--<?php echo $link['rel']; ?>-->
-<link href="<?php echo $link['href']; ?>" rel="preload" onload="this.rel='<?php echo $link['rel']; ?>'" as="style"/>
+<link href="<?php echo $link['href']; ?>" rel="preload" href="this.rel='<?php echo $link['rel']; ?>'" as="style"/>
 <?php } ?>
 
 <?php foreach ($analytics as $analytic) { ?>
