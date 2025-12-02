@@ -143,7 +143,7 @@
       <option value="/category/avtomaty/yaytsa/?pomosch">Яйца</option>
     </select>
     <div class="text">Не нашли свой товар в списке? Оставьте заявку!</div>
-    <a href="javascript:void(0)" class="callme avtomat-link">Подобрать автомат</a>
+    <button data-target="#winMain" class="btn callme avtomat-link">Подобрать автомат</button>
 </div>
 <script>
   $(document).ready(function(){
