@@ -269,8 +269,6 @@
 
     const emailFields = document.querySelectorAll('input[type="email"]')
 
-    emailFields.forEach(field =>
-        field.required = true;
-    )
+    emailFields.forEach(field => field.required = true)
 
 </script>
