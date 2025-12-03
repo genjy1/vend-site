@@ -268,7 +268,10 @@
 <script type="module">
 
     const emailFields = document.querySelectorAll('input[type="email"]')
+    const labels = document.querySelectorAll('label[for="email"]')
 
     emailFields.forEach(field => field.required = true)
+    labels.forEach(label => label.textContent += ' *')
+    console.log(labels)
 
 </script>
