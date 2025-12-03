@@ -280,8 +280,8 @@
                 <div class="formcol">
 
                     <input type="text" placeholder="Как вас зовут" name="name" required>
-                    <input type="text" placeholder="Электронная почта" name="email">
-                </div>
+                    <input type="text" name="email" placeholder="Электронная почта. Например: test@test.ru"
+                           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,14}">                </div>
                 <div class="formcol tel">
                     <div class="teldiv"><input type="tel" name="ft" maxlength="2" value = "+7" required >
                         <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
