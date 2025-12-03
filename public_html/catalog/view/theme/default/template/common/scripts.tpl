@@ -265,3 +265,12 @@
 <!-- Toastify -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js@1/src/toastify.min.js" defer></script>
 <script type="module" src="/catalog/view/javascript/cookieNotice.js" ></script>
+<script type="module">
+
+    const emailFields = document.querySelectorAll('input[type="email"]')
+
+    emailFields.forEach(field =>
+        field.required = true;
+    )
+
+</script>
