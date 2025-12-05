@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('#checkout');
     const ct_site_id = 49728;
     const buttonLabel = 'Дальше';
+    const emailInput = form.querySelector('#email');
+
 
     if (!form) {
         console.error('Checkout form not found');
@@ -242,4 +244,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }).showToast();
     }
 
+    emailInput.addEventListener('input', () => {
+        console.log('emailInput');
+        const val = emailInput.value.trim();
+        const valid = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(val);
+        emailInput.setCustomValidity(valid ? '' : 'Введите корректный email');
+    });
 });

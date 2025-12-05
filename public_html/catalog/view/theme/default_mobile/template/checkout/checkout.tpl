@@ -23,9 +23,23 @@
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input class="input input-text" name="email" id="email" required type="text">
+          <input
+                  class="input input-text"
+                  name="email"
+                  id="email"
+                  type="email"
+                  required
+                  pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}">
         </div>
         <button type="submit" class="btn btn-submit-checkout">Дальше</button>
+        <div class="agreement-container">
+          <input type="checkbox" name="agreement" id="CallbackAgreement">
+          <label for="CallbackAgreement" class="prv agreement-label">
+            <p class="label__agreement-text">
+              Даю <a href="/agreement">согласие на обработку персональных данных</a> в соответствии с <a href="/privacy">политикой конфиденциальности</a>
+            </p>
+          </label>
+        </div>
       </form>
     </div>
   </div>
