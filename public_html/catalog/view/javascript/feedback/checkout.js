@@ -78,99 +78,168 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---------------------------
     // SUBMIT HANDLER
     // ---------------------------
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+    form.addEventListener('submit', handleSubmit);
+
+// -------------------------
+// Основной обработчик
+// -------------------------
+    async function handleSubmit(event) {
+        event.preventDefault();
 
         if (isSubmitting) {
-            console.warn('Submit prevented: form already submitting');
+            console.warn('Повторная отправка предотвращена');
             return;
         }
 
-        isSubmitting = true;
-        submitButton.disabled = true; // блокируем кнопку
-        submitButton.textContent = 'Отправка...';
+        const formEl = event.target;
+        const submitBtn = submitButton;
+
+        const restoreButtonState = lockButton(submitBtn);
 
         try {
-            const fd = new FormData(e.target);
-            const data = Object.fromEntries(fd.entries());
+            const fd = new FormData(formEl);
+            const data = normalizeForm(fd);
 
-            const firstname = (data.firstname || '').trim();
-            const phone = (data.telephone || '').trim();
-
-            if (!firstname || !phone) {
-                Toastify({
-                    text: "Заполните все поля",
-                    duration: 2500,
-                    gravity: "top",
-                    position: "center",
-                    backgroundColor: "#D9534F"
-                }).showToast();
+            if (!validateAgreement(data.agreement)) {
+                showError('Пожалуйста, дайте согласие на обработку данных');
                 return;
             }
 
-            const callTouchPayload = new URLSearchParams({
-                fio: firstname,
-                phoneNumber: phone,
-                subject: 'Заявка из корзины',
-                sessionId: window.call_value || '',
-                requestUrl: location.href
-            });
-
-            const confirmPromise = fetch('index.php?route=checkout/confirm', {
-                method: 'POST',
-                body: fd
-            });
-
-            const callTouchPromise = fetch(
-                `https://api.calltouch.ru/calls-service/RestAPI/requests/${ct_site_id}/register/`,
-                {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: callTouchPayload.toString()
-                }
-            );
-
-            const [confirmRes, callTouchRes] = await Promise.all([confirmPromise, callTouchPromise]);
-
-            if (!confirmRes.ok) {
-                console.error('Checkout confirm request failed:', confirmRes.status);
+            if (!validateRequiredFields(data)) {
+                showError('Заполните все поля');
                 return;
             }
 
-            if (!callTouchRes.ok) {
-                console.error('CallTouch request failed:', callTouchRes.status);
-                return;
+            const [confirmRes, callTouchRes] = await sendParallelRequests(fd, data);
+
+            if (confirmRes.ok && callTouchRes.ok) {
+                showSuccess('Заявка отправлена!');
             }
 
-            const result = await safeJson(confirmRes);
-            const callTouchResult = await safeJson(callTouchRes);
-
-            const okConfirm = result?.status === 200 || result?.success === true;
-            const okCt = callTouchResult?.status === 200 || callTouchResult?.success === true;
-
-            if (okConfirm && okCt) {
-                Toastify({
-                    text: "Заявка отправлена!",
-                    duration: 3000,
-                    gravity: "top",
-                    position: "center",
-                    backgroundColor: "#4A259B"
-                }).showToast();
-            }
-
-            console.log('confirm result:', result);
-
-            if (result.redirect) {
-                location.assign(result.redirect);
+            if (confirmRes.json?.redirect) {
+                location.assign(confirmRes.json.redirect);
             }
 
         } catch (err) {
             console.error('Checkout error:', err);
+            showError('Ошибка при отправке формы');
         } finally {
-            isSubmitting = false;
-            submitButton.disabled = false; // разблокируем кнопку
-            submitButton.textContent = buttonLabel;
+            restoreButtonState();
         }
-    });
+    }
+
+// -------------------------
+// ЛОГИКА ОТПРАВКИ
+// -------------------------
+
+    async function sendParallelRequests(fd, data) {
+        const callTouchPayload = new URLSearchParams({
+            fio: data.firstname,
+            phoneNumber: data.telephone,
+            subject: 'Заявка из корзины',
+            sessionId: window.call_value || '',
+            requestUrl: location.href
+        });
+
+        const confirmReq = fetch('index.php?route=checkout/confirm', {
+            method: 'POST',
+            body: fd
+        });
+
+        const callTouchReq = fetch(
+            `https://api.calltouch.ru/calls-service/RestAPI/requests/${ct_site_id}/register/`,
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: callTouchPayload.toString()
+            }
+        );
+
+        const results = await Promise.allSettled([confirmReq, callTouchReq]);
+
+        const confirmRes = await parseSafe(results[0]);
+        const callTouchRes = await parseSafe(results[1]);
+
+        return [confirmRes, callTouchRes];
+    }
+
+// -------------------------
+// ПАРСИНГ JSON
+// -------------------------
+    async function parseSafe(result) {
+        if (result.status !== 'fulfilled') {
+            return { ok: false, json: null };
+        }
+
+        const resp = result.value;
+        let json = null;
+
+        try {
+            json = await resp.clone().json();
+        } catch (_) {}
+
+        return { ok: resp.ok, json };
+    }
+
+// -------------------------
+// ОБРАБОТКА ДАННЫХ ФОРМЫ
+// -------------------------
+
+    function normalizeForm(fd) {
+        const data = Object.fromEntries(fd.entries());
+        data.firstname = (data.firstname || '').trim();
+        data.telephone = (data.telephone || '').trim();
+        data.agreement = data.agreement === 'on';
+        return data;
+    }
+
+    function validateAgreement(agree) {
+        return agree === true;
+    }
+
+    function validateRequiredFields(data) {
+        return Boolean(data.firstname && data.telephone);
+    }
+
+// -------------------------
+// КНОПКА
+// -------------------------
+
+    function lockButton(btn) {
+        const initialText = btn.textContent;
+
+        isSubmitting = true;
+        btn.disabled = true;
+        btn.textContent = 'Отправка...';
+
+        return () => {
+            btn.disabled = false;
+            btn.textContent = initialText;
+            isSubmitting = false;
+        };
+    }
+
+// -------------------------
+// UI Уведомления
+// -------------------------
+    function showError(text) {
+        Toastify({
+            text,
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            style: {background:"#D9534F"}
+        }).showToast();
+    }
+
+    function showSuccess(text) {
+        Toastify({
+            text,
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            style: {background:"#4A259B"}
+        }).showToast();
+    }
 
 });
