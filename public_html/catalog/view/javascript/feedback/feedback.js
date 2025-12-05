@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (agreement && !agreement.checked) {
                 highlightAgreement(agreement);
-                showErrorMessage('Поставьте галочку согласия на обработку данных');
+                showErrorMessage('Для отправки заявки Вам необходимо дать согласие на обработку персональных данных в соответствии с политикой конфиденциальности ООО "Вендпром"');
                 return;
             }
 

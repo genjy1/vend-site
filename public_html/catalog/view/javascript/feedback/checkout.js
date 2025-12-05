@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = normalizeForm(fd);
 
             if (!validateAgreement(data.agreement)) {
-                showError('Пожалуйста, дайте согласие на обработку данных');
+                showError('Для отправки заявки Вам необходимо дать согласие на обработку персональных данных в соответствии с политикой конфиденциальности ООО "Вендпром"');
                 return;
             }
 
