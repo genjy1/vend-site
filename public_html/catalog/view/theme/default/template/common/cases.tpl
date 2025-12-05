@@ -13,7 +13,7 @@
                                         <div class="text">
                                             <? $slide['text'] = str_replace("src", "class='lazy' data-src", $slide['text']); ?>
                                             <p><?php echo htmlspecialchars_decode($slide['text']) ?></p>
-                                            <button data-target="#winMain" class="btn callme proposal">Получить предложение</button>
+                                            <button data-target="#winMain" class="btn callme proposal cases-btn">Получить предложение</button>
                                         </div>
                                     </div>
                                 </div>
