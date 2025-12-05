@@ -252,6 +252,18 @@ header div.top .lc {
     overflow: visible;
 }
 
+button.callme.proposal {
+    width: 100%;
+    background: #e91e63;
+    margin: 20px 0;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    border-radius: 6px;
+}
+
 .btn-submit{
     clear: both;
     width: 233px;
