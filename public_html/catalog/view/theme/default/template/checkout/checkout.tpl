@@ -23,7 +23,7 @@
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input class="input input-text" name="email" id="email"  type="text">
+              <input class="input input-text" name="email" id="email" required type="text">
             </div>
             <button type="submit" class="btn btn-submit-checkout">Дальше</button>
           </form>
