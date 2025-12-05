@@ -2305,6 +2305,25 @@ button[type="submit"]:disabled {
   transition: background 0.3s;
 }
 
+.btn.cases-btn {
+  background: #e91e63;
+  color: #fff;
+  padding: 8px 11px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: all ease-in 0.3s;
+  position: relative;
+}
+
+.btn.cases-btn:hover {
+  border: 1px solid transparent;
+  background: #e91e63;
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(74 ,37, 155, 0.35);
+}
+
 .cookie-notice button:hover {
   background: #e7e2f9;
 }
