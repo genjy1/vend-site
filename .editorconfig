@@ -1,0 +1,56 @@
+# EditorConfig помогает поддерживать согласованный стиль кода
+# https://editorconfig.org
+
+root = true
+
+# Настройки по умолчанию для всех файлов
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# PHP файлы
+[*.php]
+indent_size = 4
+
+# JavaScript файлы
+[*.js]
+indent_size = 2
+
+# CSS/SCSS файлы
+[*.{css,scss,less}]
+indent_size = 2
+
+# JSON файлы
+[*.json]
+indent_size = 2
+
+# YAML файлы
+[*.{yml,yaml}]
+indent_size = 2
+
+# Markdown файлы
+[*.md]
+trim_trailing_whitespace = false
+
+# Шаблоны OpenCart
+[*.tpl]
+indent_size = 2
+
+# Composer файлы
+[composer.json]
+indent_size = 4
+
+# Docker файлы
+[Dockerfile]
+indent_size = 4
+
+[docker-compose.yml]
+indent_size = 2
+
+# Makefile использует табы
+[Makefile]
+indent_style = tab

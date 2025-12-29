@@ -1,0 +1,28 @@
+# Игнорируемые файлы и директории для Prettier
+
+# Зависимости
+node_modules/
+vendor/
+
+# Кэш и временные файлы
+*.cache
+.php-cs-fixer.cache
+
+# Загруженные файлы
+public_html/image/
+public_html/download/
+public_html/storage/
+
+# Минифицированные файлы
+*.min.js
+*.min.css
+
+# Карты исходников
+*.map
+
+# Шаблоны OpenCart (содержат PHP)
+*.tpl
+
+# Конфигурационные файлы
+config.php
+admin/config.php

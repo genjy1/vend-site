@@ -1,68 +1,88 @@
 <?php echo $header; ?>
-<div class="lc">
-<ul class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-<?php $i=1; foreach ($breadcrumbs as $breadcrumb) { ?>
-  <li itemprop="itemListElement" itemscope
-  itemtype="https://schema.org/ListItem">
-  <a href="<?php echo $breadcrumb['href']; ?>" itemprop="name"><?php echo $breadcrumb['text']; ?></a><span>/</span>
-  <meta itemprop="position" content="<?=$i?>" />
-  </li>
-<?php $i++; } ?>
-</ul>
+<div class="lc layout-container">
+  <ul class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <?php $i = 1; foreach ($breadcrumbs as $breadcrumb) { ?>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="<?php echo $breadcrumb['href']; ?>" itemprop="name"><?php echo $breadcrumb['text']; ?></a>
+      <span>/</span>
+      <meta itemprop="position" content="<?php echo $i; ?>" />
+    </li>
+    <?php $i++; } ?>
+  </ul>
+
   <div class="product" id="product" itemscope itemtype="https://schema.org/Product">
     <?php echo $content_top; ?>
     <h1 itemprop="name"><?php echo $heading_title; ?></h1>
-    <div class="block1">
-      <div class="images">
-        <? if(count($images) > 5) { ?>
-          <a id="prev"></a>
-        <? } ?>
-        <div class="imgout">
-          <div class="imgin">
-            <? foreach($images as $key => $image) { ?>
-              <div class="itm"><a href="<? echo $image['popup'] ?>" <?php if($key != 0) { ?> data-fancybox="fullfancy" <?php } ?> rel="fullfanc" ><img data-popup="<? echo $image['popup'] ?>" data-popup2="<? echo $image['popup2'] ?>" src="<? echo $image['thumb'] ?>"></a></div>
-            <? } ?>
-          </div>
-        </div>
-        <? if(count($images) > 5) { ?>
-          <a id="next"></a>
-        <? } ?>
-      </div>
-      <div class="fullimage">
-        <? if($v3d != '') { ?>
-          <a class="b3d" id="v3d" href="#v3block"></a>
-          <div id="v3block"><? echo $v3d ?></div>
-        <? } ?>
-        <? if($video != '') { 
-           
-        ?>
-          <a href="<? echo $video ?>" id="video" class="video"></a>
-        <? } ?>
-        <a href="<? echo $popup ?>" class="fullfanc" data-fancybox="fullfancy" rel="fullfanc" data-popup2="<? echo $popup2 ?>"><img class="lazy" data-class="lazy" itemprop="image" data-src="<?php echo $thumb; ?>" src="http://vend-shop.com/<?php echo $thumb; ?>" alt=""></a>
-        <? if(isset($promo) && !empty($promo)) {?>
-          <? foreach($promo as $prom){ ?>
-            <div class="promo" style="<? echo $prom['position']; ?>">
-              <img src="<? echo $prom['image']; ?>" alt="">
-              <span style="<? echo $prom['spanposition']; ?>"><? if($prom['usename']) { echo $prom['text']; } ?></span>
+
+    <div class="block1 product__main">
+      <div class="images product__images">
+        <?php if (count($images) > 5) { ?>
+        <a id="prev" class="product__image-nav product__image-nav--prev"></a>
+        <?php } ?>
+
+        <div class="imgout product__image-gallery">
+          <div class="imgin product__image-list">
+            <?php foreach ($images as $key => $image) { ?>
+            <div class="itm product__image-thumbnail">
+              <a href="<?php echo $image['popup']; ?>" <?php if ($key != 0) { ?>data-fancybox="fullfancy"<?php } ?> rel="fullfanc">
+                <img data-popup="<?php echo $image['popup']; ?>" data-popup2="<?php echo $image['popup2']; ?>" src="<?php echo $image['thumb']; ?>" alt="">
+              </a>
             </div>
-          <? } ?>
-        <? } ?>
-      </div>
-      <div style="padding: 0 0 0 30px; width: 400px;float: left">
-      <? if(!$special) { ?>
-        <div class="pr" itemprop="price" content="<?php echo str_replace('₽', '', $price); ?>"><? if($price) {?> <? if($price && $avtomat){ ?><span>от</span><? } ?> <?php echo $price; ?><? } ?>
-        </div>
-      <? } else { ?>
-      <div class="specprice">
-            <div class="oldpr"><? if($avtomat) {?> <span>от</span> <?php echo $price; ?><? } ?>
+            <?php } ?>
           </div>
-          <div class="newpr" itemprop="price" content="<?php echo str_replace('₽', '', $special); ?>"><? if($avtomat) {?> <span>от</span> <?php echo $special; ?><? } ?>
         </div>
+
+        <?php if (count($images) > 5) { ?>
+        <a id="next" class="product__image-nav product__image-nav--next"></a>
+        <?php } ?>
       </div>
-      <? } ?>
+      <div class="fullimage product__image-main">
+        <?php if ($v3d != '') { ?>
+        <a class="b3d product__3d-view" id="v3d" href="#v3block"></a>
+        <div id="v3block"><?php echo $v3d; ?></div>
+        <?php } ?>
+
+        <?php if ($video != '') { ?>
+        <a href="<?php echo $video; ?>" id="video" class="video product__video-link"></a>
+        <?php } ?>
+
+        <a href="<?php echo $popup; ?>" class="fullfanc product__image-zoom" data-fancybox="fullfancy" rel="fullfanc" data-popup2="<?php echo $popup2; ?>">
+          <img class="lazy" data-class="lazy" itemprop="image" data-src="<?php echo $thumb; ?>" src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>">
+        </a>
+
+        <?php if (isset($promo) && !empty($promo)) { ?>
+          <?php foreach ($promo as $prom) { ?>
+          <div class="promo product__promo-badge" data-position="<?php echo htmlspecialchars($prom['position']); ?>">
+            <img src="<?php echo $prom['image']; ?>" alt="">
+            <span class="product__promo-text" data-position="<?php echo htmlspecialchars($prom['spanposition']); ?>">
+              <?php if ($prom['usename']) { echo $prom['text']; } ?>
+            </span>
+          </div>
+          <?php } ?>
+        <?php } ?>
       </div>
-      <div class="parametrs" style="padding-top: 15px">
-        <?
+      <div class="product__price-section">
+        <?php if (!$special) { ?>
+        <div class="pr product__price" itemprop="price" content="<?php echo str_replace('₽', '', $price); ?>">
+          <?php if ($price) { ?>
+            <?php if ($price && $avtomat) { ?><span class="product__price-prefix">от</span><?php } ?>
+            <?php echo $price; ?>
+          <?php } ?>
+        </div>
+        <?php } else { ?>
+        <div class="specprice product__price-wrapper">
+          <div class="oldpr product__price--original">
+            <?php if ($avtomat) { ?><span class="product__price-prefix">от</span> <?php echo $price; ?><?php } ?>
+          </div>
+          <div class="newpr product__price--special" itemprop="price" content="<?php echo str_replace('₽', '', $special); ?>">
+            <?php if ($avtomat) { ?><span class="product__price-prefix">от</span> <?php echo $special; ?><?php } ?>
+          </div>
+        </div>
+        <?php } ?>
+      </div>
+
+      <div class="parametrs product__attributes">
+        <?php
         $width = 1;
         $height = 1;
         $length = 1;
@@ -70,44 +90,40 @@
         ?>
 
         <?php foreach ($attribute_groups as $attribute_group) { ?>
-         <div class="title"><?php echo $attribute_group['name']; ?></div>
-         <div class="pars">
-          <? $ak = 0; ?>
+        <div class="title product__attributes-title"><?php echo $attribute_group['name']; ?></div>
+        <div class="pars product__attributes-list">
+          <?php $ak = 0; ?>
           <?php foreach ($attribute_group['attribute'] as $key => $attribute) { ?>
-            <div class="item" <? if($key > 5) { ?> style="display:none" data-hide-item="1" <? } ?>>
-              <? $ak = $key; ?>
-              <? if($attribute['attribute_id'] == 45){ ?>
-                <? $height = $attribute['text']; ?>
-              <? } ?>
-              <? if($attribute['attribute_id'] == 44){ ?>
-                <? $length = $attribute['text']; ?>
-              <? } ?>
-              <? if($attribute['attribute_id'] == 43){ ?>
-                <? $width = $attribute['text']; ?>
-              <? } ?>
-              <? if($attribute['attribute_id'] == 13){ ?>
-                <? $weight = $attribute['text']; ?>
-              <? } ?>
-              <div><?php echo $attribute['name']; ?>:</div>
-              <div><?php echo $attribute['text']; ?></div>
-            </div>
+          <div class="item product__attribute<?php if ($key > 5) { ?> product__attribute--hidden<?php } ?>" <?php if ($key > 5) { ?>data-hide-item="1"<?php } ?>>
+            <?php
+            $ak = $key;
+            if ($attribute['attribute_id'] == 45) { $height = $attribute['text']; }
+            if ($attribute['attribute_id'] == 44) { $length = $attribute['text']; }
+            if ($attribute['attribute_id'] == 43) { $width = $attribute['text']; }
+            if ($attribute['attribute_id'] == 13) { $weight = $attribute['text']; }
+            ?>
+            <div class="product__attribute-name"><?php echo $attribute['name']; ?>:</div>
+            <div class="product__attribute-value"><?php echo $attribute['text']; ?></div>
+          </div>
           <?php } ?>
         </div>
-      <?php } ?>
-      <div class="pdf">
-        <?php if(!empty($downloads) && $category_id!= 3){ ?>
-          <?php foreach($downloads as $download){ ?>
-            <?php if(!$download['href']) continue; ?>
-            <a href="<?php echo $download['href']; ?>" title="">
-              <?php echo $download['name']; ?>
-            </a>
-            <?php if($download['size']){ ?>
-              <span><?php echo $download['size'] . ", " . strtoupper($download['ext']);?></span>
+        <?php } ?>
+
+        <div class="pdf downloads">
+          <?php if (!empty($downloads) && $category_id != 3) { ?>
+            <?php foreach ($downloads as $download) { ?>
+              <?php if (!$download['href']) continue; ?>
+              <div class="downloads__item">
+                <a href="<?php echo $download['href']; ?>" class="downloads__link" title="">
+                  <?php echo $download['name']; ?>
+                </a>
+                <?php if ($download['size']) { ?>
+                <span class="downloads__meta"><?php echo $download['size'] . ', ' . strtoupper($download['ext']); ?></span>
+                <?php } ?>
+              </div>
             <?php } ?>
           <?php } ?>
-
-        <?php } ?>
-      </div>
+        </div>
       <div class="calculator-btn__wrapper">
         <? if($category_id!= 250 && $category_id!= 60 && $category_id!= 3){ ?>
         <button data-target="#calc" class="text-btn calculator-btn">Рассчитать окупаемость</button>
