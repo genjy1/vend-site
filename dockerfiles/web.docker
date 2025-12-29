@@ -1,4 +1,4 @@
-FROM php:8.2-apache
+FROM php:7.4-apache
 
 RUN apt-get update \
   && apt-get install -y \
@@ -27,13 +27,15 @@ COPY ./conf/apache2.conf /etc/apache2/apache2.conf
 
 COPY ./conf/www.vend-shop.conf /etc/apache2/sites-enabled/ 
 
-#COPY ./conf/php.ini /usr/local/etc/php/conf.d/
+COPY ./conf/php.ini /usr/local/etc/php/conf.d/
 
-#RUN mkdir -p /var/www/html/system/storage /var/www/html/system/storage/cache /var/www/html/system/storage/logs /var/www/html/system/storage/download \ 
+#RUN mkdir -p /var/www/html/system/storage /var/www/html/system/storage/cache /var/www/html/system/storage/logs /var/www/html/system/storage/download \
 #	/var/www/html/system/storage/upload /var/www/html/system/storage/modification /var/www/html/system/storage/session /var/www/html/system/image/cache /var/www/html/system/storage/logs/
 
 #RUN chmod -R 755 /var/www/html/system/storage /var/www/html/system/storage/cache /var/www/html/system/storage/logs /var/www/html/system/storage/download \
-#        /var/www/html/system/storage/upload /var/www/html/system/storage/modification /var/www/html/system/storage/session /var/www/html/system/image/cache /var/www/html/system/storage/logs/ 
+#        /var/www/html/system/storage/upload /var/www/html/system/storage/modification /var/www/html/system/storage/session /var/www/html/system/image/cache /var/www/html/system/storage/logs/
+
+#RUN chmod -R 755 /var/www/html/
 
 RUN chown -R www-data:www-data /var/www/html/
 

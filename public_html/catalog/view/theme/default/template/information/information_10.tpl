@@ -115,6 +115,7 @@
         <form class="catchform2" id="catchform2" data-template="category" data-subject="Вопрос по мониторингу VendShop Online">
           <div class="title">Остались вопросы? Мы с Вами свяжемся!</div>
           <input placeholder="Как вас зовут" name="name">
+          <input type="email" name="email" id="email">
           <div class="teldiv"><input type="tel" name="ft" maxlength="2" value = "+7" required >
             <input type="tel" name="code" value = "" placeholder="123" pattern="^\d+$" maxlength="3" required >
             <input type="tel" name="phone" value = "" placeholder="456 78 90" pattern="^\d+$" maxlength="8" required ></div>

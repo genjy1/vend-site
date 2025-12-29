@@ -61,6 +61,7 @@
         </a></div>
       <? } ?>
     </div>
+
     <?php echo $pagination; ?>
     <?php echo $content_bottom; ?>
 

@@ -1048,6 +1048,11 @@ footer a {
   font-size: 20px;
   display: block;
 }
+
+.footer-form__submit {
+  margin: 10px 0;
+}
+
 .formochka span {
   color: #e01186;
 }

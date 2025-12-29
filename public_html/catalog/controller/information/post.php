@@ -35,7 +35,7 @@ class ControllerInformationInformation extends Controller {
 			$data['button_continue'] = $this->language->get('button_continue');
 
 			$data['description'] = html_entity_decode($information_info['description'], ENT_QUOTES, 'UTF-8');
-
+//            $data['description'] = json_encode($information_info['description']);
 			$data['continue'] = $this->url->link('common/home');
 
 			$data['column_left'] = $this->load->controller('common/column_left');

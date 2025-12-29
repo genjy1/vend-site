@@ -4784,6 +4784,7 @@ header a{
     max-width: 250px;
 }
 .itembg{
+    position: relative;
     width: 100%;
     margin: 0 auto;
     background-size: cover!important;
@@ -5665,7 +5666,7 @@ blockquote p{
 
 #slider.banner.cases{
     background: #fff;
-    /* height: 612px; */
+    height: 612px;
 }
 #slider.banner.cases .item{
     width: 1300px;

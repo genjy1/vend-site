@@ -27,8 +27,3 @@ define('DB_PASSWORD', 'vshop');
 define('DB_DATABASE', 'vendsh82_test');
 define('DB_PORT', '3306');
 define('DB_PREFIX', 'oc_');
-
-//External services Calltouch, Google reCaptcha, e.t.c. ...
-define('RECAPTCHA_SECRET_KEY','6LenhE8qAAAAAGV3CnMTi6mOzsMqgi8rw4dRWb5n');
-define('RECAPTCHA_SITE_KEY','6LenhE8qAAAAAFC-Rd-l5TeTtRMXw-z0EVLjwmLx');
-define('CALLTOUCH_ID', '49728');

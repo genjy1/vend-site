@@ -12,7 +12,7 @@
       <div class="thanks">
         <h1>Спасибо</h1>
         <div class="text">Ваш заказ успешно оформлен. Мы свяжемся с вами в ближайшее время.<br/>
-        <? if(isset($order_id)) { ?>Номер вашего заказа <span>№<? echo $order_id ?>.</span><? } ?></div><a href="javascript:history.go(-3)" class="gotoshop">Вернуться в магазин</a>
+        <? if(isset($order_id)) { ?>Номер вашего заказа <span>№<? echo $order_id ?>.</span><? } ?></div><a href="/" class="gotoshop">Вернуться в магазин</a>
       </div>
     </div>
 <?php echo $footer; ?>

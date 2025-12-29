@@ -9,12 +9,6 @@
             </div>
         </div>
         <? if($type){ ?>
-        <div><div class="it">Тип установки<a class="op"></a></div>
-            <div id="type">
-                <div class="filteritem" data-atr=1>Напольная</div>
-                <div class="filteritem" data-atr=2>Настенная</div>
-            </div>
-        </div>
         <? } ?>
         <?php if($showprice) { ?>
         <div class="price">
@@ -28,7 +22,7 @@
             </div>
         </div>
         <? } ?>
-        <a class="reset" href="/category/avtomaty/">Сбросить</a>
+            <button type="reset" class="reset">Сбросить</button>
         </div>
       </div>
 

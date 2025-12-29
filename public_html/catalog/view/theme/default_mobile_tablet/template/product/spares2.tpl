@@ -162,8 +162,8 @@
   <div class="cin">
   <img src="<? echo $mini ?>" alt="">
   <div class="buts">
-    <a href="javascript:void(0)" class="getoffer continue">продолжить выбор товара</a>
-    <a href="/cart/" class="getoffer">оформить заявку</a>
+    <button href="javascript:void(0)" class="getoffer continue">продолжить выбор товара</button>
+    <button href="/cart/" class="getoffer">оформить заявку</button>
   </div>
   </div>
 </div>

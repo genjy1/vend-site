@@ -33,7 +33,7 @@ class ControllerCommonDelin extends Controller {
 		// $params['delivery']["derival"]["variant"] = "terminal";
 		// $params['delivery']["derival"]["terminalID"] = "1";
 		// $params['members']["requester"]["role"] = "receiver";
-//		 $params['cargo']["quantity"] = $this->request->post['qq'];
+		// $params['cargo']["quantity"] = "1";
 		// $params['cargo']["length"] = "1";
 		// $params['cargo']["width"] = "1";
 		// $params['cargo']["weight"] = "12";

@@ -95,7 +95,7 @@
         </p>
         <button id="cookieAcceptBtn">Согласен</button>
     </div>
-<script>new WOW().init();</script>
+
 
     <div style="display: none" id="arenza"></div>
     <script>
@@ -114,7 +114,7 @@
     }, 10000);
 
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" type="text/javascript"></script>
+    <script src="catalog/view/javascript/hammerjs/hammer.min.js"></script>
  </div>
     </body>
 </html>

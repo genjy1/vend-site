@@ -81,6 +81,8 @@
           <form data-template="request" id="winProduct" data-subject="Обратный звонок">
             Имя <span>*</span> <br>
             <input type="text" name="name" required>
+            Электронная почта <span>*</span> <br>
+            <input type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,14}">
             Номер Вашего телефона<span>*</span><br>
             <div class="teldiv">
               <input type="tel" name="ft" maxlength="2" value = "+7" required >

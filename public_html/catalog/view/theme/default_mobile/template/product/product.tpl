@@ -75,7 +75,7 @@
           <?php } ?>
         </div>
         <?php } ?>
-        <div class="pdf<?= count($downloads) < 1 ? 'hidden' : '' ?>">
+        <div class="pdf <?= count($downloads) < 1 ? 'hidden' : '' ?>">
           <?php if(!empty($downloads) && $category_id!= 3){ ?>
           <?php foreach($downloads as $download){ ?>
           <a href="<?php echo $download['href']; ?>" title="">

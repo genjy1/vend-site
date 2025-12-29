@@ -265,13 +265,51 @@
 <!-- Toastify -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js@1/src/toastify.min.js" defer></script>
 <script type="module" src="/catalog/view/javascript/cookieNotice.js" ></script>
+<style>
+    .easter-egg {
+        position: fixed;
+        transform: translateX(-120%);
+        transition: all ease-in .3s;
+    }
+
+    .easter-egg > img {
+        width: 64px;
+        object-fit: contain;
+        height: auto;
+    }
+
+    .easter-egg.active {
+        transform: translateX(0);
+    }
+</style>
 <script type="module">
 
     const emailFields = document.querySelectorAll('input[type="email"]')
     const labels = document.querySelectorAll('label[for="email"]')
+    const easterEgg = document.querySelector('.easter-egg')
+    const pressed = new Set();
 
     emailFields.forEach(field => field.required = true)
     labels.forEach(label => label.textContent += ' *')
-    console.log(labels)
+
+
+    document.addEventListener('keydown', (e) => {
+
+        pressed.add(e.key.toLowerCase())
+
+        if (pressed.has('p') && pressed.has('n') || pressed.has('з') && pressed.has('т')) {
+            easterEgg.classList.toggle('active')
+
+            setTimeout(() => {
+            easterEgg.classList.toggle('active')}, 3000)
+        }
+    });
+
+    document.addEventListener('keyup', (e) => {
+        pressed.delete(e.key.toLowerCase());
+    });
 
 </script>
+
+
+<script></script>

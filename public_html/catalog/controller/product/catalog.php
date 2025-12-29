@@ -2,7 +2,6 @@
 class ControllerProductCatalog extends Controller {
 	public function index() {
 		
-
 		$this->load->language('product/category');
 
 		$this->load->model('catalog/category');
@@ -86,7 +85,6 @@ class ControllerProductCatalog extends Controller {
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
-
 		$this->response->setOutput($this->load->view('product/catalog', $data));
 	}
 }

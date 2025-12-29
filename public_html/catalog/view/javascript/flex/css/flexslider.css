@@ -117,7 +117,7 @@ html[xmlns] .flexslider .slides {
   display: block;
   width: 16px;
   height: 20px;
-  margin: -16px -24px 0;
+  margin: -16px 0 0;
   position: absolute;
   z-index: 10;
   overflow: hidden;
@@ -204,7 +204,7 @@ html[xmlns] .flexslider .slides {
   text-align: center;
 }
 .flex-control-nav li {
-  margin: 0 8px;
+  margin: 0 6px;
   display: inline-block;
   zoom: 1;
   *display: inline;

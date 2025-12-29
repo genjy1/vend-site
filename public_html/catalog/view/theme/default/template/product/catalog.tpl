@@ -329,11 +329,9 @@ $(document).ready(function(){
             <div class="note">
               <textarea name="note" required placeholder="Какие автоматы интересуют?"></textarea>
             </div>
-            <input
-                    type="hidden"
-                    name="url"
-                    value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?>"
-            >
+            <input type="hidden" name="url"
+              value="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?>">
+			<input type="hidden" name="recaptcha_response" id="recaptchaResponseCtlg">
             <div class="prv">
               Нажимая на кнопку "отправить", вы даете согласие на обработку <a
                 href="https://vend-shop.com/privacy/">персональных данных</a>.

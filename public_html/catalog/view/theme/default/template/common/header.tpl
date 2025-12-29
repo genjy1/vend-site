@@ -93,6 +93,8 @@ grecaptcha.ready(function() {
             },
             body: JSON.stringify({token: token})  // Токен передается в теле запроса
         })
+        localStorage.setItem('grecaptcha_token', token)
+        )
         .then(response => response.json())
         .then(data => {
             if (data.success) {
@@ -229,3 +231,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </header>
+
+<div class="easter-egg">
+  <img src="/image/catalog/photo_2025-12-03_13-11-40.jpg" alt="Easter egg">
+</div>

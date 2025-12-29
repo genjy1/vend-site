@@ -13,6 +13,7 @@ class SubDomains {
 			// header("Access-Control-Allow-Origin: " . $_SERVER['HTTP_ORIGIN']);
       
 		}
+
 		//die("ddd");
 	}
 	public function getSubDomain(){

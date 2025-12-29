@@ -48,6 +48,7 @@ class ControllerPostPost extends Controller {
 		$data['post_id'] = $this->request->get['post_id'];
 
 		$result = $this->model_post_post->getPost($this->request->get['post_id']);
+
 		if(empty($result)){
 			$this->response->redirect($this->url->link('post/posts'));
 		}
@@ -101,7 +102,9 @@ class ControllerPostPost extends Controller {
 
 
 		$data['description'] = html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8');
+//        $data['description'] = json_encode($result['description'], JSON_UNESCAPED_UNICODE);
 
+//        $data['description'] = 'JOPA';
 
 		$data['breadcrumbs'][] = array(
 			'text' => $data['title'],

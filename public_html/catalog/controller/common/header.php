@@ -39,7 +39,7 @@ class ControllerCommonHeader extends Controller {
 			}
 		}
 
-    $data['graphs'] = array();
+        $data['graphs'] = array();
 
 		$subdomain = $this->subdomains->getSubDomain();
 
@@ -70,7 +70,7 @@ class ControllerCommonHeader extends Controller {
 		$data['scripts'] = $this->document->getScripts();
 		$data['lang'] = $this->language->get('code');
 		$data['direction'] = $this->language->get('direction');
-    $data['graphs'] = $this->document->getGraphs();
+        $data['graphs'] = $this->document->getGraphs();
 
 		$data['name'] = $this->config->get('config_name');
 

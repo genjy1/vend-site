@@ -1,4 +1,5 @@
 version: '3'
+
 services:
   vend-shop-com:
     build:
@@ -20,8 +21,7 @@ services:
       bash -c "dos2unix /var/www/tools/start.sh && bash /var/www/tools/start.sh" 
 
   mysql:
-#    image: mysql:5.7
-    build: 
+    build:
       context: .
       dockerfile: ./dockerfiles/mysql.docker
     container_name: site_mysql
@@ -36,20 +36,36 @@ services:
       - MYSQL_ROOT_PASSWORD=opencart
       - MYSQL_DATABASE=opencart
 
-  adminer:
-    image: adminer:latest
-    container_name: site_adminer
-    environment:
-      ADMINER_DEFAULT_SERVER: mysql
-    networks:
-      - site-network
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: site_phpmyadmin
+    restart: always
     depends_on:
       - mysql
     ports:
-      - "8080:8080"
+      - "8081:80"
+    environment:
+      - PMA_HOST=mysql
+      - PMA_PORT=3306
+      - PMA_USER=root
+      - PMA_PASSWORD=opencart
+      - UPLOAD_LIMIT=128M
+    networks:
+      - site-network
 
+  # Adminer можно оставить для сравнения, но не обязателен
+  # adminer:
+  #   image: adminer:latest
+  #   container_name: site_adminer
+  #   environment:
+  #     ADMINER_DEFAULT_SERVER: mysql
+  #   networks:
+  #     - site-network
+  #   depends_on:
+  #     - mysql
+  #   ports:
+  #     - "8080:8080"
 
 networks:
   site-network:
     driver: bridge
-

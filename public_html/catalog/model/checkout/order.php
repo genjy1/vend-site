@@ -653,6 +653,7 @@ class ModelCheckoutOrder extends Model {
 
                 try {
                     $mail = new Mail();
+                    $mail->debug = true;
                     $mail->protocol = $this->config->get('config_mail_protocol');
                     $mail->parameter = $this->config->get('config_mail_parameter');
                     $mail->smtp_hostname = $this->config->get('config_mail_smtp_hostname');
