@@ -38,6 +38,7 @@
   <link rel="preload" as="font">
   <link href="/catalog/view/theme/default/stylesheet/stylesheet.css?ver=2.0.0-8" rel="stylesheet" id="stylesheet">
   <link href="/catalog/view/theme/default/stylesheet/bem-utilities.css" rel="stylesheet">
+  <link href="/catalog/view/theme/default/stylesheet/ui-enhancements.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js@1/src/toastify.min.css">
 
   <?php foreach ($styles as $style) { ?>
@@ -69,6 +70,7 @@
 
   <script src="/catalog/view/javascript/new.js"></script>
   <script src="/catalog/view/javascript/hide_links.js"></script>
+  <script src="/catalog/view/javascript/ui-enhancements.js" defer></script>
 
   <?php foreach ($links as $link) { ?>
   <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>">
