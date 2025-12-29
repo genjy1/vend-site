@@ -1,76 +1,150 @@
 <?php
-class Response {
-	private $headers = array();
-	private $level = 0;
-	private $output;
+/**
+ * Класс для управления HTTP ответом
+ *
+ * Обрабатывает заголовки, сжатие и вывод контента.
+ */
+class Response
+{
+    /**
+     * Массив HTTP заголовков
+     *
+     * @var array
+     */
+    private $headers = [];
 
-	public function addHeader($header) {
-		$this->headers[] = $header;
-	}
+    /**
+     * Уровень сжатия (0-9)
+     *
+     * @var int
+     */
+    private $level = 0;
 
-	public function redirect($url, $status = 302) {
-		header('Location: ' . str_replace(array('&amp;', "\n", "\r"), array('&', '', ''), $url), true, $status);
-		exit();
-	}
+    /**
+     * Содержимое ответа
+     *
+     * @var string
+     */
+    private $output;
 
-	public function setCompression($level) {
-		$this->level = $level;
-	}
+    /**
+     * Добавляет HTTP заголовок
+     *
+     * @param string $header Заголовок в формате "Name: Value"
+     * @return void
+     */
+    public function addHeader($header)
+    {
+        $this->headers[] = $header;
+    }
 
-	public function getOutput() {
-		return $this->output;
-	}
-	
-	public function setOutput($output) {
-		$this->output = $output;
-	}
+    /**
+     * Выполняет HTTP редирект
+     *
+     * @param string $url URL для редиректа
+     * @param int $status HTTP код статуса (по умолчанию 302)
+     * @return void
+     */
+    public function redirect($url, $status = 302)
+    {
+        $cleanUrl = str_replace(['&amp;', "\n", "\r"], ['&', '', ''], $url);
+        header('Location: ' . $cleanUrl, true, $status);
+        exit();
+    }
 
-	private function compress($data, $level = 0) {
-		if (isset($_SERVER['HTTP_ACCEPT_ENCODING']) && (strpos($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip') !== false)) {
-			$encoding = 'gzip';
-		}
+    /**
+     * Устанавливает уровень сжатия gzip
+     *
+     * @param int $level Уровень сжатия (0-9)
+     * @return void
+     */
+    public function setCompression($level)
+    {
+        $this->level = $level;
+    }
 
-		if (isset($_SERVER['HTTP_ACCEPT_ENCODING']) && (strpos($_SERVER['HTTP_ACCEPT_ENCODING'], 'x-gzip') !== false)) {
-			$encoding = 'x-gzip';
-		}
+    /**
+     * Возвращает текущее содержимое ответа
+     *
+     * @return string
+     */
+    public function getOutput()
+    {
+        return $this->output;
+    }
 
-		if (!isset($encoding) || ($level < -1 || $level > 9)) {
-			return $data;
-		}
+    /**
+     * Устанавливает содержимое ответа
+     *
+     * @param string $output Содержимое
+     * @return void
+     */
+    public function setOutput($output)
+    {
+        $this->output = $output;
+    }
 
-		if (!extension_loaded('zlib') || ini_get('zlib.output_compression')) {
-			return $data;
-		}
+    /**
+     * Сжимает данные с помощью gzip
+     *
+     * @param string $data Данные для сжатия
+     * @param int $level Уровень сжатия
+     * @return string Сжатые данные или оригинальные при ошибке
+     */
+    private function compress($data, $level = 0)
+    {
+        $encoding = null;
 
-		if (headers_sent()) {
-			return $data;
-		}
+        if (isset($_SERVER['HTTP_ACCEPT_ENCODING'])) {
+            if (strpos($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip') !== false) {
+                $encoding = 'gzip';
+            } elseif (strpos($_SERVER['HTTP_ACCEPT_ENCODING'], 'x-gzip') !== false) {
+                $encoding = 'x-gzip';
+            }
+        }
 
-		if (connection_status()) {
-			return $data;
-		}
+        if (!$encoding || $level < -1 || $level > 9) {
+            return $data;
+        }
 
-		$this->addHeader('Content-Encoding: ' . $encoding);
+        if (!extension_loaded('zlib') || ini_get('zlib.output_compression')) {
+            return $data;
+        }
 
-		return gzencode($data, (int)$level);
-	}
+        if (headers_sent() || connection_status()) {
+            return $data;
+        }
 
-	public function output() {
-		if (!defined('HTTP_CATALOG')) $this->output = str_replace('index.php?route=common/home', '', $this->output);
-		if ($this->output) {
-			if ($this->level) {
-				$output = $this->compress($this->output, $this->level);
-			} else {
-				$output = $this->output;
-			}
+        $this->addHeader('Content-Encoding: ' . $encoding);
 
-			if (!headers_sent()) {
-				foreach ($this->headers as $header) {
-					header($header, true);
-				}
-			}
+        return gzencode($data, (int) $level);
+    }
 
-			echo $output;
-		}
-	}
+    /**
+     * Выводит содержимое ответа
+     *
+     * Обрабатывает сжатие и отправляет заголовки если они ещё не отправлены.
+     *
+     * @return void
+     */
+    public function output()
+    {
+        if (!defined('HTTP_CATALOG')) {
+            $this->output = str_replace('index.php?route=common/home', '', $this->output);
+        }
+
+        if ($this->output) {
+            $output = $this->level
+                ? $this->compress($this->output, $this->level)
+                : $this->output;
+
+            if (!headers_sent()) {
+                foreach ($this->headers as $header) {
+                    header($header, true);
+                }
+            }
+
+            echo $output;
+        }
+    }
 }
