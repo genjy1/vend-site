@@ -1,0 +1,47 @@
+{
+    "extends": ["stylelint-config-standard"],
+    "plugins": ["stylelint-selector-bem-pattern"],
+    "rules": {
+        "selector-class-pattern": [
+            "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$|^u-[a-z]+(-[a-z]+)*$",
+            {
+                "message": "Селектор должен соответствовать BEM нотации (block__element--modifier) или утилитарному классу (u-name)"
+            }
+        ],
+        "selector-id-pattern": null,
+        "color-hex-length": "long",
+        "declaration-block-no-redundant-longhand-properties": null,
+        "no-descending-specificity": null,
+        "font-family-no-missing-generic-family-keyword": null,
+        "property-no-vendor-prefix": null,
+        "selector-no-vendor-prefix": null,
+        "value-no-vendor-prefix": null,
+        "declaration-empty-line-before": null,
+        "rule-empty-line-before": [
+            "always",
+            {
+                "except": ["first-nested"],
+                "ignore": ["after-comment"]
+            }
+        ],
+        "comment-empty-line-before": [
+            "always",
+            {
+                "except": ["first-nested"],
+                "ignore": ["stylelint-commands"]
+            }
+        ],
+        "max-nesting-depth": 3,
+        "selector-max-compound-selectors": 4,
+        "selector-max-id": 0,
+        "declaration-block-single-line-max-declarations": 1,
+        "length-zero-no-unit": true,
+        "shorthand-property-no-redundant-values": true,
+        "declaration-block-no-duplicate-properties": true
+    },
+    "ignoreFiles": [
+        "**/node_modules/**",
+        "**/vendor/**",
+        "**/*.min.css"
+    ]
+}
