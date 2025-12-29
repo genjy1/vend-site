@@ -61,27 +61,27 @@
           <?php } ?>
         <?php } ?>
       </div>
-      <div class="product__price-section">
+      <div class="product__price-section" style="padding: 0 0 0 30px; width: 400px; float: left;">
         <?php if (!$special) { ?>
         <div class="pr product__price" itemprop="price" content="<?php echo str_replace('₽', '', $price); ?>">
           <?php if ($price) { ?>
-            <?php if ($price && $avtomat) { ?><span class="product__price-prefix">от</span><?php } ?>
+            <?php if ($price && $avtomat) { ?><span>от</span><?php } ?>
             <?php echo $price; ?>
           <?php } ?>
         </div>
         <?php } else { ?>
         <div class="specprice product__price-wrapper">
           <div class="oldpr product__price--original">
-            <?php if ($avtomat) { ?><span class="product__price-prefix">от</span> <?php echo $price; ?><?php } ?>
+            <?php if ($avtomat) { ?><span>от</span> <?php echo $price; ?><?php } ?>
           </div>
           <div class="newpr product__price--special" itemprop="price" content="<?php echo str_replace('₽', '', $special); ?>">
-            <?php if ($avtomat) { ?><span class="product__price-prefix">от</span> <?php echo $special; ?><?php } ?>
+            <?php if ($avtomat) { ?><span>от</span> <?php echo $special; ?><?php } ?>
           </div>
         </div>
         <?php } ?>
       </div>
 
-      <div class="parametrs product__attributes">
+      <div class="parametrs product__attributes" style="padding-top: 15px;">
         <?php
         $width = 1;
         $height = 1;
@@ -94,7 +94,7 @@
         <div class="pars product__attributes-list">
           <?php $ak = 0; ?>
           <?php foreach ($attribute_group['attribute'] as $key => $attribute) { ?>
-          <div class="item product__attribute<?php if ($key > 5) { ?> product__attribute--hidden<?php } ?>" <?php if ($key > 5) { ?>data-hide-item="1"<?php } ?>>
+          <div class="item product__attribute" <?php if ($key > 5) { ?>style="display:none" data-hide-item="1"<?php } ?>>
             <?php
             $ak = $key;
             if ($attribute['attribute_id'] == 45) { $height = $attribute['text']; }
@@ -102,8 +102,8 @@
             if ($attribute['attribute_id'] == 43) { $width = $attribute['text']; }
             if ($attribute['attribute_id'] == 13) { $weight = $attribute['text']; }
             ?>
-            <div class="product__attribute-name"><?php echo $attribute['name']; ?>:</div>
-            <div class="product__attribute-value"><?php echo $attribute['text']; ?></div>
+            <div><?php echo $attribute['name']; ?>:</div>
+            <div><?php echo $attribute['text']; ?></div>
           </div>
           <?php } ?>
         </div>
@@ -113,14 +113,12 @@
           <?php if (!empty($downloads) && $category_id != 3) { ?>
             <?php foreach ($downloads as $download) { ?>
               <?php if (!$download['href']) continue; ?>
-              <div class="downloads__item">
-                <a href="<?php echo $download['href']; ?>" class="downloads__link" title="">
-                  <?php echo $download['name']; ?>
-                </a>
-                <?php if ($download['size']) { ?>
-                <span class="downloads__meta"><?php echo $download['size'] . ', ' . strtoupper($download['ext']); ?></span>
-                <?php } ?>
-              </div>
+              <a href="<?php echo $download['href']; ?>" title="">
+                <?php echo $download['name']; ?>
+              </a>
+              <?php if ($download['size']) { ?>
+              <span><?php echo $download['size'] . ', ' . strtoupper($download['ext']); ?></span>
+              <?php } ?>
             <?php } ?>
           <?php } ?>
         </div>
