@@ -152,23 +152,30 @@ body {
     }
 }
 
-/* Modern product name */
+/* Modern product name - improved visibility */
 .grid .product .name {
     transition: color var(--transition-fast);
     font-weight: 600;
     letter-spacing: -0.01em;
+    color: #1a1a2e !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    line-height: 1.3;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .grid .product:hover .name {
-    color: var(--primary);
+    color: var(--primary) !important;
 }
 
-/* Modern price styling */
+/* Modern price styling - improved visibility */
 .grid .product .price {
     font-weight: 700;
     font-size: 18px;
-    color: var(--text-primary);
+    color: #1a1a2e !important;
     transition: transform var(--transition-fast);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .grid .product:hover .price {
@@ -176,32 +183,42 @@ body {
 }
 
 .grid .product .request {
-    color: var(--primary);
+    color: var(--primary) !important;
     font-weight: 600;
     cursor: pointer;
     padding: 8px 16px;
     border-radius: var(--radius-full);
     transition: all var(--transition-fast);
     display: inline-block;
+    background: rgba(232, 7, 128, 0.1);
 }
 
 .grid .product .request:hover {
     background: var(--primary-gradient);
-    color: white;
+    color: white !important;
     box-shadow: var(--shadow-color);
 }
 
 .grid .product .oldprice {
-    color: var(--text-muted);
+    color: #888 !important;
     text-decoration: line-through;
     font-size: 14px;
     font-weight: 400;
+    padding-left: 10px;
 }
 
 .grid .product .newprice {
-    color: var(--primary);
+    color: var(--primary) !important;
     font-weight: 700;
     font-size: 20px;
+    padding-left: 10px;
+}
+
+/* Ensure text area has good contrast */
+.grid .product a {
+    display: block;
+    position: relative;
+    background: #fff;
 }
 
 /* ==========================================================================
@@ -476,8 +493,57 @@ input[type="radio"]:checked::after {
    MODERN CARDS & SECTIONS
    ========================================================================== */
 
-/* Glass morphism cards */
-.catchform,
+/* Category feedback form - keep original pink background */
+.catchform {
+    background: #e01186 !important;
+    backdrop-filter: none;
+    border: none;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+}
+
+.catchform .title {
+    color: #fff !important;
+}
+
+.catchform input[type="text"],
+.catchform input[type="tel"],
+.catchform input[type="email"],
+.catchform textarea {
+    background: #fff !important;
+    border: none !important;
+    border-radius: var(--radius-md);
+    color: var(--text-primary) !important;
+}
+
+.catchform input::placeholder {
+    color: var(--text-muted) !important;
+}
+
+.catchform button,
+.catchform .submit {
+    background: #4a259b !important;
+    border-radius: var(--radius-full);
+}
+
+.catchform button:hover,
+.catchform .submit:hover {
+    background: #5a35ab !important;
+    transform: translateY(-2px);
+}
+
+.catchform .radios label,
+.catchform .agreement-label,
+.catchform .prv {
+    color: #fff !important;
+}
+
+.catchform a {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+/* Delivery and question forms - glass effect */
 .delivery,
 .questform {
     background: var(--glass-bg);
@@ -488,7 +554,6 @@ input[type="radio"]:checked::after {
     box-shadow: var(--shadow-lg);
 }
 
-.catchform .title,
 .delivery .title,
 .questform .title {
     font-size: 22px;
